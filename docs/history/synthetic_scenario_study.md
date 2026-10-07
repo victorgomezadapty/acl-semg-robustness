@@ -8,7 +8,7 @@
 
 ## Métodos reproducibles
 
-Ejecutar `python scripts/simulate_measurement_scenarios.py` desde la raíz. [Código](../../scripts/simulate_measurement_scenarios.py), [resultados individuales](../../reports/synthetic_scenario_results.csv), [resumen](../../reports/synthetic_scenario_summary.csv), [comprobaciones](../../reports/synthetic_scenario_checks.json).
+Ejecutar `python scripts/simulate_measurement_scenarios.py` desde la raíz. [Código](../../scripts/simulate_measurement_scenarios.py), resultados individuales (`reports/synthetic_scenario_results.csv`, 23.100 filas; se regenera con el script y no se versiona en Git por tamaño), [resumen](../../reports/synthetic_scenario_summary.csv), [comprobaciones](../../reports/synthetic_scenario_checks.json).
 
 Se generaron 100 realizaciones por cada uno de 11 escenarios, con semillas 2026100600–2026100699 y 16.384 muestras activas. Portadora gaussiana de media cero; envolvente constante por bloques de 1.024 muestras, con amplitud uniforme entre 0,3 y 1,7. El par básico comparte portadora y tiene cociente 0,8. Un control adicional usa portadoras independientes y calibra su RMS para conservar ese cociente. No se asigna frecuencia de muestreo: no se simulan espectro fisiológico, unidades motoras ni adquisición clínica.
 

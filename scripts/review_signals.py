@@ -104,7 +104,7 @@ def main():
                 fontsize=12,
             )
             fig.tight_layout(rect=[0, 0, 1, 0.98])
-            fig.savefig(output / f"{cohort}_{condition}_signal_review.png", dpi=140)
+            fig.savefig(output / f"{cohort}_{condition}_signal_review.png", dpi=100)
             plt.close(fig)
     with (ROOT / "reports/signal_quality.csv").open(
         "w", newline="", encoding="utf-8"
@@ -136,7 +136,7 @@ def main():
     axes[0].set_title("Patient1 involved: original clocks")
     axes[1].set_title("Detail near 10 seconds: timestamp plateaus")
     fig.tight_layout()
-    fig.savefig(output / "patient_involved_time_review.png", dpi=160)
+    fig.savefig(output / "patient_involved_time_review.png", dpi=110)
     plt.close(fig)
     summary = {
         "records": len(rows),
