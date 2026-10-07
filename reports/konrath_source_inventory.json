@@ -1,0 +1,62 @@
+[
+  {
+    "archive": "Damaged_Muscle_Forces.zip",
+    "members": 1530,
+    "files": 1260,
+    "sample_members": [
+      "Damaged_Muscle_Forces/ACL01_left/calibrated/calibrated_CF.xml",
+      "Damaged_Muscle_Forces/ACL01_left/calibrationCfg.xml",
+      "Damaged_Muscle_Forces/ACL01_left/calibrationSetup.xml",
+      "Damaged_Muscle_Forces/ACL01_left/Cut1/ceinmsExecutionSetup.xml",
+      "Damaged_Muscle_Forces/ACL01_left/Cut1/Output/Activations.sto",
+      "Damaged_Muscle_Forces/ACL01_left/Cut1/Output/FiberLenghts.sto",
+      "Damaged_Muscle_Forces/ACL01_left/Cut1/Output/FiberVelocities.sto",
+      "Damaged_Muscle_Forces/ACL01_left/Cut1/Output/MuscleForces.sto"
+    ],
+    "first_file": "Damaged_Muscle_Forces/ACL01_left/calibrated/calibrated_CF.xml",
+    "header": [
+      "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>",
+      "<subject xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"subject.xsd\">",
+      "",
+      "  <mtuDefault>",
+      "    <emDelay>0.015</emDelay>",
+      "    <percentageChange>0.15</percentageChange>",
+      "    <damping>0.1</damping>",
+      "    <curve>",
+      "      <name>activeForceLength</name>",
+      "      <xPoints>0.4035 0.52725 0.62875 0.71875 0.86125 1.045 1.2175 1.43875 1.61875</xPoints>",
+      "      <yPoints>0 0.226667 0.636667 0.856667 0.95 0.993333 0.77 0.246667 0</yPoints>",
+      "    </curve>"
+    ]
+  },
+  {
+    "archive": "Undamaged_Muscle_Forces.zip",
+    "members": 1530,
+    "files": 1260,
+    "sample_members": [
+      "Undamaged_Muscle_Forces/ACL01_left/calibrated/calibrated_CF.xml",
+      "Undamaged_Muscle_Forces/ACL01_left/calibrationCfg.xml",
+      "Undamaged_Muscle_Forces/ACL01_left/calibrationSetup.xml",
+      "Undamaged_Muscle_Forces/ACL01_left/Cut1/ceinmsExecutionSetup.xml",
+      "Undamaged_Muscle_Forces/ACL01_left/Cut1/Output/Activations.sto",
+      "Undamaged_Muscle_Forces/ACL01_left/Cut1/Output/FiberLenghts.sto",
+      "Undamaged_Muscle_Forces/ACL01_left/Cut1/Output/FiberVelocities.sto",
+      "Undamaged_Muscle_Forces/ACL01_left/Cut1/Output/MuscleForces.sto"
+    ],
+    "first_file": "Undamaged_Muscle_Forces/ACL01_left/calibrated/calibrated_CF.xml",
+    "header": [
+      "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>",
+      "<subject xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"subject.xsd\">",
+      "",
+      "  <mtuDefault>",
+      "    <emDelay>0.015</emDelay>",
+      "    <percentageChange>0.15</percentageChange>",
+      "    <damping>0.1</damping>",
+      "    <curve>",
+      "      <name>activeForceLength</name>",
+      "      <xPoints>0.4035 0.52725 0.62875 0.71875 0.86125 1.045 1.2175 1.43875 1.61875</xPoints>",
+      "      <yPoints>0 0.226667 0.636667 0.856667 0.95 0.993333 0.77 0.246667 0</yPoints>",
+      "    </curve>"
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "records": 88,
+  "participant_pairs": 44,
+  "participants": 22,
+  "comparisons": 60,
+  "correlations": 24,
+  "profiles": 22,
+  "selection_sensitivity_rows": 792,
+  "seed": 20261004,
+  "holm_t_below_005": 0,
+  "holm_rank_below_005": 0,
+  "exact_publication_replication": false
+}

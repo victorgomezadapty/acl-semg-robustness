@@ -1,0 +1,370 @@
+{
+  "healthy_iso180_inv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "healthy1",
+      "healthy2",
+      "healthy3",
+      "healthy4",
+      "healthy5",
+      "healthy6",
+      "healthy7",
+      "healthy8",
+      "healthy9",
+      "healthy10"
+    ],
+    "rows": 43290,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      12506,
+      9620,
+      8658,
+      10582,
+      9620,
+      23088,
+      9620,
+      20202,
+      0,
+      13468
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "healthy_iso180_inv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 43290,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "healthy_iso180_uninv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "healthy1",
+      "healthy2",
+      "healthy3",
+      "healthy4",
+      "healthy5",
+      "healthy6",
+      "healthy7",
+      "healthy8",
+      "healthy9",
+      "healthy10"
+    ],
+    "rows": 45214,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      13468,
+      0,
+      15392,
+      14430,
+      4810,
+      962,
+      6734,
+      5772,
+      8658,
+      5772
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "healthy_iso180_uninv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 45214,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "healthy_iso90_inv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "healthy1",
+      "healthy2",
+      "healthy3",
+      "healthy4",
+      "healthy5",
+      "healthy6",
+      "healthy7",
+      "healthy8",
+      "healthy9",
+      "healthy10"
+    ],
+    "rows": 71188,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      24050,
+      26936,
+      32708,
+      18278,
+      12506,
+      39442,
+      18278,
+      23088,
+      0,
+      24050
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "healthy_iso90_inv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 71188,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "healthy_iso90_uninv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "healthy1",
+      "healthy2",
+      "healthy3",
+      "healthy4",
+      "healthy5",
+      "healthy6",
+      "healthy7",
+      "healthy8",
+      "healthy9",
+      "healthy10"
+    ],
+    "rows": 76960,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      19240,
+      25012,
+      25974,
+      24050,
+      0,
+      37518,
+      16354,
+      73112,
+      15392,
+      34632
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "healthy_iso90_uninv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 76960,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso180_inv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "patient1",
+      "patient2",
+      "patient3",
+      "patient4",
+      "patient5",
+      "patient6",
+      "patient7",
+      "patient8",
+      "patient9",
+      "patient10",
+      "patient11",
+      "patient12"
+    ],
+    "rows": 47138,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      22126,
+      5772,
+      0,
+      9620,
+      11544,
+      13468,
+      14430,
+      14430,
+      22126,
+      15392,
+      25974,
+      10582
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso180_inv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 47138,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso180_uninv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "patient1",
+      "patient2",
+      "patient3",
+      "patient4",
+      "patient5",
+      "patient6",
+      "patient7",
+      "patient8",
+      "patient9",
+      "patient10",
+      "patient11",
+      "patient12"
+    ],
+    "rows": 41366,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      19240,
+      2886,
+      4810,
+      12506,
+      2886,
+      4810,
+      13468,
+      9620,
+      10582,
+      9620,
+      0,
+      12506
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso180_uninv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 41366,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso90_inv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "patient1",
+      "patient2",
+      "patient3",
+      "patient4",
+      "patient5",
+      "patient6",
+      "patient7",
+      "patient8",
+      "patient9",
+      "patient10",
+      "patient11",
+      "patient12"
+    ],
+    "rows": 56758,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      5772,
+      0,
+      3848,
+      16354,
+      9620,
+      7696,
+      6734,
+      8658,
+      1924,
+      16354,
+      18278,
+      5772
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso90_inv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 56758,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso90_uninv.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "patient1",
+      "patient2",
+      "patient3",
+      "patient4",
+      "patient5",
+      "patient6",
+      "patient7",
+      "patient8",
+      "patient9",
+      "patient10",
+      "patient11",
+      "patient12"
+    ],
+    "rows": 60606,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      4810,
+      11544,
+      3848,
+      8658,
+      8658,
+      8658,
+      4810,
+      13468,
+      0,
+      18278,
+      16354,
+      8658
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  },
+  "patient_iso90_uninv_time.csv": {
+    "status": "table_structure_only",
+    "header": [
+      "X [s]"
+    ],
+    "rows": 60606,
+    "blank_rows": 0,
+    "row_width_anomalies": 0,
+    "empty_cells_by_column_position": [
+      0
+    ],
+    "note": "Units, labels and sentinel missing values require source documentation."
+  }
+}

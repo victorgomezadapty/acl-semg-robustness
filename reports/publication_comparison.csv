@@ -1,0 +1,13 @@
+cohort,condition,metric,n,our_whole_record_mean_pct,our_whole_record_sd_pct,published_mean_pct,published_sd_pct,mean_difference_pp,status
+patient,iso90,rms_V,12,86.71336741852247,31.230503949474073,90.2,7.9,-3.4866325814775365,not_exact_replication_unknown_processing_and_cycle_boundaries
+patient,iso90,peak_abs_V,12,97.3647133550656,46.88826019167099,91.4,8.6,5.964713355065598,not_exact_replication_unknown_processing_and_cycle_boundaries
+patient,iso90,peak_positive_V,12,88.9772255838041,49.65094267296489,91.4,8.6,-2.4227744161959066,not_exact_replication_unknown_processing_and_cycle_boundaries
+patient,iso180,rms_V,12,85.44543845277683,36.02477863083948,87.5,9.8,-2.054561547223173,not_exact_replication_unknown_processing_and_cycle_boundaries
+patient,iso180,peak_abs_V,12,86.05951863368601,43.22597494782359,88.3,10.4,-2.240481366313986,not_exact_replication_unknown_processing_and_cycle_boundaries
+patient,iso180,peak_positive_V,12,72.11245739983637,29.483837032698627,88.3,10.4,-16.187542600163624,not_exact_replication_unknown_processing_and_cycle_boundaries
+healthy,iso90,rms_V,10,328.55753408966586,771.1259056170835,96.8,3.5,231.75753408966585,not_exact_replication_unknown_processing_and_cycle_boundaries
+healthy,iso90,peak_abs_V,10,1048.7518444296757,3056.4264655726015,97.6,3.1,951.1518444296756,not_exact_replication_unknown_processing_and_cycle_boundaries
+healthy,iso90,peak_positive_V,10,818.7875857279053,2316.306735194534,97.6,3.1,721.1875857279052,not_exact_replication_unknown_processing_and_cycle_boundaries
+healthy,iso180,rms_V,10,86.13082859893638,39.276768086825726,96.1,4.2,-9.969171401063619,not_exact_replication_unknown_processing_and_cycle_boundaries
+healthy,iso180,peak_abs_V,10,66.48442603885279,45.66681471502989,96.9,3.8,-30.415573961147217,not_exact_replication_unknown_processing_and_cycle_boundaries
+healthy,iso180,peak_positive_V,10,68.7857241799214,47.43328500774151,96.9,3.8,-28.114275820078603,not_exact_replication_unknown_processing_and_cycle_boundaries

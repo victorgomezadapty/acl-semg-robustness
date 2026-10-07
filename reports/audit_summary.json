@@ -1,0 +1,17 @@
+{
+  "recordings": 88,
+  "participants": 22,
+  "sample_range": [
+    3848,
+    76960
+  ],
+  "elapsed_s_range": [
+    1.99748,
+    39.9595
+  ],
+  "internal_empty_cells": 0,
+  "leading_empty_cells": 0,
+  "invalid_numeric_cells": 0,
+  "nonfinite_values": 0,
+  "all_time_rows_match": true
+}

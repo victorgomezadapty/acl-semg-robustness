@@ -1,0 +1,8 @@
+# Optional local development and notebook verification dependencies.
+# Install with: python -m pip install -r requirements-verification.txt
+# Analysis dependencies remain in requirements.txt.
+pytest==9.1.1
+ruff==0.16.10
+nbformat==5.10.4
+nbclient==0.11.0
+ipykernel==7.3.0

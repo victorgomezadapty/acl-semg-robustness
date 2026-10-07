@@ -1,0 +1,7 @@
+{
+  "scenarios": 11,
+  "replicates_per_scenario": 100,
+  "methods": 21,
+  "evaluations": 23100,
+  "invariants_passed": true
+}

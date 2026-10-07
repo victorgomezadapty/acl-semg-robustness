@@ -1,0 +1,40 @@
+[
+  {
+    "search": "ACL_methods_search",
+    "total_hits": 12,
+    "warnings": {},
+    "query_translation": "(\"anterior cruciate ligament\"[Title/Abstract] OR \"ACLR\"[Title/Abstract]) AND (\"electromyograph*\"[Title/Abstract] OR \"EMG\"[Title/Abstract] OR \"sEMG\"[Title/Abstract]) AND (\"symmetr*\"[Title/Abstract] OR \"asymmetr*\"[Title/Abstract]) AND (\"normaliz*\"[Title/Abstract] OR \"normalis*\"[Title/Abstract] OR \"process*\"[Title/Abstract] OR \"reliab*\"[Title/Abstract] OR \"sensitiv*\"[Title/Abstract])"
+  },
+  {
+    "search": "EMG_CEDE_revised_search",
+    "total_hits": 9,
+    "warnings": {},
+    "query_translation": "\"CEDE\"[Title/Abstract] AND \"electromyograph*\"[Title/Abstract]"
+  },
+  {
+    "search": "EMG_CEDE_search",
+    "total_hits": 0,
+    "warnings": {
+      "phrasesignored": [],
+      "quotedphrasesnotfound": [
+        "\"Consensus for experimental design in electromyography\"[Title]"
+      ],
+      "outputmessages": [
+        "No items found."
+      ]
+    },
+    "query_translation": "\"Consensus for experimental design in electromyography\"[Title]"
+  },
+  {
+    "search": "EMG_multiverse_search",
+    "total_hits": 16,
+    "warnings": {},
+    "query_translation": "(\"electromyograph*\"[Title/Abstract] OR \"EMG\"[Title/Abstract] OR \"sEMG\"[Title/Abstract]) AND (\"multiverse\"[Title/Abstract] OR \"specification curve\"[Title/Abstract] OR \"processing pipeline\"[Title/Abstract])"
+  },
+  {
+    "search": "EMG_processing_search",
+    "total_hits": 7,
+    "warnings": {},
+    "query_translation": "(\"electromyograph*\"[Title/Abstract] OR \"EMG\"[Title/Abstract] OR \"sEMG\"[Title/Abstract]) AND (\"normaliz*\"[Title/Abstract] OR \"normalis*\"[Title/Abstract]) AND (\"clinical interpretation\"[Title/Abstract] OR \"processing choices\"[Title/Abstract] OR \"data-driven approach\"[Title/Abstract])"
+  }
+]

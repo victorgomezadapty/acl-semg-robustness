@@ -1,0 +1,9 @@
+{
+  "pairs": 44,
+  "specifications_per_pair": 21,
+  "rows": 924,
+  "direction_changes": 13,
+  "participants_with_direction_changes": 11,
+  "rms_only_direction_changes": 10,
+  "synthetic_assertions_passed": true
+}

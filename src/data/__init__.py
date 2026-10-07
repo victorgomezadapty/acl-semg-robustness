@@ -1,0 +1,1 @@
+"""Source-preserving data access."""

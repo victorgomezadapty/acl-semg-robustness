@@ -1,0 +1,5 @@
+hypothetical_standardized_effect,participants_per_group,power_at_n,alpha,target_power,design
+0.3,176,0.801379443549623,0.05,0.8,two_independent_equal_groups_two_sided_t_no_multiplicity
+0.5,64,0.8014595579222542,0.05,0.8,two_independent_equal_groups_two_sided_t_no_multiplicity
+0.62,42,0.8017291390994635,0.05,0.8,two_independent_equal_groups_two_sided_t_no_multiplicity
+0.8,26,0.8074866151465275,0.05,0.8,two_independent_equal_groups_two_sided_t_no_multiplicity

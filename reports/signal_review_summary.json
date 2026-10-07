@@ -1,0 +1,10 @@
+{
+  "records": 88,
+  "all_signals_have_negative_values": true,
+  "longest_zero_run_samples": 936,
+  "max_zero_fraction": 0.14397089397089397,
+  "excluded_records": 0,
+  "time_reconstructed": false,
+  "filtered": false,
+  "note": "RMS/MAV describe full exported tasks for QA only; not normalized activation or contraction-cycle features."
+}

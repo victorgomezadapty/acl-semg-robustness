@@ -1,0 +1,4 @@
+# Inspectors use the standard library. Signal review additionally uses:
+numpy==2.5.2
+matplotlib==3.11.2
+scipy==1.18.1

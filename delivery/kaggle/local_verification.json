@@ -1,0 +1,39 @@
+{
+  "exact_notebook_executed_locally": true,
+  "isolated_bundle": true,
+  "verification_python": "C:\\Users\\victo\\OneDrive\\Documents\\ACL Return-to-Sport Rehabilitation Analytics\\.venv\\Scripts\\python.exe",
+  "kaggle_execution_verified": false,
+  "summary": {
+    "pairs": 44,
+    "specifications_per_pair": 21,
+    "rows": 924,
+    "direction_changes": 13,
+    "participants_with_direction_changes": 11,
+    "rms_only_direction_changes": 10,
+    "synthetic_assertions_passed": true
+  },
+  "centering": {
+    "recordings": 88,
+    "pairs": 44,
+    "specification_rows": 1848,
+    "whole_rms_direction_changes": 0,
+    "healthy8_iso90": {
+      "participant_id": "healthy8",
+      "cohort": "healthy",
+      "condition": "iso90",
+      "exported_whole_rms_ratio": 25.21355884415131,
+      "exported_rms_log_range": 0.4499417759287905,
+      "centered_whole_rms_ratio": 46.50928946893217,
+      "centered_rms_log_range": 0.44254554745980057,
+      "whole_rms_direction_changes": false
+    }
+  },
+  "synthetic": {
+    "scenarios": 11,
+    "replicates_per_scenario": 100,
+    "methods": 21,
+    "evaluations": 23100,
+    "invariants_passed": true
+  },
+  "bundle_sha256": "ba80b9d1b63a0096f8a905d3883dc059f62231fc3b7825df03c985642cf0c699"
+}

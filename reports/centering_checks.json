@@ -1,0 +1,16 @@
+{
+  "recordings": 88,
+  "pairs": 44,
+  "specification_rows": 1848,
+  "whole_rms_direction_changes": 0,
+  "healthy8_iso90": {
+    "participant_id": "healthy8",
+    "cohort": "healthy",
+    "condition": "iso90",
+    "exported_whole_rms_ratio": 25.21355884415131,
+    "exported_rms_log_range": 0.4499417759287905,
+    "centered_whole_rms_ratio": 46.50928946893217,
+    "centered_rms_log_range": 0.44254554745980057,
+    "whole_rms_direction_changes": false
+  }
+}
