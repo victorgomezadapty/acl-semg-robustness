@@ -18,10 +18,12 @@ def main():
     scripts = [
         "check_amplitude.py",
         "check_statistics.py",
+        "review_signals.py",
         "exploratory_amplitude.py",
         "comprehensive_semg.py",
         "evaluate_robustness.py",
         "evaluate_centering.py",
+        "evaluate_bandpass.py",
         "simulate_measurement_scenarios.py",
         "build_analysis_report.py",
     ]

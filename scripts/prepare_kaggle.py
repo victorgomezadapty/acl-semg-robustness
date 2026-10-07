@@ -56,7 +56,7 @@ print({'Python':sys.version, 'numpy':numpy.__version__, 'scipy':scipy.__version_
 
 How dependent are descriptive bilateral sEMG interpretations on amplitude-summary choices? All 22 participants and 88 records are retained. Samples and specifications are not independent people. No torque, IMU or clinical outcomes exist in this export. Labels iso90/iso180 and inv/uninv are retained without inventing control dominance.
 """),
-    code("""for script in ('check_amplitude.py','check_statistics.py','exploratory_amplitude.py','comprehensive_semg.py','evaluate_robustness.py','evaluate_centering.py','simulate_measurement_scenarios.py','build_analysis_report.py'):
+    code("""for script in ('check_amplitude.py','check_statistics.py','exploratory_amplitude.py','comprehensive_semg.py','evaluate_robustness.py','evaluate_centering.py','evaluate_bandpass.py','simulate_measurement_scenarios.py','build_analysis_report.py'):
     print('Running', script, flush=True)
     subprocess.run([sys.executable, str(working/'scripts'/script)], cwd=working, check=True)
 """),

@@ -1,0 +1,70 @@
+{
+  "recordings": 88,
+  "pairs": 44,
+  "primary_pairs": 43,
+  "excluded_pairs": [
+    "healthy8/iso90"
+  ],
+  "sampling_rate_hz": 1925.9239204006642,
+  "clock_rate_min_hz": 1923.909090909091,
+  "clock_rate_max_hz": 1925.9266676011775,
+  "band_hz": [
+    20.0,
+    450.0
+  ],
+  "specification_rows": 1848,
+  "primary_whole_rms_direction_changes": 1,
+  "primary_whole_rms_direction_change_pairs": [
+    "patient7/iso180"
+  ],
+  "primary_rms_crossings_exported": 10,
+  "primary_rms_crossings_bandpass": 8,
+  "median_whole_rms_ratio_primary": {
+    "healthy/iso90": {
+      "pairs": 9,
+      "exported": 0.8679030024394687,
+      "bandpass": 0.871282814476729
+    },
+    "healthy/iso180": {
+      "pairs": 10,
+      "exported": 0.9329101990062163,
+      "bandpass": 0.9808933168310533
+    },
+    "patient/iso90": {
+      "pairs": 12,
+      "exported": 0.778859660502784,
+      "bandpass": 0.7815543698757208
+    },
+    "patient/iso180": {
+      "pairs": 12,
+      "exported": 0.9334677283475841,
+      "bandpass": 0.9356169795579619
+    }
+  },
+  "median_in_band_share": 0.9857953373799412,
+  "low_in_band_share_records": [
+    {
+      "record": "healthy9/iso90/uninv",
+      "in_band_share": 0.6195177253059828
+    },
+    {
+      "record": "healthy9/iso180/uninv",
+      "in_band_share": 0.6999540361415861
+    },
+    {
+      "record": "healthy8/iso90/uninv",
+      "in_band_share": 0.7147244274778937
+    },
+    {
+      "record": "healthy3/iso180/uninv",
+      "in_band_share": 0.7887905420109588
+    }
+  ],
+  "healthy8_iso90": {
+    "exported_ratio": 25.21355884415131,
+    "bandpass_ratio": 64.5713466111564,
+    "uninv_duration_s": 1.9980020805803544,
+    "uninv_in_band_share": 0.7147244274778937,
+    "next_shortest_duration_s": 10.489510923046861
+  }
+}

@@ -138,9 +138,9 @@ For healthy8/iso90 the ratio increases from {h["exported_whole_rms_ratio"]:.3f} 
 
 ![Centering sensitivity](../../reports/figures/centering_ratio_sensitivity.png)
 
-Primary presentation: within-participant log-ratio sensitivity, including centering; cross-person absolute-voltage tests are supplemental acquisition-dependent descriptions. Centering is not declared physiologically correct by default. No band-pass is applied: exported processing is incompletely documented and some clocks have duplicate timestamps. A guessed sampling frequency would not establish suitability for physiological filtering.
+Primary presentation: within-participant log-ratio sensitivity, including centering; cross-person absolute-voltage tests are supplemental acquisition-dependent descriptions. Centering is not declared physiologically correct by default. Band-pass filtering is evaluated separately in [bandpass_results.md](bandpass_results.md), using a sampling rate estimated from all exported clocks.
 
-QA rules now identify length below 25% of the cohort-condition median and |mean|/RMS ≥0.1. These are review heuristics chosen retrospectively, not clinical thresholds or automatic exclusions. All records remain included.
+QA rules now identify length below 25% of the cohort-condition median and |mean|/RMS ≥0.1. These are review heuristics chosen retrospectively, not clinical thresholds. Since 2026-10-07 a pair with a short record is left out of the primary presentation (currently only healthy8/iso90; see [bandpass_results.md](bandpass_results.md)); all records remain in the sensitivity analyses.
 
 Percentile bootstrap intervals remain exploratory and are not guaranteed to have nominal coverage at this sample size. Shapiro values are descriptive diagnostics only and never choose tests. No stronger clinical conclusion follows from changing an interval method.
 

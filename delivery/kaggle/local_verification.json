@@ -1,7 +1,7 @@
 {
   "exact_notebook_executed_locally": true,
   "isolated_bundle": true,
-  "verification_python": "C:\\Users\\victo\\OneDrive\\Documents\\ACL Return-to-Sport Rehabilitation Analytics\\.venv\\Scripts\\python.exe",
+  "verification_python": "C:\\Users\\victo\\.venvs\\acl-semg\\Scripts\\python.exe",
   "kaggle_execution_verified": false,
   "summary": {
     "pairs": 44,
@@ -10,6 +10,12 @@
     "direction_changes": 13,
     "participants_with_direction_changes": 11,
     "rms_only_direction_changes": 10,
+    "excluded_pairs": [
+      "healthy8/iso90"
+    ],
+    "primary_pairs": 43,
+    "primary_direction_changes": 13,
+    "primary_rms_only_direction_changes": 10,
     "synthetic_assertions_passed": true
   },
   "centering": {
@@ -35,5 +41,5 @@
     "evaluations": 23100,
     "invariants_passed": true
   },
-  "bundle_sha256": "ba80b9d1b63a0096f8a905d3883dc059f62231fc3b7825df03c985642cf0c699"
+  "bundle_sha256": "c6e35b779c0df469895f660f8cb155e0c8487516b810f1c80cf6778ff2566225"
 }
