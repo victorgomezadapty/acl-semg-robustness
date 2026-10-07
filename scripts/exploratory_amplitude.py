@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 
 from src.data.semg import recordings
 from src.features.amplitude import ratio, summarize
+from src.features.quality import short_records
 
 
 def save_csv(path, rows):
@@ -34,20 +35,14 @@ def boot_median(values, rng):
 
 def main():
     records = list(recordings())
+    short = short_records({**r, "samples": len(r["semg_V"])} for r in records)
     features = []
     for record in records:
         x = record["semg_V"]
         n = len(x)
         flags = []
-        reference_length = np.median(
-            [
-                len(r["semg_V"])
-                for r in records
-                if r["cohort"] == record["cohort"]
-                and r["condition"] == record["condition"]
-            ]
-        )
-        if n < 0.25 * reference_length:
+        key = (record["participant_id"], record["condition"], record["limb_label"])
+        if key in short:
             flags.append("short_record_review")
         rms = np.sqrt(np.mean(x * x))
         if rms > 0 and abs(x.mean()) / rms >= 0.1:
