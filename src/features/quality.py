@@ -10,12 +10,14 @@ SHORT_RECORD_FRACTION = 0.25
 def sampling_rate_from_clock(times):
     """Average rate over the whole record: (samples - 1) / elapsed seconds.
 
-    Uses only the first and last timestamps, so quantized clocks with many
-    duplicate stamps still give the acquisition rate.
+    Validates nondecreasing timestamps; duplicates are retained. Endpoint span
+    estimates an average rate, not uniform acquisition or the cause of duplicates.
     """
     t = np.asarray(times, dtype=float)
     if t.ndim != 1 or len(t) < 2 or not np.isfinite(t).all():
         raise ValueError("At least two finite timestamps are required.")
+    if np.any(np.diff(t) < 0):
+        raise ValueError("Clock timestamps must not go backwards.")
     elapsed = t[-1] - t[0]
     if elapsed <= 0:
         raise ValueError("Clock does not advance.")
@@ -23,7 +25,11 @@ def sampling_rate_from_clock(times):
 
 
 def bandpass(signal, fs, band=EMG_BAND_HZ, order=4):
-    """Zero-phase Butterworth band-pass; input is not modified."""
+    """Butterworth prototype N=order, SOS band-pass, forward/backward filtering.
+
+    N=4 gives order 8 band-pass per direction, effective order 16 after both
+    passes. Input is preserved; sampling uniformity remains an explicit assumption.
+    """
     x = np.asarray(signal, dtype=float)
     if x.ndim != 1 or not len(x) or not np.isfinite(x).all():
         raise ValueError("A nonempty finite one-dimensional signal is required.")
@@ -33,11 +39,12 @@ def bandpass(signal, fs, band=EMG_BAND_HZ, order=4):
     return sps.sosfiltfilt(sos, x)
 
 
-def in_band_share(signal, fs, band=EMG_BAND_HZ):
+def rms_retention_ratio(signal, fs, band=EMG_BAND_HZ):
     """RMS of the band-passed signal divided by RMS of the mean-centered signal.
 
-    Close to 1 when nearly all non-DC energy lies in the EMG band; lower values
-    indicate drift, movement or other low/high-frequency content.
+    Measures RMS retention under this filter, including transition attenuation
+    and edge effects. Its square is the filtered/centered mean-square ratio;
+    neither quantity directly partitions energy into inside/outside the band.
     """
     x = np.asarray(signal, dtype=float)
     centered = x - x.mean()

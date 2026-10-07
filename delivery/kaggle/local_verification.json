@@ -1,7 +1,7 @@
 {
   "exact_notebook_executed_locally": true,
   "isolated_bundle": true,
-  "verification_python": "C:\\Users\\victo\\.venvs\\acl-semg\\Scripts\\python.exe",
+  "verification_python": "C:\\Users\\victo\\OneDrive\\Documents\\ACL Return-to-Sport Rehabilitation Analytics\\.venv\\Scripts\\python.exe",
   "kaggle_execution_verified": false,
   "summary": {
     "pairs": 44,
@@ -41,5 +41,119 @@
     "evaluations": 23100,
     "invariants_passed": true
   },
-  "bundle_sha256": "c6e35b779c0df469895f660f8cb155e0c8487516b810f1c80cf6778ff2566225"
+  "bandpass": {
+    "recordings": 88,
+    "pairs": 44,
+    "primary_pairs": 43,
+    "excluded_pairs": [
+      "healthy8/iso90"
+    ],
+    "sampling_rate_hz": 1925.9239204006642,
+    "clock_rate_min_hz": 1923.909090909091,
+    "clock_rate_max_hz": 1925.9266676011775,
+    "band_hz": [
+      20.0,
+      450.0
+    ],
+    "filter_design": {
+      "prototype_N": 4,
+      "bandpass_order_per_pass": 8,
+      "forward_backward_effective_order": 16,
+      "method": "butter SOS + sosfiltfilt"
+    },
+    "largest_primary_individual_changes": [
+      {
+        "pair": "healthy9/iso90",
+        "exported_ratio": 0.2080563152737475,
+        "filtered_ratio": 0.3331995195941138,
+        "relative_change_pct": 60.14871702198068,
+        "absolute_log_change": 0.4709326789327743
+      },
+      {
+        "pair": "healthy3/iso180",
+        "exported_ratio": 0.3340156019854788,
+        "filtered_ratio": 0.4173763415247595,
+        "relative_change_pct": 24.957139440122546,
+        "absolute_log_change": 0.22280060803686605
+      },
+      {
+        "pair": "healthy1/iso180",
+        "exported_ratio": 0.8193395209685915,
+        "filtered_ratio": 0.961670244964971,
+        "relative_change_pct": 17.371397369935426,
+        "absolute_log_change": 0.1601730577354021
+      },
+      {
+        "pair": "healthy9/iso180",
+        "exported_ratio": 0.2769135939799262,
+        "filtered_ratio": 0.30432327420055927,
+        "relative_change_pct": 9.898279035958058,
+        "absolute_log_change": 0.09438501593543623
+      },
+      {
+        "pair": "healthy6/iso180",
+        "exported_ratio": 1.0160622569767233,
+        "filtered_ratio": 1.0894214710534635,
+        "relative_change_pct": 7.219952672488739,
+        "absolute_log_change": 0.0697121710055765
+      }
+    ],
+    "specification_rows": 1848,
+    "primary_whole_rms_direction_changes": 1,
+    "primary_whole_rms_direction_change_pairs": [
+      "patient7/iso180"
+    ],
+    "primary_rms_crossings_exported": 10,
+    "primary_rms_crossings_bandpass": 8,
+    "median_whole_rms_ratio_primary": {
+      "healthy/iso90": {
+        "pairs": 9,
+        "exported": 0.8679030024394687,
+        "bandpass": 0.871282814476729
+      },
+      "healthy/iso180": {
+        "pairs": 10,
+        "exported": 0.9329101990062163,
+        "bandpass": 0.9808933168310533
+      },
+      "patient/iso90": {
+        "pairs": 12,
+        "exported": 0.778859660502784,
+        "bandpass": 0.7815543698757208
+      },
+      "patient/iso180": {
+        "pairs": 12,
+        "exported": 0.9334677283475841,
+        "bandpass": 0.9356169795579619
+      }
+    },
+    "median_rms_retention_ratio": 0.9857953373799412,
+    "low_rms_retention_ratio_records": [
+      {
+        "record": "healthy9/iso90/uninv",
+        "rms_retention_ratio": 0.6195177253059828
+      },
+      {
+        "record": "healthy9/iso180/uninv",
+        "rms_retention_ratio": 0.6999540361415861
+      },
+      {
+        "record": "healthy8/iso90/uninv",
+        "rms_retention_ratio": 0.7147244274778937
+      },
+      {
+        "record": "healthy3/iso180/uninv",
+        "rms_retention_ratio": 0.7887905420109588
+      }
+    ],
+    "healthy8_iso90": {
+      "exported_ratio": 25.21355884415131,
+      "bandpass_ratio": 64.5713466111564,
+      "uninv_duration_s": 1.9980020805803544,
+      "uninv_rms_retention_ratio": 0.7147244274778937,
+      "uninv_filtered_mean_square_ratio": 0.5108310072336029,
+      "next_shortest_duration_s": 10.489510923046861
+    }
+  },
+  "bundle_sha256": "868b7bfcbff6c4ad8dc78da85a0fb9eb38381253fb480c9880ddf167d184f162"
 }

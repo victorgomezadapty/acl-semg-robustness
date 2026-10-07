@@ -2,6 +2,16 @@
 
 Each entry records what changed and why.
 
+## 2026-10-07 — Correct filter interpretation and document decisions
+
+- Renamed `in_band_share` to `rms_retention_ratio` in code and regenerated outputs. The quantity compares RMS amplitudes; its square compares mean squares. The former claims of energy outside the band and diagnoses of movement content are superseded. Transition attenuation and edge effects prevent interpreting these as a direct spectral partition.
+- Clock validation now rejects backward timestamps while retaining duplicates. Average-rate agreement supports a conditional sensitivity analysis; it does not demonstrate rounding, exclude missing samples or prove uniform acquisition. The causal wording in the earlier entry below is superseded.
+- Documented Butterworth prototype N=4, SOS band-pass order 8 per direction, and effective order 16 after forward/backward filtering.
+- Replaced aggregate claims of filtering invariance with individual and group summaries. healthy9/iso90 changes 0.208 → 0.333 (+60.1%) despite small group median changes; clinical importance remains uncalibrated.
+- Added known-answer tests for backward/rounded clocks and the distinction between RMS and mean-square changes. Added filter output assertions to exact notebook verification.
+- Added a decision record and clean-checkout reproduction guide: reasons, alternatives, retrospective choices, hashes, expected outputs and troubleshooting. Notebook readers receive the same decision explanations and generated filter results.
+- Preserved source signals, the retrospective 43-pair primary subset, all 44 pairs as sensitivity, and simulated reference scenarios. Kaggle verification remains false until the matching version is run there.
+
 ## 2026-10-07 — Signal validity and band-pass sensitivity
 
 ### Sampling rate derived from the exported clocks

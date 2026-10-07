@@ -1,7 +1,9 @@
 """Execute the exact delivered notebook against only its unpacked input bundle."""
 
+import csv
 import hashlib
 import json
+import math
 import os
 import sys
 import zipfile
@@ -58,6 +60,23 @@ synthetic = json.loads(
 )
 assert centering["recordings"] == 88 and centering["specification_rows"] == 1848
 assert synthetic["evaluations"] == 23100 and synthetic["invariants_passed"]
+filtered = json.loads((output_root / "reports/bandpass_checks.json").read_text())
+assert filtered["recordings"] == 88 and filtered["pairs"] == 44
+assert filtered["primary_pairs"] == 43 and filtered["specification_rows"] == 1848
+assert filtered["primary_rms_crossings_exported"] == 10
+assert filtered["primary_rms_crossings_bandpass"] == 8
+assert filtered["filter_design"]["forward_backward_effective_order"] == 16
+with (output_root / "reports/bandpass_signal_audit.csv").open() as stream:
+    audit = list(csv.DictReader(stream))
+assert len(audit) == 88
+assert all(
+    math.isclose(
+        float(row["filtered_mean_square_ratio"]),
+        float(row["rms_retention_ratio"]) ** 2,
+        rel_tol=1e-12,
+    )
+    for row in audit
+)
 result = {
     "exact_notebook_executed_locally": True,
     "isolated_bundle": True,
@@ -66,6 +85,7 @@ result = {
     "summary": summary,
     "centering": centering,
     "synthetic": synthetic,
+    "bandpass": filtered,
     "bundle_sha256": hashlib.sha256(
         (delivery / "acl_semg_input.zip").read_bytes()
     ).hexdigest(),

@@ -26,6 +26,8 @@ No torque, IMU axes, acceleration, demographics, mass, graft type, postoperative
 
 ## Comprehensive derived fields
 
+`reports/bandpass_signal_audit.csv`: `clock_rate_hz` is an endpoint-derived average rate, not confirmed acquisition timing; `duration_s` is sample count divided by the analysis rate. `rms_retention_ratio` = RMS(filtered)/RMS(centered), replacing the former misleading `in_band_share` name. `filtered_mean_square_ratio` is its square. Neither directly measures the fraction of energy outside a frequency band. `primary_pair` in paired tables indicates eligibility under the retrospective short-record rule; it is not clinically validated signal quality. The filter and largest individual changes are recorded in `bandpass_checks.json`.
+
 `semg_extended_features.csv` adds positive peak, signed mean, standard deviation and crest factor to amplitude metrics. Amplitudes retain volts; crest factor is peak absolute amplitude divided by RMS. `semg_extended_pairs.csv` retains both limbs, inv/uninv ×100, log(inv/uninv), and min/max ×100 for RMS, MAV and peaks. Nonpositive denominators yield undefined ratios, never artificial zeros.
 
 `reports/exploratory_tests.csv` contains participant counts, mean differences, bootstrap intervals, test statistics, raw and family-adjusted p-values, standardized and rank effects. `exploratory_correlations.csv` contains Spearman associations. Block selection tables use sample counts and amplitude thresholds, not validated contraction timing. Definitions and test families are documented in [comprehensive methods](history/comprehensive_methods.md).

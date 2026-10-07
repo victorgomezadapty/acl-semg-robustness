@@ -11,7 +11,7 @@ from src.features.amplitude import center_signal, summarize
 from src.features.quality import (
     bandpass,
     excluded_pairs,
-    in_band_share,
+    rms_retention_ratio,
     sampling_rate_from_clock,
     short_records,
 )
@@ -98,7 +98,7 @@ def test_sampling_rate_ignores_duplicate_clock_stamps():
     rounded[-1] = exact[-1]
     assert np.mean(np.diff(rounded) == 0) > 0.9
     assert np.isclose(sampling_rate_from_clock(rounded), fs)
-    for invalid in ([0.0], [1.0, 1.0], [0.0, np.nan]):
+    for invalid in ([0.0], [1.0, 1.0], [0.0, np.nan], [0.0, 10.0, 1.0]):
         with pytest.raises(ValueError):
             sampling_rate_from_clock(invalid)
 
@@ -111,9 +111,11 @@ def test_bandpass_keeps_emg_band_and_removes_drift():
     core = slice(len(t) // 4, -len(t) // 4)  # ignore filter edge transients
     filtered = bandpass(emg_like + drift, fs)
     assert np.allclose(filtered[core], emg_like[core], atol=0.02)
-    assert np.isclose(in_band_share(emg_like, fs), 1, atol=0.01)
+    assert np.isclose(rms_retention_ratio(emg_like, fs), 1, atol=0.01)
     # Centered power: 0.5 (sine) + 4.5 (drift); only the sine is in band.
-    assert np.isclose(in_band_share(emg_like + drift, fs), np.sqrt(0.5 / 5), atol=0.01)
+    assert np.isclose(
+        rms_retention_ratio(emg_like + drift, fs), np.sqrt(0.5 / 5), atol=0.01
+    )
     with pytest.raises(ValueError):
         bandpass(emg_like, 800.0)
 
@@ -135,3 +137,21 @@ def test_short_record_rule_flags_pair_not_cohort():
     assert excluded_pairs(rows) == {("h1", "iso90")}
     rows[1]["samples"] = 12000  # 30% of median: kept
     assert excluded_pairs(rows) == set()
+
+
+def test_rms_retention_squared_is_mean_square_comparison():
+    fs = 1925.926
+    t = np.arange(int(4 * fs)) / fs
+    x = np.sin(2 * np.pi * 100 * t) + 3 * np.sin(2 * np.pi * t) + 5
+    ratio = rms_retention_ratio(x, fs)
+    expected = np.mean(bandpass(x, fs) ** 2) / np.mean((x - x.mean()) ** 2)
+    assert np.isclose(ratio**2, expected)
+    assert not np.isclose(1 - ratio, 1 - ratio**2)
+
+
+def test_rounded_clock_without_exact_endpoint_only_estimates_average():
+    exact = np.arange(4000) / 1925.926
+    rounded = np.round(exact * 2) / 2
+    rate = sampling_rate_from_clock(rounded)
+    assert np.isclose(rate, (len(rounded) - 1) / (rounded[-1] - rounded[0]))
+    assert not np.isclose(rate, 1925.926, rtol=0.001)

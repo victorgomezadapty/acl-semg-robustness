@@ -43,12 +43,13 @@ if len(candidates) != 1:
 source_root = candidates[0].parents[1]
 working = Path(os.environ.get('ACL_WORKING_ROOT', '/kaggle/working/acl_semg_analysis' if Path('/kaggle/working').exists() else str(Path.cwd()/'kaggle_local_run')))
 working.mkdir(parents=True, exist_ok=True)
-for folder in ('src','scripts','docs','data'):
+for folder in ('src','scripts','docs','data','tests'):
     shutil.copytree(source_root/folder, working/folder, dirs_exist_ok=True)
-for filename in ('README.md','requirements.txt'):
+for filename in ('README.md','requirements.txt','requirements-verification.txt','CHANGELOG.md','pytest.ini','ruff.toml'):
     shutil.copy2(source_root/filename, working/filename)
 for folder in ('reports/figures/profiles','data/processed'):
     (working/folder).mkdir(parents=True, exist_ok=True)
+os.environ.setdefault('MPLCONFIGDIR', str(working/'.mpl-cache'))
 import numpy, scipy, matplotlib
 print({'Python':sys.version, 'numpy':numpy.__version__, 'scipy':scipy.__version__, 'matplotlib':matplotlib.__version__})
 """),
@@ -56,7 +57,7 @@ print({'Python':sys.version, 'numpy':numpy.__version__, 'scipy':scipy.__version_
 
 How dependent are descriptive bilateral sEMG interpretations on amplitude-summary choices? All 22 participants and 88 records are retained. Samples and specifications are not independent people. No torque, IMU or clinical outcomes exist in this export. Labels iso90/iso180 and inv/uninv are retained without inventing control dominance.
 """),
-    code("""for script in ('check_amplitude.py','check_statistics.py','exploratory_amplitude.py','comprehensive_semg.py','evaluate_robustness.py','evaluate_centering.py','evaluate_bandpass.py','simulate_measurement_scenarios.py','build_analysis_report.py'):
+    code("""for script in ('inspect_dataset.py','check_amplitude.py','check_statistics.py','exploratory_amplitude.py','comprehensive_semg.py','evaluate_robustness.py','evaluate_centering.py','evaluate_bandpass.py','simulate_measurement_scenarios.py','build_analysis_report.py'):
     print('Running', script, flush=True)
     subprocess.run([sys.executable, str(working/'scripts'/script)], cwd=working, check=True)
 """),
@@ -110,6 +111,34 @@ for figure in ('centering_ratio_sensitivity.png','synthetic_scenario_matrix.png'
     display(Image(filename=str(working/'reports/figures'/figure)))
 """),
 )
+cells.insert(
+    3,
+    markdown("""## Why these choices were made
+
+The decision record describes choices, reasons, alternatives and checks. Choices remain retrospective. The short-record rule defines 43 primary pairs while all 44 remain available. Clock-derived average rates permit conditional filtering sensitivity, not proof of uniform acquisition. RMS retention is an amplitude comparison, not energy outside a band. Stable group medians can coexist with large individual changes.
+
+The archive includes docs/reproducibility.md with hashes, commands, expected outputs and troubleshooting. This notebook runs offline once its input is attached.
+"""),
+)
+cells.insert(
+    4,
+    code("""display(Markdown((working/'docs/decision_log.md').read_text(encoding='utf-8')))
+"""),
+)
+cells.insert(
+    -1,
+    markdown("""## Band-pass sensitivity: individuals and groups
+
+SciPy butter(N=4, bandpass, output='sos') followed by sosfiltfilt gives order 8 per pass and effective forward/backward order 16. RMS retention compares filtered and centered RMS; its square compares mean squares, including transition and edge effects. Review flags are not diagnoses. The report preserves all pairs alongside the primary subset.
+"""),
+)
+cells.insert(
+    -1,
+    code("""display(Markdown((working/'docs/history/bandpass_results.md').read_text(encoding='utf-8')))
+display(Image(filename=str(working/'reports/figures/bandpass_sensitivity.png')))
+print(json.loads((working/'reports/bandpass_checks.json').read_text()))
+"""),
+)
 notebook = {
     "cells": cells,
     "metadata": {
@@ -130,7 +159,7 @@ for i, cell in enumerate(cells):
     json.dumps(notebook, indent=2), encoding="utf-8"
 )
 files = []
-for folder in ("src", "scripts", "docs"):
+for folder in ("src", "scripts", "docs", "tests"):
     files.extend(
         p
         for p in (ROOT / folder).rglob("*")
@@ -143,6 +172,9 @@ files.extend(
         ROOT / "README.md",
         ROOT / "requirements.txt",
         ROOT / "requirements-verification.txt",
+        ROOT / "CHANGELOG.md",
+        ROOT / "pytest.ini",
+        ROOT / "ruff.toml",
         ROOT / "data/raw/ACL_data.zip",
         ROOT / "data/raw/README_acl.txt",
     ]

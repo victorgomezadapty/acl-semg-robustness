@@ -1,6 +1,7 @@
 """Offline analysis pipeline; delivery generation is an explicit optional step."""
 
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -16,6 +17,7 @@ def main():
     for folder in ("reports/figures/profiles", "data/processed"):
         (ROOT / folder).mkdir(parents=True, exist_ok=True)
     scripts = [
+        "inspect_dataset.py",
         "check_amplitude.py",
         "check_statistics.py",
         "review_signals.py",
@@ -34,7 +36,10 @@ def main():
     for script in scripts:
         print("Running", script, flush=True)
         subprocess.run(
-            [sys.executable, str(ROOT / "scripts" / script)], cwd=ROOT, check=True
+            [sys.executable, str(ROOT / "scripts" / script)],
+            cwd=ROOT,
+            check=True,
+            env={**os.environ, "MPLCONFIGDIR": str(ROOT / ".mpl-cache")},
         )
 
 

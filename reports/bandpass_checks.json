@@ -12,6 +12,49 @@
     20.0,
     450.0
   ],
+  "filter_design": {
+    "prototype_N": 4,
+    "bandpass_order_per_pass": 8,
+    "forward_backward_effective_order": 16,
+    "method": "butter SOS + sosfiltfilt"
+  },
+  "largest_primary_individual_changes": [
+    {
+      "pair": "healthy9/iso90",
+      "exported_ratio": 0.2080563152737475,
+      "filtered_ratio": 0.3331995195941138,
+      "relative_change_pct": 60.14871702198068,
+      "absolute_log_change": 0.4709326789327743
+    },
+    {
+      "pair": "healthy3/iso180",
+      "exported_ratio": 0.3340156019854788,
+      "filtered_ratio": 0.4173763415247595,
+      "relative_change_pct": 24.957139440122546,
+      "absolute_log_change": 0.22280060803686605
+    },
+    {
+      "pair": "healthy1/iso180",
+      "exported_ratio": 0.8193395209685915,
+      "filtered_ratio": 0.961670244964971,
+      "relative_change_pct": 17.371397369935426,
+      "absolute_log_change": 0.1601730577354021
+    },
+    {
+      "pair": "healthy9/iso180",
+      "exported_ratio": 0.2769135939799262,
+      "filtered_ratio": 0.30432327420055927,
+      "relative_change_pct": 9.898279035958058,
+      "absolute_log_change": 0.09438501593543623
+    },
+    {
+      "pair": "healthy6/iso180",
+      "exported_ratio": 1.0160622569767233,
+      "filtered_ratio": 1.0894214710534635,
+      "relative_change_pct": 7.219952672488739,
+      "absolute_log_change": 0.0697121710055765
+    }
+  ],
   "specification_rows": 1848,
   "primary_whole_rms_direction_changes": 1,
   "primary_whole_rms_direction_change_pairs": [
@@ -41,30 +84,31 @@
       "bandpass": 0.9356169795579619
     }
   },
-  "median_in_band_share": 0.9857953373799412,
-  "low_in_band_share_records": [
+  "median_rms_retention_ratio": 0.9857953373799412,
+  "low_rms_retention_ratio_records": [
     {
       "record": "healthy9/iso90/uninv",
-      "in_band_share": 0.6195177253059828
+      "rms_retention_ratio": 0.6195177253059828
     },
     {
       "record": "healthy9/iso180/uninv",
-      "in_band_share": 0.6999540361415861
+      "rms_retention_ratio": 0.6999540361415861
     },
     {
       "record": "healthy8/iso90/uninv",
-      "in_band_share": 0.7147244274778937
+      "rms_retention_ratio": 0.7147244274778937
     },
     {
       "record": "healthy3/iso180/uninv",
-      "in_band_share": 0.7887905420109588
+      "rms_retention_ratio": 0.7887905420109588
     }
   ],
   "healthy8_iso90": {
     "exported_ratio": 25.21355884415131,
     "bandpass_ratio": 64.5713466111564,
     "uninv_duration_s": 1.9980020805803544,
-    "uninv_in_band_share": 0.7147244274778937,
+    "uninv_rms_retention_ratio": 0.7147244274778937,
+    "uninv_filtered_mean_square_ratio": 0.5108310072336029,
     "next_shortest_duration_s": 10.489510923046861
   }
 }
