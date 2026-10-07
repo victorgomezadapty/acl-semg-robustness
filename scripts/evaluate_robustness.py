@@ -15,6 +15,7 @@ import numpy as np
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+from src.features.quality import excluded_pairs
 from src.features.specifications import specifications
 
 
@@ -70,6 +71,7 @@ def synthetic():
 def main():
     features = read("data/processed/semg_extended_features.csv")
     blocks = read("reports/block_selection_sensitivity.csv")
+    excluded = excluded_pairs(features)
     grouped = {}
     for r in features:
         key = (r["participant_id"], r["cohort"], r["condition"])
@@ -129,10 +131,14 @@ def main():
                 "log_ratio_range": float(valid.max() - valid.min()),
                 "direction_changes_across_specifications": crosses,
                 "max_absolute_log_change_from_whole_rms": max(abs(valid - reference)),
+                "primary_pair": (person, condition) not in excluded,
             }
         )
         matrix.append(logs)
-        labels.append(f"{person} / {condition}")
+        labels.append(
+            f"{person} / {condition}"
+            + (" (excluded: short record)" if (person, condition) in excluded else "")
+        )
     assert len(rows) == 924 and len(summaries) == 44
     write("reports/robustness_specifications.csv", rows)
     write("reports/robustness_participant_summary.csv", summaries)
@@ -150,6 +156,13 @@ def main():
     rms_changed = sum(
         np.any(np.array(v)[rms_columns] < 0) and np.any(np.array(v)[rms_columns] > 0)
         for v in matrix
+    )
+    primary = [r for r in summaries if r["primary_pair"]]
+    primary_changed = sum(r["direction_changes_across_specifications"] for r in primary)
+    primary_rms_changed = sum(
+        np.any(np.array(v)[rms_columns] < 0) and np.any(np.array(v)[rms_columns] > 0)
+        for v, r in zip(matrix, summaries)
+        if r["primary_pair"]
     )
     fig, ax = plt.subplots(figsize=(14, 13))
     im = ax.imshow(matrix, aspect="auto", cmap="RdBu_r", vmin=-1.5, vmax=1.5)
@@ -172,6 +185,8 @@ Evaluación retrospectiva · 2026-10-06. No es un descubrimiento clínico ni se 
 De 44 pares participante-condición, **{changed} ({changed / 44:.1%}) cambian de dirección** entre las 21 especificaciones de amplitud. Corresponden a {people} de 22 personas; cada persona puede aportar dos condiciones. Cambiar de dirección significa que unas especificaciones dan inv/uninv <1 y otras >1. Diferencias muy pequeñas también cuentan: no implica un cambio clínicamente relevante.
 
 Esto demuestra información adicional al RMS único: identifica interpretaciones dependientes de cómo se resume la señal. No demuestra cuál especificación es fisiológicamente correcta. Las 21 variantes no son réplicas independientes ni votos con probabilidad clínica. RMS y MAV son estimandos diferentes; se agrupan aquí para mostrar dependencia de la interpretación, no para estimar error de medición del mismo estimando.
+
+Clasificación de validez (2026-10-07): {44 - len(primary)} par(es) quedan fuera de la presentación principal porque un miembro dura menos del 25% de la mediana de su cohorte-condición; con los {len(primary)} pares válidos, {primary_changed} cambian de dirección (21 variantes) y {primary_rms_changed} con las 11 variantes RMS. Los 44 se conservan como sensibilidad.
 
 Si se restringe la comparación a las 11 variantes RMS (registro completo, límite de picos y nueve selecciones de bloques), {rms_changed} pares cambian de dirección. Los bloques seleccionados siguen midiendo subconjuntos diferentes del registro.
 
@@ -212,6 +227,10 @@ No hay validación independiente ni ejecución confirmada en Kaggle todavía. El
         "direction_changes": changed,
         "participants_with_direction_changes": people,
         "rms_only_direction_changes": int(rms_changed),
+        "excluded_pairs": sorted("/".join(k) for k in excluded),
+        "primary_pairs": len(primary),
+        "primary_direction_changes": int(primary_changed),
+        "primary_rms_only_direction_changes": int(primary_rms_changed),
         "synthetic_assertions_passed": True,
     }
     (ROOT / "reports/robustness_summary.json").write_text(

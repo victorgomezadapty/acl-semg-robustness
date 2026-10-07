@@ -5,5 +5,11 @@
   "direction_changes": 13,
   "participants_with_direction_changes": 11,
   "rms_only_direction_changes": 10,
+  "excluded_pairs": [
+    "healthy8/iso90"
+  ],
+  "primary_pairs": 43,
+  "primary_direction_changes": 13,
+  "primary_rms_only_direction_changes": 10,
   "synthetic_assertions_passed": true
 }

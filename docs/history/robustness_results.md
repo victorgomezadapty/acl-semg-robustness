@@ -8,6 +8,8 @@ De 44 pares participante-condición, **13 (29.5%) cambian de dirección** entre 
 
 Esto demuestra información adicional al RMS único: identifica interpretaciones dependientes de cómo se resume la señal. No demuestra cuál especificación es fisiológicamente correcta. Las 21 variantes no son réplicas independientes ni votos con probabilidad clínica. RMS y MAV son estimandos diferentes; se agrupan aquí para mostrar dependencia de la interpretación, no para estimar error de medición del mismo estimando.
 
+Clasificación de validez (2026-10-07): 1 par(es) quedan fuera de la presentación principal porque un miembro dura menos del 25% de la mediana de su cohorte-condición; con los 43 pares válidos, 13 cambian de dirección (21 variantes) y 10 con las 11 variantes RMS. Los 44 se conservan como sensibilidad.
+
 Si se restringe la comparación a las 11 variantes RMS (registro completo, límite de picos y nueve selecciones de bloques), 10 pares cambian de dirección. Los bloques seleccionados siguen midiendo subconjuntos diferentes del registro.
 
 Ejemplos auditables: healthy1/iso180 abarca aproximadamente 79,5–107,7% entre especificaciones; patient2/iso180, 83,6–106,0%. En cambio, patient6/iso90 abarca 99,6–108,7%: cruzar 100% por sí solo no indica una diferencia sustancial. Los valores no describen fuerza muscular recuperada.
