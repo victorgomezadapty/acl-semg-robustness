@@ -10,17 +10,19 @@ I investigated this problem using a public [dataset from Gutierrez, Hart and Bou
 
 I first checked the source files against their published digital fingerprints, inspected their structure and retained the original recordings. I removed only empty padding at the ends. This made the analysis traceable to the downloaded data rather than a manually edited spreadsheet.
 
-Next, I compared 21 explicit ways of summarizing amplitude. These included whole-record RMS, a measure that gives greater weight to larger values; average absolute amplitude; a version limiting unusually large values; and summaries of selected signal blocks. I also repeated the calculations after subtracting each recording's average value. Each participant remained a person in the analysis: thousands of samples and multiple processing choices were never treated as thousands of patients.
+Next, I compared 21 explicit ways of summarizing amplitude. These included whole-record RMS, a measure that gives greater weight to larger values; average absolute amplitude; a version limiting unusually large values; and summaries of selected signal blocks. I also repeated the calculations after subtracting each recording's average value, and again after a standard 20–450 Hz band-pass filter. The authors do not state the sampling rate, but every exported clock implies the same value, 1,925.9 Hz, which made filtering possible. Each participant remained a person in the analysis: thousands of samples and multiple processing choices were never treated as thousands of patients.
+
+One pair needed a decision. In `healthy8`/`iso90`, the `uninv` recording lasts only 2 seconds; the next shortest of all 88 lasts 10.5 seconds, and its partner lasts about 25. Comparing a whole task with a short fragment does not compare like with like, so I left this pair out of the main results (43 pairs) and kept it in every sensitivity analysis.
 
 Finally, I constructed synthetic signals whose starting ratio was known. I introduced pauses, spikes, noise and differences in sensor scaling, then repeated each scenario 100 times. This let me examine processing errors against a defined reference, something the patient recordings alone cannot provide.
 
-## Three figures that explain the findings
+## Four figures that explain the findings
 
 ### 1. One recording pair can support different directions
 
 ![Ratio sensitivity across processing choices](../reports/figures/robustness_matrix.png)
 
-Each row represents one participant in one condition; each column represents a summary method. The colors show whether the exported `inv` signal is larger or smaller than `uninv`. Across all 21 methods, 13 of 44 pairs switch sides of a ratio of one. Restricting the comparison to the 11 RMS methods leaves 10 such pairs.
+Each row represents one participant in one condition; each column represents a summary method. The colors show whether the exported `inv` signal is larger or smaller than `uninv`. Across all 21 methods, 13 of the 43 main pairs switch sides of a ratio of one. Restricting the comparison to the 11 RMS methods leaves 10 such pairs. The excluded `healthy8` pair does not switch, so including it changes neither count.
 
 The practical point is to inspect how much a conclusion changes across reasonable summaries. A small crossing of one is counted here, so these switches are descriptive changes, not evidence that a clinical decision should change.
 
@@ -28,11 +30,19 @@ The practical point is to inspect how much a conclusion changes across reasonabl
 
 ![Ratios before and after removing the record mean](../reports/figures/centering_ratio_sensitivity.png)
 
-The dashed line represents no change after centering. Most points stay close to it, and none of the 44 whole-RMS ratios reverses direction. One control recording, `healthy8` in `iso90`, remains extreme: its ratio increases from 25.21 to 46.51.
+The dashed line represents no change after centering. Most points stay close to it, and none of the 44 whole-RMS ratios reverses direction. The excluded `healthy8`/`iso90` pair remains extreme: its ratio increases from 25.21 to 46.51.
 
-This happens because subtracting the average reduces the already small value in the bottom of the ratio. The signal's average accounts for about 70.7% of its mean-square value. That observation identifies a recording worth inspecting; it does not tell us whether the person had little muscle activity or whether acquisition or processing produced the pattern.
+This happens because subtracting the average reduces the already small value in the bottom of the ratio: the average accounts for about 70.7% of that recording's mean-square value. Together with its 2-second length, this is why the pair was set aside. The files cannot tell us whether it reflects a truncated export, a failed trial or an acquisition problem.
 
-### 3. A correction can help in one scenario and distort another
+### 3. Filtering does not change the picture
+
+![Band-pass sensitivity and energy inside the EMG band](../reports/figures/bandpass_sensitivity.png)
+
+The left panel compares each pair's ratio before and after the 20–450 Hz filter. Points sit on the dashed line: only one of 43 pairs changes direction, from 0.995 to 1.000, a difference of no practical size. The typical ratio in each group moves by 0.05 at most.
+
+The right panel shows how much of each recording's signal lies inside the usual EMG frequency band. Most recordings are above 0.98. Four control recordings fall below 0.8, meaning a noticeable part of their signal is slow drift or movement rather than muscle activity. They stay in the analysis but are flagged, and a reviewer can see exactly which ones they are.
+
+### 4. A correction can help in one scenario and distort another
 
 ![Errors in controlled synthetic scenarios](../reports/figures/synthetic_scenario_matrix.png)
 
@@ -48,4 +58,4 @@ Sensitivity to processing is already established in the literature, including [B
 
 ## Limits and next use
 
-The files contain no force, movement-sensor or return-to-sport outcomes, and contraction boundaries and some acquisition details remain unresolved. The analysis is retrospective. Synthetic perturbations are illustrative scenarios, not estimates of their frequency in real patients. Small samples limit statistical inference, and inspected external datasets did not support direct validation. Consequently, this work supports a methods and reproducibility portfolio case; it cannot determine readiness to return to sport. The complete [methods](review_methods.md), [results](review_results.md) and [limitations](review_limitations.md) provide the technical audit trail for review.
+The files contain no force, movement-sensor or return-to-sport outcomes, and contraction boundaries and some acquisition details remain unresolved. The sampling rate is estimated from the clocks, and the device's own preprocessing is undocumented. The analysis is retrospective: centering, filtering, the quality flags and the `healthy8` exclusion were all decided after looking at the data, so each is shown next to the unmodified results. Synthetic perturbations are illustrative scenarios, not estimates of their frequency in real patients. Small samples limit statistical inference, and inspected external datasets did not support direct validation. Consequently, this work supports a methods and reproducibility portfolio case; it cannot determine readiness to return to sport. The complete [methods](review_methods.md), [results](review_results.md) and [limitations](review_limitations.md) provide the technical audit trail for review.
