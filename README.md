@@ -2,6 +2,8 @@
 
 **v0.2.0:** the independent ENABL3S methodological extension is ready. Start with the [portfolio case](docs/review_case.md), [cohort findings](docs/enabl3s_cohort_results_v1.md) and [delivery/reproduction guide](delivery/enabl3s/README.md). Code/prose and data-derived artifacts have [separate licenses](DATA_SOURCES.md).
 
+[Download release v0.2.0](https://github.com/victorgomezadapty/acl-semg-robustness/releases/tag/v0.2.0): source/results ZIP, locally executed notebook and verification files. [Publication record](delivery/enabl3s/PUBLICATION.md).
+
 Public Kaggle release: [executed notebook](https://www.kaggle.com/code/vctorandrsgmezlpez/acl-semg-robustness-and-synthetic-scenarios) and [input dataset](https://www.kaggle.com/datasets/vctorandrsgmezlpez/acl-semg-dryad-2022-reproducibility-bundle). The [publication record](delivery/kaggle/PUBLICATION.md) identifies the verified version, environment, component licenses and packaging decisions.
 
 How sensitive are descriptive bilateral vastus-lateralis sEMG ratios to amplitude summaries, record-mean removal, band-pass filtering and controlled measurement perturbations?
