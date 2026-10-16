@@ -1,0 +1,9 @@
+{
+  "verified_on": "2026-10-16",
+  "bundle_sha256": "6022b205f3ecc7debca4d0ac5f1b815fa31c349496e49213933ce4b693442c82",
+  "packaged_files_verified": 186,
+  "derived_review_notebook_executed_locally": true,
+  "original_signal_analysis_rerun_by_notebook": false,
+  "kaggle_extension_published": false,
+  "python": "3.14.6"
+}

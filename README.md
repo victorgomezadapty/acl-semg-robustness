@@ -1,5 +1,9 @@
 # sEMG limb symmetry after ACL reconstruction: a robustness analysis
 
+**v0.2.0:** the independent ENABL3S methodological extension is ready. Start with the [portfolio case](docs/review_case.md), [cohort findings](docs/enabl3s_cohort_results_v1.md) and [delivery/reproduction guide](delivery/enabl3s/README.md). Code/prose and data-derived artifacts have [separate licenses](DATA_SOURCES.md).
+
+Public Kaggle release: [executed notebook](https://www.kaggle.com/code/vctorandrsgmezlpez/acl-semg-robustness-and-synthetic-scenarios) and [input dataset](https://www.kaggle.com/datasets/vctorandrsgmezlpez/acl-semg-dryad-2022-reproducibility-bundle). The [publication record](delivery/kaggle/PUBLICATION.md) identifies the verified version, environment, component licenses and packaging decisions.
+
 How sensitive are descriptive bilateral vastus-lateralis sEMG ratios to amplitude summaries, record-mean removal, band-pass filtering and controlled measurement perturbations?
 
 The [Dryad dataset](https://doi.org/10.5061/dryad.66t1g1k4j) contains 22 participants and 88 recordings with exported time. This release has no torque, IMU or return-to-sport outcomes. Participants, not samples or repeated tasks, are the independent units.
@@ -14,6 +18,10 @@ The [Dryad dataset](https://doi.org/10.5061/dryad.66t1g1k4j) contains 22 partici
 - 23,100 synthetic evaluations show trade-offs: limiting spikes helps against a constructed artefact but also distorts a sustained desired event. Unknown unequal sensor gain persists across methods.
 
 Scientific priority, clinical validity and external validation are not established. Absolute cross-person voltage comparisons are supplemental acquisition-dependent descriptions.
+
+The next phase is an independent methodological transport study using ENABL3S. Its [analysis plan](docs/history/enabl3s_transport_protocol.md) distinguishes healthy walking data from ACL reconstruction and freezes pilot selection before signal inspection. A verified one-participant [pilot and interpretation](docs/enabl3s_pilot_review.md) are complete; the ten-participant study and clinical validation remain pending. This phase is separate from the published Kaggle release.
+
+The [remaining-cohort protocol v1](docs/enabl3s_cohort_protocol_v1.md) now fixes annotation exclusions, transition margins, minimum segment length and separate sensitivities for duration matching and shared temporal selection before analysis of the other nine participants.
 
 ![Band-pass sensitivity and RMS retention](reports/figures/bandpass_sensitivity.png)
 

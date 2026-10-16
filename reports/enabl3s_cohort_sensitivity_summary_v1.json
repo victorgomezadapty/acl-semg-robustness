@@ -1,0 +1,224 @@
+[
+  {
+    "guard": 250,
+    "family": "original_samples",
+    "selection": "independent",
+    "counts": {
+      "complete": 6,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "undefined_specifications": 0,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192",
+      "AB194"
+    ],
+    "median_paired_log_range_difference": 0.08489894565930997
+  },
+  {
+    "guard": 250,
+    "family": "original_samples",
+    "selection": "shared_intersection",
+    "counts": {
+      "complete": 5,
+      "partial": 1,
+      "unavailable": 0
+    },
+    "undefined_specifications": 1,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192"
+    ],
+    "median_paired_log_range_difference": 0.32799617421525207
+  },
+  {
+    "guard": 250,
+    "family": "time_matched",
+    "selection": "independent",
+    "counts": {
+      "complete": 6,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "undefined_specifications": 0,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192",
+      "AB194"
+    ],
+    "median_paired_log_range_difference": 0.005259179332006508
+  },
+  {
+    "guard": 250,
+    "family": "time_matched",
+    "selection": "shared_intersection",
+    "counts": {
+      "complete": 5,
+      "partial": 1,
+      "unavailable": 0
+    },
+    "undefined_specifications": 2,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192"
+    ],
+    "median_paired_log_range_difference": 0.09706956355452906
+  },
+  {
+    "guard": 500,
+    "family": "original_samples",
+    "selection": "independent",
+    "counts": {
+      "complete": 6,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "undefined_specifications": 0,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192",
+      "AB194"
+    ],
+    "median_paired_log_range_difference": 0.0
+  },
+  {
+    "guard": 500,
+    "family": "original_samples",
+    "selection": "shared_intersection",
+    "counts": {
+      "complete": 4,
+      "partial": 2,
+      "unavailable": 0
+    },
+    "undefined_specifications": 4,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190"
+    ],
+    "median_paired_log_range_difference": 0.14883787514927815
+  },
+  {
+    "guard": 500,
+    "family": "time_matched",
+    "selection": "independent",
+    "counts": {
+      "complete": 6,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "undefined_specifications": 0,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192",
+      "AB194"
+    ],
+    "median_paired_log_range_difference": 0.026915356562736206
+  },
+  {
+    "guard": 500,
+    "family": "time_matched",
+    "selection": "shared_intersection",
+    "counts": {
+      "complete": 5,
+      "partial": 1,
+      "unavailable": 0
+    },
+    "undefined_specifications": 3,
+    "matched_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192"
+    ],
+    "median_paired_log_range_difference": 0.02051573846330762
+  },
+  {
+    "guard": 1000,
+    "family": "original_samples",
+    "selection": "independent",
+    "counts": {
+      "complete": 3,
+      "partial": 0,
+      "unavailable": 3
+    },
+    "undefined_specifications": 0,
+    "matched_participants": [
+      "AB156",
+      "AB188",
+      "AB192"
+    ],
+    "median_paired_log_range_difference": -0.021786103889975816
+  },
+  {
+    "guard": 1000,
+    "family": "original_samples",
+    "selection": "shared_intersection",
+    "counts": {
+      "complete": 2,
+      "partial": 1,
+      "unavailable": 3
+    },
+    "undefined_specifications": 1,
+    "matched_participants": [
+      "AB156",
+      "AB188"
+    ],
+    "median_paired_log_range_difference": 0.418716554151539
+  },
+  {
+    "guard": 1000,
+    "family": "time_matched",
+    "selection": "independent",
+    "counts": {
+      "complete": 3,
+      "partial": 0,
+      "unavailable": 3
+    },
+    "undefined_specifications": 0,
+    "matched_participants": [
+      "AB156",
+      "AB188",
+      "AB192"
+    ],
+    "median_paired_log_range_difference": 0.006449706946617617
+  },
+  {
+    "guard": 1000,
+    "family": "time_matched",
+    "selection": "shared_intersection",
+    "counts": {
+      "complete": 3,
+      "partial": 0,
+      "unavailable": 3
+    },
+    "undefined_specifications": 0,
+    "matched_participants": [
+      "AB156",
+      "AB188",
+      "AB192"
+    ],
+    "median_paired_log_range_difference": 0.13333985157347694
+  }
+]

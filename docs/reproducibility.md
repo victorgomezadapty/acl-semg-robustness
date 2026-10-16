@@ -2,6 +2,8 @@
 
 Start with the [case study](review_case.md). The [decision record](decision_log.md) explains why each step exists. This guide reproduces a measurement sensitivity analysis, not a clinical prediction model.
 
+For the independent ENABL3S extension, follow the [delivery guide](../delivery/enabl3s/README.md): a lightweight notebook reviews verified derived results, while the separate raw-data route downloads approximately 5.9 GB and recalculates the nine-participant cohort. The two checks have distinct execution claims.
+
 ## 1. Obtain the exact source files
 
 Download `ACL_data.zip` and `README_acl.txt` from [Dryad DOI 10.5061/dryad.66t1g1k4j](https://doi.org/10.5061/dryad.66t1g1k4j), the pinned release published 2022-06-10. Put both in `data/raw/` without extracting or editing the ZIP. They are excluded from Git; a repository checkout alone therefore does not supply measurements. Original data are CC0 according to source metadata; project code/docs have their [own license](CODE_LICENSE.md).

@@ -2,6 +2,18 @@
 
 Each entry records what changed and why.
 
+## 2026-10-16 — v0.2.0 independent ENABL3S delivery
+
+- Added the preserved AB191 pilot and the protocol fixed before the other nine outcomes: six eligible, three excluded; two of six cross ratio 1 across eleven RMS specifications.
+- Added trial-level exclusions, block indices, duration-matching and shared-selection sensitivities, including eleven undefined specification rows and twelve unavailable analysis sets.
+- Integrated the independent extension into the portfolio, with source attribution, CC BY 4.0 for ENABL3S-derived artifacts and MIT for original project code/prose.
+- Added a portable source/results snapshot and a locally executable derived-results review notebook. This notebook does not rerun original signal analysis or establish Kaggle execution.
+- Fixed cohort downloading from a clean checkout: pinned metadata is now obtained automatically if absent. Preserved frozen-file bytes across Git line-ending conversions.
+
+## 2026-10-07 — Kaggle publication
+
+- Published and executed the first Dryad notebook and input dataset; [publication record](delivery/kaggle/PUBLICATION.md) includes URLs, execution evidence and component licenses. The ENABL3S update is a separate delivery.
+
 ## 2026-10-07 — Correct filter interpretation and document decisions
 
 - Renamed `in_band_share` to `rms_retention_ratio` in code and regenerated outputs. The quantity compares RMS amplitudes; its square compares mean squares. The former claims of energy outside the band and diagnoses of movement content are superseded. Transition attenuation and edge effects prevent interpreting these as a direct spectral partition.

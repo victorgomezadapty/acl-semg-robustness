@@ -31,7 +31,7 @@ An independent portfolio study, not a competition submission or clinical clearan
 Data: Gutierrez, Hart & Boukhechba (2022), [Dryad DOI](https://doi.org/10.5061/dryad.66t1g1k4j), CC0 per original metadata.
 The published secondary analysis uses related standard measures. Our additional contribution is a retrospective specification-sensitivity audit; novelty and clinical validity are not established.
 
-Attach the uploaded input bundle **acl_semg_input.zip** as a Kaggle Dataset. Kaggle normally expands the outer archive. The original inner ACL_data.zip must remain intact for hash verification. CPU is sufficient; no credentials or internet downloads are required by this notebook.
+Attach the uploaded input bundle **acl_semg_input.zip** as a Kaggle Dataset. Kaggle recursively expands ZIP files, so original archive bytes travel as ACL_data.zip.bin. This notebook restores the .zip filename before the existing SHA-256 checks. CPU is sufficient; no credentials or internet downloads are required by this notebook.
 """),
     code("""from pathlib import Path
 import shutil, sys, subprocess, json, os
@@ -45,6 +45,9 @@ working = Path(os.environ.get('ACL_WORKING_ROOT', '/kaggle/working/acl_semg_anal
 working.mkdir(parents=True, exist_ok=True)
 for folder in ('src','scripts','docs','data','tests'):
     shutil.copytree(source_root/folder, working/folder, dirs_exist_ok=True)
+transport_archive = working/'data/raw/ACL_data.zip.bin'
+if transport_archive.exists():
+    shutil.copyfile(transport_archive, working/'data/raw/ACL_data.zip')
 for filename in ('README.md','requirements.txt','requirements-verification.txt','CHANGELOG.md','pytest.ini','ruff.toml'):
     shutil.copy2(source_root/filename, working/filename)
 for folder in ('reports/figures/profiles','data/processed'):
@@ -181,13 +184,17 @@ files.extend(
 )
 with zipfile.ZipFile(OUT / "acl_semg_input.zip", "w", zipfile.ZIP_DEFLATED) as archive:
     for p in sorted(files):
-        archive.write(p, p.relative_to(ROOT).as_posix())
+        archive_name = p.relative_to(ROOT).as_posix()
+        if archive_name == "data/raw/ACL_data.zip":
+            archive_name += ".bin"
+        archive.write(p, archive_name)
 manifest = {
     "files": len(files),
     "bundle_sha256": hashlib.sha256(
         (OUT / "acl_semg_input.zip").read_bytes()
     ).hexdigest(),
     "source_doi": "10.5061/dryad.66t1g1k4j",
+    "source_archive_transport": "data/raw/ACL_data.zip.bin",
     "kaggle_execution_verified": False,
     "notebook_outputs": False,
 }
@@ -196,6 +203,7 @@ manifest = {
     """# Kaggle delivery
 
 1. Create a Dataset from acl_semg_input.zip. Title: ACL Reconstruction sEMG — Dryad 2022, Reproducibility Bundle.
+   The original ZIP is transported as ACL_data.zip.bin because Kaggle recursively expands ZIP files. The notebook copies identical bytes to ACL_data.zip before hash verification.
 2. Attribute Gutierrez, Hart & Boukhechba and link DOI 10.5061/dryad.66t1g1k4j. State that source data are CC0; this upload is a repackaged analysis bundle, not newly collected data. Dataset metadata ownership is not authorship of measurements.
 3. This bundle also includes project code and documentation under MIT (see CODE_LICENSE.md). Explain the separate licenses in the dataset description; do not relabel all bundled content CC0.
 4. Import acl_semg_robustness.ipynb into a Python Notebook and attach that Dataset.

@@ -1,0 +1,266 @@
+{
+  "protocol": "docs/history/enabl3s_transport_protocol.md",
+  "source_doi": "10.6084/m9.figshare.5362627.v2",
+  "source_sha256": "c7608026950e6f4c15f2279966377ab9cdf7409125486beeac8612af13330013",
+  "population": "Healthy adults; one pilot participant; no ACL clinical validation",
+  "participant": "AB191",
+  "signal_file": "AB191/Processed/AB191_Circuit_001_post.csv",
+  "signal_representation": "Source postprocessed export; no additional filtering",
+  "units": "Export units; no conversion to volts asserted",
+  "sample_rate_Hz_from_publication": 1000,
+  "segment_start_zero_based_inclusive": 8280,
+  "segment_stop_zero_based_exclusive": 11130,
+  "samples": 2850,
+  "duration_seconds_at_documented_rate": 2.85,
+  "earlier_ineligible_files": [],
+  "source_trial_notes": "Late transition from LW to SA",
+  "defined_RMS_specifications": 11,
+  "minimum_ratio": 1.2583384129256787,
+  "maximum_ratio": 7.312780308593137,
+  "log_ratio_range": 1.759831413835494,
+  "crosses_one": false,
+  "specifications": [
+    {
+      "method": "whole_RMS",
+      "right_export_units": 0.020864915333800815,
+      "left_export_units": 0.005345309298044256,
+      "right_left_ratio": 3.9034065515039282
+    },
+    {
+      "method": "cap995_RMS",
+      "right_export_units": 0.018951868788952726,
+      "left_export_units": 0.005200686312577716,
+      "right_left_ratio": 3.644109190573205
+    },
+    {
+      "method": "block256_f0.1_RMS",
+      "right_export_units": 0.030885942672128453,
+      "left_export_units": 0.0062491788648967395,
+      "right_left_ratio": 4.94240016806413
+    },
+    {
+      "method": "block256_f0.2_RMS",
+      "right_export_units": 0.030885942672128453,
+      "left_export_units": 0.006553487933665414,
+      "right_left_ratio": 4.712901432757154
+    },
+    {
+      "method": "block256_f0.3_RMS",
+      "right_export_units": 0.030885942672128453,
+      "left_export_units": 0.007319108668505664,
+      "right_left_ratio": 4.219904918891498
+    },
+    {
+      "method": "block512_f0.1_RMS",
+      "right_export_units": 0.027624311548156345,
+      "left_export_units": 0.006328962115061556,
+      "right_left_ratio": 4.364745916619801
+    },
+    {
+      "method": "block512_f0.2_RMS",
+      "right_export_units": 0.03345323810751491,
+      "left_export_units": 0.006328962115061556,
+      "right_left_ratio": 5.2857384037587245
+    },
+    {
+      "method": "block512_f0.3_RMS",
+      "right_export_units": 0.04628230952885412,
+      "left_export_units": 0.006328962115061556,
+      "right_left_ratio": 7.312780308593137
+    },
+    {
+      "method": "block1024_f0.1_RMS",
+      "right_export_units": 0.007226095071472889,
+      "left_export_units": 0.0057425689283950076,
+      "right_left_ratio": 1.2583384129256787
+    },
+    {
+      "method": "block1024_f0.2_RMS",
+      "right_export_units": 0.007226095071472889,
+      "left_export_units": 0.0057425689283950076,
+      "right_left_ratio": 1.2583384129256787
+    },
+    {
+      "method": "block1024_f0.3_RMS",
+      "right_export_units": 0.007226095071472889,
+      "left_export_units": 0.0057425689283950076,
+      "right_left_ratio": 1.2583384129256787
+    }
+  ],
+  "block_selection_audit": [
+    {
+      "block_samples": 256,
+      "threshold_factor": 0.1,
+      "complete_blocks": 11,
+      "discarded_tail_samples": 34,
+      "right_selected_indices": [
+        1,
+        5,
+        8,
+        9,
+        10
+      ],
+      "left_selected_indices": [
+        0,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "common_selected_indices": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "block_samples": 256,
+      "threshold_factor": 0.2,
+      "complete_blocks": 11,
+      "discarded_tail_samples": 34,
+      "right_selected_indices": [
+        1,
+        5,
+        8,
+        9,
+        10
+      ],
+      "left_selected_indices": [
+        0,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "common_selected_indices": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "block_samples": 256,
+      "threshold_factor": 0.3,
+      "complete_blocks": 11,
+      "discarded_tail_samples": 34,
+      "right_selected_indices": [
+        1,
+        5,
+        8,
+        9,
+        10
+      ],
+      "left_selected_indices": [
+        0,
+        3,
+        7,
+        8
+      ],
+      "common_selected_indices": [
+        8
+      ]
+    },
+    {
+      "block_samples": 512,
+      "threshold_factor": 0.1,
+      "complete_blocks": 5,
+      "discarded_tail_samples": 290,
+      "right_selected_indices": [
+        0,
+        2,
+        4
+      ],
+      "left_selected_indices": [
+        1,
+        3,
+        4
+      ],
+      "common_selected_indices": [
+        4
+      ]
+    },
+    {
+      "block_samples": 512,
+      "threshold_factor": 0.2,
+      "complete_blocks": 5,
+      "discarded_tail_samples": 290,
+      "right_selected_indices": [
+        2,
+        4
+      ],
+      "left_selected_indices": [
+        1,
+        3,
+        4
+      ],
+      "common_selected_indices": [
+        4
+      ]
+    },
+    {
+      "block_samples": 512,
+      "threshold_factor": 0.3,
+      "complete_blocks": 5,
+      "discarded_tail_samples": 290,
+      "right_selected_indices": [
+        4
+      ],
+      "left_selected_indices": [
+        1,
+        3,
+        4
+      ],
+      "common_selected_indices": [
+        4
+      ]
+    },
+    {
+      "block_samples": 1024,
+      "threshold_factor": 0.1,
+      "complete_blocks": 2,
+      "discarded_tail_samples": 802,
+      "right_selected_indices": [
+        1
+      ],
+      "left_selected_indices": [
+        1
+      ],
+      "common_selected_indices": [
+        1
+      ]
+    },
+    {
+      "block_samples": 1024,
+      "threshold_factor": 0.2,
+      "complete_blocks": 2,
+      "discarded_tail_samples": 802,
+      "right_selected_indices": [
+        1
+      ],
+      "left_selected_indices": [
+        1
+      ],
+      "common_selected_indices": [
+        1
+      ]
+    },
+    {
+      "block_samples": 1024,
+      "threshold_factor": 0.3,
+      "complete_blocks": 2,
+      "discarded_tail_samples": 802,
+      "right_selected_indices": [
+        1
+      ],
+      "left_selected_indices": [
+        1
+      ],
+      "common_selected_indices": [
+        1
+      ]
+    }
+  ]
+}

@@ -54,6 +54,16 @@ However, when a sustained increase is deliberately defined as desired signal, li
 
 ## What the work contributes
 
+### Independent methodological extension: ENABL3S
+
+After the Dryad audit, I applied a separate protocol to [ENABL3S v2](https://doi.org/10.6084/m9.figshare.5362627.v2), a healthy walking dataset by Hu, Rouse and Hargrove. An exploratory pilot informed rules fixed before examining the other nine participants: exclude annotated trials, trim 500 ms per edge, require 4,096 remaining samples, then select the first eligible segment in numeric trial order. Alternative margins, time-matched blocks and shared temporal selection were kept separate.
+
+Six of nine participants met these rules; three were excluded. All six had eleven calculable primary RMS specifications, and two crossed ratio 1 across methods. Shared temporal selections sometimes had no common blocks; a larger transition margin made three selected segments too short. Those unavailable and partial results remain visible rather than being replaced with another segment.
+
+![Independent ENABL3S audit](../reports/figures/enabl3s_cohort_primary_v1.png)
+
+This adds an independently sourced, inspectable check of methodological sensitivity. It does not validate ACL clinical decisions, establish scientific priority, or show that any one summary is physiologically correct. The eligible sample favors longer walking segments. See the [complete report](enabl3s_cohort_results_v1.md), [rules and rationale](enabl3s_cohort_protocol_v1.md) and [downloadable delivery guide](../delivery/enabl3s/README.md). Source attribution and separate licenses are in [DATA_SOURCES.md](../DATA_SOURCES.md).
+
 The project combines a verified data loader, an offline analysis pipeline, an individual signal viewer and reproducible scenario tests. It gives a reviewer the original amplitudes, the resulting ratios and the consequences of explicit processing choices. It also explains why an unusual number deserves investigation before interpretation.
 
 Sensitivity to processing is already established in the literature, including [Benoit et al. (2003)](https://doi.org/10.1016/S0966-6362(02)00194-7) and [Devaprakash et al. (2016)](https://doi.org/10.1016/j.jelekin.2016.10.001). My contribution is this dataset-specific, inspectable implementation and its controlled failure cases, rather than discovering the general principle.

@@ -1,0 +1,31 @@
+{
+  "reviewed_on": "2026-10-11",
+  "frozen_files_match": true,
+  "nine_unique_nonpilot_participants": true,
+  "nine_archives_verified": true,
+  "summary": {
+    "participants_expected": 9,
+    "eligible": 6,
+    "complete_primary": 6,
+    "excluded": 3,
+    "not_calculable": 0,
+    "complete_primary_participants": [
+      "AB156",
+      "AB186",
+      "AB188",
+      "AB190",
+      "AB192",
+      "AB194"
+    ],
+    "primary_log_range_median": 0.28353105760999203,
+    "primary_log_range_minimum": 0.10906515087258084,
+    "primary_log_range_maximum": 0.3884052252864041,
+    "primary_crossings_of_one": 2
+  },
+  "analysis_sets": 72,
+  "unavailable_analysis_sets": 12,
+  "partial_analysis_sets": 6,
+  "specification_rows": 660,
+  "undefined_specification_rows": 11,
+  "results_sha256": "73d541d1780f60af1831c1cdb9d7ebb96bd2fa958e6c250b00a314961d27cba3"
+}

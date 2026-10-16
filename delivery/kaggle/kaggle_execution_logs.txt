@@ -1,0 +1,989 @@
+Time
+	
+#
+	
+Log Message
+
+10.3s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+10.3s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+10.3s	3	0.00s - to python to disable frozen modules.
+
+10.3s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+11.1s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+11.1s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+11.1s	7	0.00s - to python to disable frozen modules.
+
+11.1s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+13.2s	9	{'Python': '3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]', 'numpy': '2.1.3', 'scipy': '1.16.3', 'matplotlib': '3.10.0'}
+
+13.2s	10	Running inspect_dataset.py
+
+15.7s	11	Verified both originals. Inventoried 16 archive files.
+
+15.7s	12	Review schema_inventory.json and source README before analytical use.
+
+15.7s	13	Verified both originals. Inventoried 16 archive files.
+
+15.7s	14	Review schema_inventory.json and source README before analytical use.
+
+15.7s	15	Running check_amplitude.py
+
+15.9s	16	Amplitude definitions, sign invariance, remainder and zero-denominator checks passed.
+
+16.0s	17	Amplitude definitions, sign invariance, remainder and zero-denominator checks passed.
+
+16.0s	18	Running check_statistics.py
+
+18.0s	19	Holm, paired direction, bootstrap difference and effect sign checks passed.
+
+18.2s	20	Holm, paired direction, bootstrap difference and effect sign checks passed.
+
+18.2s	21	Running exploratory_amplitude.py
+
+30.2s	22	{
+
+30.2s	23	  "recordings": 88,
+
+30.2s	24	  "paired_records": 44,
+
+30.2s	25	  "independent_participants": 22,
+
+30.2s	26	  "primary_exclusions": 0,
+
+30.2s	27	  "bootstrap_replicates": 5000,
+
+30.2s	28	  "seed": 20261004,
+
+30.2s	29	  "qa_flagged_recordings": 29,
+
+30.2s	30	  "group_summaries": [
+
+30.2s	31	    {
+
+30.2s	32	      "sensitivity": "all_records",
+
+30.2s	33	      "cohort": "healthy",
+
+30.2s	34	      "condition": "iso90",
+
+30.2s	35	      "metric": "rms_V",
+
+30.2s	36	      "participants": 10,
+
+30.2s	37	      "median_inv_uninv_ratio": 0.9368036682275477,
+
+30.2s	38	      "q25": 0.7670002970044026,
+
+30.2s	39	      "q75": 1.1774794344116595,
+
+30.2s	40	      "median_bootstrap95_low": 0.6336831274493027,
+
+30.2s	41	      "median_bootstrap95_high": 1.1788302106588375
+
+30.2s	42	    },
+
+30.2s	43	    {
+
+30.2s	44	      "sensitivity": "all_records",
+
+30.2s	45	      "cohort": "healthy",
+
+30.2s	46	      "condition": "iso90",
+
+30.2s	47	      "metric": "mav_V",
+
+30.2s	48	      "participants": 10,
+
+30.2s	49	      "median_inv_uninv_ratio": 1.0046651671752453,
+
+30.2s	50	      "q25": 0.82012537855076,
+
+30.2s	51	      "q75": 1.1766889939789975,
+
+30.2s	52	      "median_bootstrap95_low": 0.6618414891616651,
+
+30.2s	53	      "median_bootstrap95_high": 1.2017726627504737
+
+30.2s	54	    },
+
+30.2s	55	    {
+
+30.2s	56	      "sensitivity": "all_records",
+
+30.2s	57	      "cohort": "healthy",
+
+30.2s	58	      "condition": "iso180",
+
+30.2s	59	      "metric": "rms_V",
+
+30.2s	60	      "participants": 10,
+
+30.2s	61	      "median_inv_uninv_ratio": 0.9329101990062163,
+
+30.2s	62	      "q25": 0.5792802256663128,
+
+30.2s	63	      "q75": 1.0332018321023797,
+
+30.2s	64	      "median_bootstrap95_low": 0.49926046056555323,
+
+30.2s	65	      "median_bootstrap95_high": 1.1509131883954336
+
+30.2s	66	    },
+
+30.2s	67	    {
+
+30.2s	68	      "sensitivity": "all_records",
+
+30.2s	69	      "cohort": "healthy",
+
+30.2s	70	      "condition": "iso180",
+
+30.2s	71	      "metric": "mav_V",
+
+30.2s	72	      "participants": 10,
+
+30.2s	73	      "median_inv_uninv_ratio": 1.0134050735360443,
+
+30.2s	74	      "q25": 0.657538006635353,
+
+30.2s	75	      "q75": 1.1675922016365234,
+
+30.2s	76	      "median_bootstrap95_low": 0.5766080807570967,
+
+30.2s	77	      "median_bootstrap95_high": 1.2703594240615765
+
+30.2s	78	    },
+
+30.2s	79	    {
+
+30.2s	80	      "sensitivity": "all_records",
+
+30.2s	81	      "cohort": "patient",
+
+30.2s	82	      "condition": "iso90",
+
+30.2s	83	      "metric": "rms_V",
+
+30.2s	84	      "participants": 12,
+
+30.2s	85	      "median_inv_uninv_ratio": 0.778859660502784,
+
+30.2s	86	      "q25": 0.6487088630974218,
+
+30.2s	87	      "q75": 1.0801764812080223,
+
+30.2s	88	      "median_bootstrap95_low": 0.645850565636074,
+
+30.2s	89	      "median_bootstrap95_high": 1.086169415995835
+
+30.2s	90	    },
+
+30.2s	91	    {
+
+30.2s	92	      "sensitivity": "all_records",
+
+30.2s	93	      "cohort": "patient",
+
+30.2s	94	      "condition": "iso90",
+
+30.2s	95	      "metric": "mav_V",
+
+30.2s	96	      "participants": 12,
+
+30.2s	97	      "median_inv_uninv_ratio": 0.8410200180887779,
+
+30.2s	98	      "q25": 0.6674834591797858,
+
+30.2s	99	      "q75": 1.0442006193122844,
+
+30.2s	100	      "median_bootstrap95_low": 0.6548887635235497,
+
+30.2s	101	      "median_bootstrap95_high": 1.0497569173706285
+
+30.2s	102	    },
+
+30.2s	103	    {
+
+30.2s	104	      "sensitivity": "all_records",
+
+30.2s	105	      "cohort": "patient",
+
+30.2s	106	      "condition": "iso180",
+
+30.2s	107	      "metric": "rms_V",
+
+30.2s	108	      "participants": 12,
+
+30.2s	109	      "median_inv_uninv_ratio": 0.9334677283475841,
+
+30.2s	110	      "q25": 0.5727530923672917,
+
+30.2s	111	      "q75": 1.0371321985722752,
+
+30.2s	112	      "median_bootstrap95_low": 0.569735098097376,
+
+30.2s	113	      "median_bootstrap95_high": 1.064261339066752
+
+30.2s	114	    },
+
+30.2s	115	    {
+
+30.2s	116	      "sensitivity": "all_records",
+
+30.2s	117	      "cohort": "patient",
+
+30.2s	118	      "condition": "iso180",
+
+30.2s	119	      "metric": "mav_V",
+
+30.2s	120	      "participants": 12,
+
+30.2s	121	      "median_inv_uninv_ratio": 0.8913752512609182,
+
+30.2s	122	      "q25": 0.5333883352655758,
+
+30.2s	123	      "q75": 1.0308892900350146,
+
+30.2s	124	      "median_bootstrap95_low": 0.532118445214564,
+
+30.2s	125	      "median_bootstrap95_high": 1.0607205809852753
+
+30.2s	126	    },
+
+30.2s	127	    {
+
+30.2s	128	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	129	      "cohort": "healthy",
+
+30.2s	130	      "condition": "iso90",
+
+30.2s	131	      "metric": "rms_V",
+
+30.2s	132	      "participants": 9,
+
+30.2s	133	      "median_inv_uninv_ratio": 0.8679030024394687,
+
+30.2s	134	      "q25": 0.759735185584007,
+
+30.2s	135	      "q75": 1.173427105670125,
+
+30.2s	136	      "median_bootstrap95_low": 0.4785706236330158,
+
+30.2s	137	      "median_bootstrap95_high": 1.1788302106588375
+
+30.2s	138	    },
+
+30.2s	139	    {
+
+30.2s	140	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	141	      "cohort": "healthy",
+
+30.2s	142	      "condition": "iso90",
+
+30.2s	143	      "metric": "mav_V",
+
+30.2s	144	      "participants": 9,
+
+30.2s	145	      "median_inv_uninv_ratio": 0.9217346433912028,
+
+30.2s	146	      "q25": 0.8130796803756953,
+
+30.2s	147	      "q75": 1.101437987664569,
+
+30.2s	148	      "median_bootstrap95_low": 0.4824205052473764,
+
+30.2s	149	      "median_bootstrap95_high": 1.2017726627504737
+
+30.2s	150	    },
+
+30.2s	151	    {
+
+30.2s	152	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	153	      "cohort": "healthy",
+
+30.2s	154	      "condition": "iso180",
+
+30.2s	155	      "metric": "rms_V",
+
+30.2s	156	      "participants": 10,
+
+30.2s	157	      "median_inv_uninv_ratio": 0.9329101990062163,
+
+30.2s	158	      "q25": 0.5792802256663128,
+
+30.2s	159	      "q75": 1.0332018321023797,
+
+30.2s	160	      "median_bootstrap95_low": 0.49926046056555323,
+
+30.2s	161	      "median_bootstrap95_high": 1.1509131883954336
+
+30.2s	162	    },
+
+30.2s	163	    {
+
+30.2s	164	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	165	      "cohort": "healthy",
+
+30.2s	166	      "condition": "iso180",
+
+30.2s	167	      "metric": "mav_V",
+
+30.2s	168	      "participants": 10,
+
+30.2s	169	      "median_inv_uninv_ratio": 1.0134050735360443,
+
+30.2s	170	      "q25": 0.657538006635353,
+
+30.2s	171	      "q75": 1.1675922016365234,
+
+30.2s	172	      "median_bootstrap95_low": 0.5766080807570967,
+
+30.2s	173	      "median_bootstrap95_high": 1.2703594240615765
+
+30.2s	174	    },
+
+30.2s	175	    {
+
+30.2s	176	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	177	      "cohort": "patient",
+
+30.2s	178	      "condition": "iso90",
+
+30.2s	179	      "metric": "rms_V",
+
+30.2s	180	      "participants": 12,
+
+30.2s	181	      "median_inv_uninv_ratio": 0.778859660502784,
+
+30.2s	182	      "q25": 0.6487088630974218,
+
+30.2s	183	      "q75": 1.0801764812080223,
+
+30.2s	184	      "median_bootstrap95_low": 0.645850565636074,
+
+30.2s	185	      "median_bootstrap95_high": 1.086169415995835
+
+30.2s	186	    },
+
+30.2s	187	    {
+
+30.2s	188	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	189	      "cohort": "patient",
+
+30.2s	190	      "condition": "iso90",
+
+30.2s	191	      "metric": "mav_V",
+
+30.2s	192	      "participants": 12,
+
+30.2s	193	      "median_inv_uninv_ratio": 0.8410200180887779,
+
+30.2s	194	      "q25": 0.6674834591797858,
+
+30.2s	195	      "q75": 1.0442006193122844,
+
+30.2s	196	      "median_bootstrap95_low": 0.6548887635235497,
+
+30.2s	197	      "median_bootstrap95_high": 1.0497569173706285
+
+30.2s	198	    },
+
+30.2s	199	    {
+
+30.2s	200	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	201	      "cohort": "patient",
+
+30.2s	202	      "condition": "iso180",
+
+30.2s	203	      "metric": "rms_V",
+
+30.2s	204	      "participants": 12,
+
+30.2s	205	      "median_inv_uninv_ratio": 0.9334677283475841,
+
+30.2s	206	      "q25": 0.5727530923672917,
+
+30.2s	207	      "q75": 1.0371321985722752,
+
+30.2s	208	      "median_bootstrap95_low": 0.569735098097376,
+
+30.2s	209	      "median_bootstrap95_high": 1.064261339066752
+
+30.2s	210	    },
+
+30.2s	211	    {
+
+30.2s	212	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.2s	213	      "cohort": "patient",
+
+30.2s	214	      "condition": "iso180",
+
+30.2s	215	      "metric": "mav_V",
+
+30.2s	216	      "participants": 12,
+
+30.2s	217	      "median_inv_uninv_ratio": 0.8913752512609182,
+
+30.2s	218	      "q25": 0.5333883352655758,
+
+30.2s	219	      "q75": 1.0308892900350146,
+
+30.2s	220	      "median_bootstrap95_low": 0.532118445214564,
+
+30.2s	221	      "median_bootstrap95_high": 1.0607205809852753
+
+30.2s	222	    }
+
+30.2s	223	  ]
+
+30.2s	224	}
+
+30.4s	225	{
+
+30.4s	226	  "recordings": 88,
+
+30.4s	227	  "paired_records": 44,
+
+30.4s	228	  "independent_participants": 22,
+
+30.4s	229	  "primary_exclusions": 0,
+
+30.4s	230	  "bootstrap_replicates": 5000,
+
+30.4s	231	  "seed": 20261004,
+
+30.4s	232	  "qa_flagged_recordings": 29,
+
+30.4s	233	  "group_summaries": [
+
+30.4s	234	    {
+
+30.4s	235	      "sensitivity": "all_records",
+
+30.4s	236	      "cohort": "healthy",
+
+30.4s	237	      "condition": "iso90",
+
+30.4s	238	      "metric": "rms_V",
+
+30.4s	239	      "participants": 10,
+
+30.4s	240	      "median_inv_uninv_ratio": 0.9368036682275477,
+
+30.4s	241	      "q25": 0.7670002970044026,
+
+30.4s	242	      "q75": 1.1774794344116595,
+
+30.4s	243	      "median_bootstrap95_low": 0.6336831274493027,
+
+30.4s	244	      "median_bootstrap95_high": 1.1788302106588375
+
+30.4s	245	    },
+
+30.4s	246	    {
+
+30.4s	247	      "sensitivity": "all_records",
+
+30.4s	248	      "cohort": "healthy",
+
+30.4s	249	      "condition": "iso90",
+
+30.4s	250	      "metric": "mav_V",
+
+30.4s	251	      "participants": 10,
+
+30.4s	252	      "median_inv_uninv_ratio": 1.0046651671752453,
+
+30.4s	253	      "q25": 0.82012537855076,
+
+30.4s	254	      "q75": 1.1766889939789975,
+
+30.4s	255	      "median_bootstrap95_low": 0.6618414891616651,
+
+30.4s	256	      "median_bootstrap95_high": 1.2017726627504737
+
+30.4s	257	    },
+
+30.4s	258	    {
+
+30.4s	259	      "sensitivity": "all_records",
+
+30.4s	260	      "cohort": "healthy",
+
+30.4s	261	      "condition": "iso180",
+
+30.4s	262	      "metric": "rms_V",
+
+30.4s	263	      "participants": 10,
+
+30.4s	264	      "median_inv_uninv_ratio": 0.9329101990062163,
+
+30.4s	265	      "q25": 0.5792802256663128,
+
+30.4s	266	      "q75": 1.0332018321023797,
+
+30.4s	267	      "median_bootstrap95_low": 0.49926046056555323,
+
+30.4s	268	      "median_bootstrap95_high": 1.1509131883954336
+
+30.4s	269	    },
+
+30.4s	270	    {
+
+30.4s	271	      "sensitivity": "all_records",
+
+30.4s	272	      "cohort": "healthy",
+
+30.4s	273	      "condition": "iso180",
+
+30.4s	274	      "metric": "mav_V",
+
+30.4s	275	      "participants": 10,
+
+30.4s	276	      "median_inv_uninv_ratio": 1.0134050735360443,
+
+30.4s	277	      "q25": 0.657538006635353,
+
+30.4s	278	      "q75": 1.1675922016365234,
+
+30.4s	279	      "median_bootstrap95_low": 0.5766080807570967,
+
+30.4s	280	      "median_bootstrap95_high": 1.2703594240615765
+
+30.4s	281	    },
+
+30.4s	282	    {
+
+30.4s	283	      "sensitivity": "all_records",
+
+30.4s	284	      "cohort": "patient",
+
+30.4s	285	      "condition": "iso90",
+
+30.4s	286	      "metric": "rms_V",
+
+30.4s	287	      "participants": 12,
+
+30.4s	288	      "median_inv_uninv_ratio": 0.778859660502784,
+
+30.4s	289	      "q25": 0.6487088630974218,
+
+30.4s	290	      "q75": 1.0801764812080223,
+
+30.4s	291	      "median_bootstrap95_low": 0.645850565636074,
+
+30.4s	292	      "median_bootstrap95_high": 1.086169415995835
+
+30.4s	293	    },
+
+30.4s	294	    {
+
+30.4s	295	      "sensitivity": "all_records",
+
+30.4s	296	      "cohort": "patient",
+
+30.4s	297	      "condition": "iso90",
+
+30.4s	298	      "metric": "mav_V",
+
+30.4s	299	      "participants": 12,
+
+30.4s	300	      "median_inv_uninv_ratio": 0.8410200180887779,
+
+30.4s	301	      "q25": 0.6674834591797858,
+
+30.4s	302	      "q75": 1.0442006193122844,
+
+30.4s	303	      "median_bootstrap95_low": 0.6548887635235497,
+
+30.4s	304	      "median_bootstrap95_high": 1.0497569173706285
+
+30.4s	305	    },
+
+30.4s	306	    {
+
+30.4s	307	      "sensitivity": "all_records",
+
+30.4s	308	      "cohort": "patient",
+
+30.4s	309	      "condition": "iso180",
+
+30.4s	310	      "metric": "rms_V",
+
+30.4s	311	      "participants": 12,
+
+30.4s	312	      "median_inv_uninv_ratio": 0.9334677283475841,
+
+30.4s	313	      "q25": 0.5727530923672917,
+
+30.4s	314	      "q75": 1.0371321985722752,
+
+30.4s	315	      "median_bootstrap95_low": 0.569735098097376,
+
+30.4s	316	      "median_bootstrap95_high": 1.064261339066752
+
+30.4s	317	    },
+
+30.4s	318	    {
+
+30.4s	319	      "sensitivity": "all_records",
+
+30.4s	320	      "cohort": "patient",
+
+30.4s	321	      "condition": "iso180",
+
+30.4s	322	      "metric": "mav_V",
+
+30.4s	323	      "participants": 12,
+
+30.4s	324	      "median_inv_uninv_ratio": 0.8913752512609182,
+
+30.4s	325	      "q25": 0.5333883352655758,
+
+30.4s	326	      "q75": 1.0308892900350146,
+
+30.4s	327	      "median_bootstrap95_low": 0.532118445214564,
+
+30.4s	328	      "median_bootstrap95_high": 1.0607205809852753
+
+30.4s	329	    },
+
+30.4s	330	    {
+
+30.4s	331	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	332	      "cohort": "healthy",
+
+30.4s	333	      "condition": "iso90",
+
+30.4s	334	      "metric": "rms_V",
+
+30.4s	335	      "participants": 9,
+
+30.4s	336	      "median_inv_uninv_ratio": 0.8679030024394687,
+
+30.4s	337	      "q25": 0.759735185584007,
+
+30.4s	338	      "q75": 1.173427105670125,
+
+30.4s	339	      "median_bootstrap95_low": 0.4785706236330158,
+
+30.4s	340	      "median_bootstrap95_high": 1.1788302106588375
+
+30.4s	341	    },
+
+30.4s	342	    {
+
+30.4s	343	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	344	      "cohort": "healthy",
+
+30.4s	345	      "condition": "iso90",
+
+30.4s	346	      "metric": "mav_V",
+
+30.4s	347	      "participants": 9,
+
+30.4s	348	      "median_inv_uninv_ratio": 0.9217346433912028,
+
+30.4s	349	      "q25": 0.8130796803756953,
+
+30.4s	350	      "q75": 1.101437987664569,
+
+30.4s	351	      "median_bootstrap95_low": 0.4824205052473764,
+
+30.4s	352	      "median_bootstrap95_high": 1.2017726627504737
+
+30.4s	353	    },
+
+30.4s	354	    {
+
+30.4s	355	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	356	      "cohort": "healthy",
+
+30.4s	357	      "condition": "iso180",
+
+30.4s	358	      "metric": "rms_V",
+
+30.4s	359	      "participants": 10,
+
+30.4s	360	      "median_inv_uninv_ratio": 0.9329101990062163,
+
+30.4s	361	      "q25": 0.5792802256663128,
+
+30.4s	362	      "q75": 1.0332018321023797,
+
+30.4s	363	      "median_bootstrap95_low": 0.49926046056555323,
+
+30.4s	364	      "median_bootstrap95_high": 1.1509131883954336
+
+30.4s	365	    },
+
+30.4s	366	    {
+
+30.4s	367	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	368	      "cohort": "healthy",
+
+30.4s	369	      "condition": "iso180",
+
+30.4s	370	      "metric": "mav_V",
+
+30.4s	371	      "participants": 10,
+
+30.4s	372	      "median_inv_uninv_ratio": 1.0134050735360443,
+
+30.4s	373	      "q25": 0.657538006635353,
+
+30.4s	374	      "q75": 1.1675922016365234,
+
+30.4s	375	      "median_bootstrap95_low": 0.5766080807570967,
+
+30.4s	376	      "median_bootstrap95_high": 1.2703594240615765
+
+30.4s	377	    },
+
+30.4s	378	    {
+
+30.4s	379	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	380	      "cohort": "patient",
+
+30.4s	381	      "condition": "iso90",
+
+30.4s	382	      "metric": "rms_V",
+
+30.4s	383	      "participants": 12,
+
+30.4s	384	      "median_inv_uninv_ratio": 0.778859660502784,
+
+30.4s	385	      "q25": 0.6487088630974218,
+
+30.4s	386	      "q75": 1.0801764812080223,
+
+30.4s	387	      "median_bootstrap95_low": 0.645850565636074,
+
+30.4s	388	      "median_bootstrap95_high": 1.086169415995835
+
+30.4s	389	    },
+
+30.4s	390	    {
+
+30.4s	391	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	392	      "cohort": "patient",
+
+30.4s	393	      "condition": "iso90",
+
+30.4s	394	      "metric": "mav_V",
+
+30.4s	395	      "participants": 12,
+
+30.4s	396	      "median_inv_uninv_ratio": 0.8410200180887779,
+
+30.4s	397	      "q25": 0.6674834591797858,
+
+30.4s	398	      "q75": 1.0442006193122844,
+
+30.4s	399	      "median_bootstrap95_low": 0.6548887635235497,
+
+30.4s	400	      "median_bootstrap95_high": 1.0497569173706285
+
+30.4s	401	    },
+
+30.4s	402	    {
+
+30.4s	403	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	404	      "cohort": "patient",
+
+30.4s	405	      "condition": "iso180",
+
+30.4s	406	      "metric": "rms_V",
+
+30.4s	407	      "participants": 12,
+
+30.4s	408	      "median_inv_uninv_ratio": 0.9334677283475841,
+
+30.4s	409	      "q25": 0.5727530923672917,
+
+30.4s	410	      "q75": 1.0371321985722752,
+
+30.4s	411	      "median_bootstrap95_low": 0.569735098097376,
+
+30.4s	412	      "median_bootstrap95_high": 1.064261339066752
+
+30.4s	413	    },
+
+30.4s	414	    {
+
+30.4s	415	      "sensitivity": "without_rule_flagged_short_pairs",
+
+30.4s	416	      "cohort": "patient",
+
+30.4s	417	      "condition": "iso180",
+
+30.4s	418	      "metric": "mav_V",
+
+30.4s	419	      "participants": 12,
+
+30.4s	420	      "median_inv_uninv_ratio": 0.8913752512609182,
+
+30.4s	421	      "q25": 0.5333883352655758,
+
+30.4s	422	      "q75": 1.0308892900350146,
+
+30.4s	423	      "median_bootstrap95_low": 0.532118445214564,
+
+30.4s	424	      "median_bootstrap95_high": 1.0607205809852753
+
+30.4s	425	    }
+
+30.4s	426	  ]
+
+30.4s	427	}
+
+30.6s	428	Running comprehensive_semg.py
+
+69.9s	429	{
+
+69.9s	430	  "records": 88,
+
+69.9s	431	  "participant_pairs": 44,
+
+69.9s	432	  "participants": 22,
+
+69.9s	433	  "comparisons": 60,
+
+69.9s	434	  "correlations": 24,
+
+69.9s	435	  "profiles": 22,
+
+69.9s	436	  "selection_sensitivity_rows": 792,
+
+69.9s	437	  "seed": 20261004,
+
+69.9s	438	  "holm_t_below_005": 0,
+
+69.9s	439	  "holm_rank_below_005": 0,
+
+69.9s	440	  "exact_publication_replication": false
+
+69.9s	441	}
+
+70.1s	442	{
+
+70.1s	443	  "records": 88,
+
+70.1s	444	  "participant_pairs": 44,
+
+70.1s	445	  "participants": 22,
+
+70.1s	446	  "comparisons": 60,
+
+70.1s	447	  "correlations": 24,
+
+70.1s	448	  "profiles": 22,
+
+70.1s	449	  "selection_sensitivity_rows": 792,
+
+70.1s	450	  "seed": 20261004,
+
+70.1s	451	  "holm_t_below_005": 0,
+
+70.1s	452	  "holm_rank_below_005": 0,
+
+70.1s	453	  "exact_publication_replication": false
+
+70.1s	454	}
+
+70.3s	455	Running evaluate_robustness.py
+
+72.7s	456	{"pairs": 44, "specifications_per_pair": 21, "rows": 924, "direction_changes": 13, "participants_with_direction_changes": 11, "rms_only_direction_changes": 10, "excluded_pairs": ["healthy8/iso90"], "primary_pairs": 43, "primary_direction_changes": 13, "primary_rms_only_direction_changes": 10, "synthetic_assertions_passed": true}
+
+72.9s	457	{"pairs": 44, "specifications_per_pair": 21, "rows": 924, "direction_changes": 13, "participants_with_direction_changes": 11, "rms_only_direction_changes": 10, "excluded_pairs": ["healthy8/iso90"], "primary_pairs": 43, "primary_direction_changes": 13, "primary_rms_only_direction_changes": 10, "synthetic_assertions_passed": true}
+
+73.0s	458	Running evaluate_centering.py
+
+79.9s	459	{"recordings": 88, "pairs": 44, "specification_rows": 1848, "whole_rms_direction_changes": 0, "healthy8_iso90": {"participant_id": "healthy8", "cohort": "healthy", "condition": "iso90", "exported_whole_rms_ratio": 25.213558844151308, "exported_rms_log_range": 0.4499417759287905, "centered_whole_rms_ratio": 46.50928946893217, "centered_rms_log_range": 0.44254554745980057, "whole_rms_direction_changes": false}}
+
+80.1s	460	{"recordings": 88, "pairs": 44, "specification_rows": 1848, "whole_rms_direction_changes": 0, "healthy8_iso90": {"participant_id": "healthy8", "cohort": "healthy", "condition": "iso90", "exported_whole_rms_ratio": 25.213558844151308, "exported_rms_log_range": 0.4499417759287905, "centered_whole_rms_ratio": 46.50928946893217, "centered_rms_log_range": 0.44254554745980057, "whole_rms_direction_changes": false}}
+
+80.1s	461	Running evaluate_bandpass.py
+
+88.8s	462	{"recordings": 88, "pairs": 44, "primary_pairs": 43, "excluded_pairs": ["healthy8/iso90"], "sampling_rate_hz": 1925.9239204006642, "clock_rate_min_hz": 1923.909090909091, "clock_rate_max_hz": 1925.9266676011775, "band_hz": [20.0, 450.0], "filter_design": {"prototype_N": 4, "bandpass_order_per_pass": 8, "forward_backward_effective_order": 16, "method": "butter SOS + sosfiltfilt"}, "largest_primary_individual_changes": [{"pair": "healthy9/iso90", "exported_ratio": 0.2080563152737475, "filtered_ratio": 0.33319951959411354, "relative_change_pct": 60.148717021980545, "absolute_log_change": 0.47093267893277346}, {"pair": "healthy3/iso180", "exported_ratio": 0.33401560198547886, "filtered_ratio": 0.4173763415247589, "relative_change_pct": 24.957139440122344, "absolute_log_change": 0.22280060803686447}, {"pair": "healthy1/iso180", "exported_ratio": 0.8193395209685915, "filtered_ratio": 0.9616702449649761, "relative_change_pct": 17.371397369936048, "absolute_log_change": 0.1601730577354074}, {"pair": "healthy9/iso180", "exported_ratio": 0.27691359397992615, "filtered_ratio": 0.30432327420055927, "relative_change_pct": 9.89827903595808, "absolute_log_change": 0.09438501593543644}, {"pair": "healthy6/iso180", "exported_ratio": 1.0160622569767233, "filtered_ratio": 1.0894214710534635, "relative_change_pct": 7.219952672488739, "absolute_log_change": 0.0697121710055765}], "specification_rows": 1848, "primary_whole_rms_direction_changes": 1, "primary_whole_rms_direction_change_pairs": ["patient7/iso180"], "primary_rms_crossings_exported": 10, "primary_rms_crossings_bandpass": 8, "median_whole_rms_ratio_primary": {"healthy/iso90": {"pairs": 9, "exported": 0.8679030024394687, "bandpass": 0.871282814476729}, "healthy/iso180": {"pairs": 10, "exported": 0.9329101990062163, "bandpass": 0.980893316831056}, "patient/iso90": {"pairs": 12, "exported": 0.778859660502784, "bandpass": 0.7815543698757208}, "patient/iso180": {"pairs": 12, "exported": 0.9334677283475841, "bandpass": 0.9356169795579621}}, "median_rms_retention_ratio": 0.9857953373799414, "low_rms_retention_ratio_records": [{"record": "healthy9/iso90/uninv", "rms_retention_ratio": 0.6195177253059835}, {"record": "healthy9/iso180/uninv", "rms_retention_ratio": 0.6999540361415862}, {"record": "healthy8/iso90/uninv", "rms_retention_ratio": 0.7147244274778934}, {"record": "healthy3/iso180/uninv", "rms_retention_ratio": 0.7887905420109599}], "healthy8_iso90": {"exported_ratio": 25.213558844151308, "bandpass_ratio": 64.57134661115647, "uninv_duration_s": 1.9980020805803544, "uninv_rms_retention_ratio": 0.7147244274778934, "uninv_filtered_mean_square_ratio": 0.5108310072336025, "next_shortest_duration_s": 10.489510923046861}}
+
+89.0s	463	{"recordings": 88, "pairs": 44, "primary_pairs": 43, "excluded_pairs": ["healthy8/iso90"], "sampling_rate_hz": 1925.9239204006642, "clock_rate_min_hz": 1923.909090909091, "clock_rate_max_hz": 1925.9266676011775, "band_hz": [20.0, 450.0], "filter_design": {"prototype_N": 4, "bandpass_order_per_pass": 8, "forward_backward_effective_order": 16, "method": "butter SOS + sosfiltfilt"}, "largest_primary_individual_changes": [{"pair": "healthy9/iso90", "exported_ratio": 0.2080563152737475, "filtered_ratio": 0.33319951959411354, "relative_change_pct": 60.148717021980545, "absolute_log_change": 0.47093267893277346}, {"pair": "healthy3/iso180", "exported_ratio": 0.33401560198547886, "filtered_ratio": 0.4173763415247589, "relative_change_pct": 24.957139440122344, "absolute_log_change": 0.22280060803686447}, {"pair": "healthy1/iso180", "exported_ratio": 0.8193395209685915, "filtered_ratio": 0.9616702449649761, "relative_change_pct": 17.371397369936048, "absolute_log_change": 0.1601730577354074}, {"pair": "healthy9/iso180", "exported_ratio": 0.27691359397992615, "filtered_ratio": 0.30432327420055927, "relative_change_pct": 9.89827903595808, "absolute_log_change": 0.09438501593543644}, {"pair": "healthy6/iso180", "exported_ratio": 1.0160622569767233, "filtered_ratio": 1.0894214710534635, "relative_change_pct": 7.219952672488739, "absolute_log_change": 0.0697121710055765}], "specification_rows": 1848, "primary_whole_rms_direction_changes": 1, "primary_whole_rms_direction_change_pairs": ["patient7/iso180"], "primary_rms_crossings_exported": 10, "primary_rms_crossings_bandpass": 8, "median_whole_rms_ratio_primary": {"healthy/iso90": {"pairs": 9, "exported": 0.8679030024394687, "bandpass": 0.871282814476729}, "healthy/iso180": {"pairs": 10, "exported": 0.9329101990062163, "bandpass": 0.980893316831056}, "patient/iso90": {"pairs": 12, "exported": 0.778859660502784, "bandpass": 0.7815543698757208}, "patient/iso180": {"pairs": 12, "exported": 0.9334677283475841, "bandpass": 0.9356169795579621}}, "median_rms_retention_ratio": 0.9857953373799414, "low_rms_retention_ratio_records": [{"record": "healthy9/iso90/uninv", "rms_retention_ratio": 0.6195177253059835}, {"record": "healthy9/iso180/uninv", "rms_retention_ratio": 0.6999540361415862}, {"record": "healthy8/iso90/uninv", "rms_retention_ratio": 0.7147244274778934}, {"record": "healthy3/iso180/uninv", "rms_retention_ratio": 0.7887905420109599}], "healthy8_iso90": {"exported_ratio": 25.213558844151308, "bandpass_ratio": 64.57134661115647, "uninv_duration_s": 1.9980020805803544, "uninv_rms_retention_ratio": 0.7147244274778934, "uninv_filtered_mean_square_ratio": 0.5108310072336025, "next_shortest_duration_s": 10.489510923046861}}
+
+89.2s	464	Running simulate_measurement_scenarios.py
+
+98.0s	465	{"scenarios": 11, "replicates_per_scenario": 100, "methods": 21, "evaluations": 23100, "invariants_passed": true}
+
+98.2s	466	{"scenarios": 11, "replicates_per_scenario": 100, "methods": 21, "evaluations": 23100, "invariants_passed": true}
+
+98.2s	467	Running build_analysis_report.py
+
+101.1s	468	Report, local 22-participant index, sensitivity plots and sample-size planning generated.
+
+101.4s	469	Report, local 22-participant index, sensitivity plots and sample-size planning generated.
+
+101.6s	470	{'pairs': 44, 'specifications_per_pair': 21, 'rows': 924, 'direction_changes': 13, 'participants_with_direction_changes': 11, 'rms_only_direction_changes': 10, 'excluded_pairs': ['healthy8/iso90'], 'primary_pairs': 43, 'primary_direction_changes': 13, 'primary_rms_only_direction_changes': 10, 'synthetic_assertions_passed': True}
+
+101.7s	471	/kaggle/working/acl_semg_analysis/reports/robustness_participant_summary.csv
+
+101.7s	472	/kaggle/working/acl_semg_analysis/reports/robustness_specifications.csv
+
+101.7s	473	/kaggle/working/acl_semg_analysis/reports/robustness_summary.json
+
+101.7s	474	/kaggle/working/acl_semg_analysis/reports/robustness_synthetic_checks.csv
+
+101.8s	475	{'recordings': 88, 'pairs': 44, 'primary_pairs': 43, 'excluded_pairs': ['healthy8/iso90'], 'sampling_rate_hz': 1925.9239204006642, 'clock_rate_min_hz': 1923.909090909091, 'clock_rate_max_hz': 1925.9266676011775, 'band_hz': [20.0, 450.0], 'filter_design': {'prototype_N': 4, 'bandpass_order_per_pass': 8, 'forward_backward_effective_order': 16, 'method': 'butter SOS + sosfiltfilt'}, 'largest_primary_individual_changes': [{'pair': 'healthy9/iso90', 'exported_ratio': 0.2080563152737475, 'filtered_ratio': 0.33319951959411354, 'relative_change_pct': 60.148717021980545, 'absolute_log_change': 0.47093267893277346}, {'pair': 'healthy3/iso180', 'exported_ratio': 0.33401560198547886, 'filtered_ratio': 0.4173763415247589, 'relative_change_pct': 24.957139440122344, 'absolute_log_change': 0.22280060803686447}, {'pair': 'healthy1/iso180', 'exported_ratio': 0.8193395209685915, 'filtered_ratio': 0.9616702449649761, 'relative_change_pct': 17.371397369936048, 'absolute_log_change': 0.1601730577354074}, {'pair': 'healthy9/iso180', 'exported_ratio': 0.27691359397992615, 'filtered_ratio': 0.30432327420055927, 'relative_change_pct': 9.89827903595808, 'absolute_log_change': 0.09438501593543644}, {'pair': 'healthy6/iso180', 'exported_ratio': 1.0160622569767233, 'filtered_ratio': 1.0894214710534635, 'relative_change_pct': 7.219952672488739, 'absolute_log_change': 0.0697121710055765}], 'specification_rows': 1848, 'primary_whole_rms_direction_changes': 1, 'primary_whole_rms_direction_change_pairs': ['patient7/iso180'], 'primary_rms_crossings_exported': 10, 'primary_rms_crossings_bandpass': 8, 'median_whole_rms_ratio_primary': {'healthy/iso90': {'pairs': 9, 'exported': 0.8679030024394687, 'bandpass': 0.871282814476729}, 'healthy/iso180': {'pairs': 10, 'exported': 0.9329101990062163, 'bandpass': 0.980893316831056}, 'patient/iso90': {'pairs': 12, 'exported': 0.778859660502784, 'bandpass': 0.7815543698757208}, 'patient/iso180': {'pairs': 12, 'exported': 0.9334677283475841, 'bandpass': 0.9356169795579621}}, 'median_rms_retention_ratio': 0.9857953373799414, 'low_rms_retention_ratio_records': [{'record': 'healthy9/iso90/uninv', 'rms_retention_ratio': 0.6195177253059835}, {'record': 'healthy9/iso180/uninv', 'rms_retention_ratio': 0.6999540361415862}, {'record': 'healthy8/iso90/uninv', 'rms_retention_ratio': 0.7147244274778934}, {'record': 'healthy3/iso180/uninv', 'rms_retention_ratio': 0.7887905420109599}], 'healthy8_iso90': {'exported_ratio': 25.213558844151308, 'bandpass_ratio': 64.57134661115647, 'uninv_duration_s': 1.9980020805803544, 'uninv_rms_retention_ratio': 0.7147244274778934, 'uninv_filtered_mean_square_ratio': 0.5108310072336025, 'next_shortest_duration_s': 10.489510923046861}}
+
+105.3s	476	/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+
+105.3s	477	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+
+105.5s	478	/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+
+105.5s	479	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+
+106.5s	480	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+
+106.6s	481	[NbConvertApp] Writing 1975181 bytes to __notebook__.ipynb
+
+109.8s	482	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+
+110.6s	483	[NbConvertApp] Support files will be in __results___files/
+
+110.6s	484	[NbConvertApp] Making directory __results___files
+
+110.6s	485	[NbConvertApp] Making directory __results___files
+
+110.6s	486	[NbConvertApp] Making directory __results___files
+
+110.6s	487	[NbConvertApp] Making directory __results___files
+
+110.6s	488	[NbConvertApp] Making directory __results___files
+
+110.6s	489	[NbConvertApp] Making directory __results___files
+
+110.6s	490	[NbConvertApp] Making directory __results___files
+
+110.6s	491	[NbConvertApp] Making directory __results___files
+
+110.6s	492	[NbConvertApp] Writing 344458 bytes to __results__.html

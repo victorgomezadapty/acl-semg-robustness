@@ -1,0 +1,10 @@
+{
+  "defined_on": "2026-10-08",
+  "status": "Rules fixed after AB191 pilot, before remaining cohort outcomes; not public preregistration",
+  "files": {
+    "docs/enabl3s_cohort_protocol_v1.md": "474f6da2d48701d6ae2064d227c239a4d982cd3270a3dfb2f1e39eb4664ce943",
+    "config/enabl3s_cohort_v1.json": "8e21d60818de276ec6459eb387a9602042ffb90020aafe70b96eb3287eefe4dc",
+    "src/features/enabl3s_windows.py": "ff6fa41ebfef0c65427001090eb33de17743af57a3071d75b30e3f16ece0353e",
+    "tests/test_enabl3s_cohort_windows.py": "0e7ef65633f78aa78f6248586b7c8acc2000c76ae08e2bde862860f35f728d6d"
+  }
+}

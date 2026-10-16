@@ -32,6 +32,12 @@ Se verificaron dos ZIP, 12.232.902 bytes en total, por tamaño y MD5; SHA-256 gu
 
 ## Qué se consiguió y qué falta
 
+### Actualización 2026-10-07 — vía metodológica en población sana
+
+Se verificaron metadatos de [ENABL3S v2](https://doi.org/10.6084/m9.figshare.5362627.v2), con diez paquetes de participantes y licencia CC BY 4.0. La descripción del depósito se descargó y coincide con el MD5 publicado. Identifica canales RVL/LVL y etiquetas de tarea, pero denomina «Raw Data» a señales postprocesadas. Antes de abrir sus valores se definió un [protocolo separado](enabl3s_transport_protocol.md) y un piloto AB191 elegido por tamaño del archivo. La descarga e inspección del piloto no equivalen a haber validado la cohorte. Esta población sana permite explorar transporte del método, no validar resultados clínicos de reconstrucción de LCA.
+
+El piloto se completó: ZIP verificado, 11 especificaciones RMS ejecutadas y auditoría posterior de selección temporal. [Resultados, decisiones y límites](../enabl3s_pilot_review.md). No se modificó la conclusión de inelegibilidad de las fuentes ACLR anteriores.
+
 Se completaron adquisición legal de fuentes públicas, verificación de integridad, lectura de métodos e inspección de archivos de dos depósitos. **No se completó una validación externa positiva:** ninguna de esas exportaciones cumple los requisitos del protocolo actual. Este resultado negativo forma parte del estudio y evita una conclusión de validación falsa.
 
 Para continuar se necesitan registros bilaterales originales del VL, unidades, parámetros de adquisición y procesamiento, límites de tarea/ciclos, escalas de normalización y relación explícita de IDs/visita. Repeticiones o sesiones independientes son necesarias si se quiere estimar fiabilidad test-retest. Datos funcionales no son una referencia automática de calidad de señal.

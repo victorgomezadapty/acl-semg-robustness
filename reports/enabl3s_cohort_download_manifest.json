@@ -1,0 +1,82 @@
+{
+  "source_doi": "10.6084/m9.figshare.5362627.v2",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "participants": [
+    {
+      "participant": "AB156",
+      "file": "AB156.zip",
+      "bytes": 627584940,
+      "md5": "8b4351a6d789a92aed4adf71925d97da",
+      "sha256": "7293201df1f3b4d470333f49dce0cad00a3d908fc51ac399633b6644fa7c1990",
+      "verified": true
+    },
+    {
+      "participant": "AB185",
+      "file": "AB185.zip",
+      "bytes": 663933758,
+      "md5": "981d04724a59c3879b47f08f898049ee",
+      "sha256": "1314dafa962405dcce16a4a0fef0313867245a7d526824f1dd8a72ac8fc15873",
+      "verified": true
+    },
+    {
+      "participant": "AB186",
+      "file": "AB186.zip",
+      "bytes": 581701120,
+      "md5": "240fc4e13e992665d51335d5c3815f20",
+      "sha256": "0f6201616db3c8acf813e3fb24c7bfbc6248bf7fd3eb7cf2d495a8f3900ef89f",
+      "verified": true
+    },
+    {
+      "participant": "AB188",
+      "file": "AB188.zip",
+      "bytes": 626104211,
+      "md5": "fa92ea12607b76debfc671f77d8ef8ba",
+      "sha256": "35f060a56bc19beb434d56ef76bdca18b1e3a254ac5e3f8acddb42485b49229f",
+      "verified": true
+    },
+    {
+      "participant": "AB189",
+      "file": "AB189.zip",
+      "bytes": 666352647,
+      "md5": "87af3c950bf28e3c16a324b8f8686d9f",
+      "sha256": "1388d60b2612df0844278752716637abcf03c9db1bfbdbed2f2685bb348b970e",
+      "verified": true
+    },
+    {
+      "participant": "AB190",
+      "file": "AB190.zip",
+      "bytes": 638515700,
+      "md5": "ed82cb898b60fc1940bee516b1d57518",
+      "sha256": "bb30c653725b0d887ac3811bb77e6143abedb9bef011cd843f8bb16109a795d1",
+      "verified": true
+    },
+    {
+      "participant": "AB192",
+      "file": "AB192.zip",
+      "bytes": 657831088,
+      "md5": "3df2c38f537655c8e911f65a64b23e21",
+      "sha256": "18a0b7e0e049e8115b86d69da7cbbf9f9abf427451b224c0afc5fc7c7751033e",
+      "verified": true
+    },
+    {
+      "participant": "AB193",
+      "file": "AB193.zip",
+      "bytes": 696374840,
+      "md5": "0ba62d0449a2eeb41a2c5dcd8f66ea7a",
+      "sha256": "28d5654b730d060ce388275db8f8eb77fcac1539e2f04c32128af495778c2971",
+      "verified": true
+    },
+    {
+      "participant": "AB194",
+      "file": "AB194.zip",
+      "bytes": 755034635,
+      "md5": "0cc795f176d3198945ae548582e767f2",
+      "sha256": "95fda3879f2bd7aabc68e3b488f959b65e140ce9e080d3cacf270d47924c4bc0",
+      "verified": true
+    }
+  ]
+}

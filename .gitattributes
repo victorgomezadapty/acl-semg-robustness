@@ -1,0 +1,6 @@
+# Preserve exact protocol and provenance bytes across Windows/Linux checkouts.
+docs/enabl3s_cohort_protocol_v1.md -text
+config/enabl3s_cohort_v1.json -text
+src/features/enabl3s_windows.py -text
+tests/test_enabl3s_cohort_windows.py -text
+reports/enabl3s*.json -text

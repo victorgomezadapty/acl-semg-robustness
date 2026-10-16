@@ -1,0 +1,411 @@
+{
+  "source_doi": "10.6084/m9.figshare.5362627.v2",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "pilot_selection": "Smallest participant ZIP by metadata, before signal inspection",
+  "participant": "AB191",
+  "bytes": 577792654,
+  "md5_verified": true,
+  "sha256": "c7608026950e6f4c15f2279966377ab9cdf7409125486beeac8612af13330013",
+  "members": [
+    {
+      "name": "AB191/AB191_Metadata.csv",
+      "bytes": 20005
+    },
+    {
+      "name": "AB191/Features/",
+      "bytes": 0
+    },
+    {
+      "name": "AB191/Features/AB191_Features_180.csv",
+      "bytes": 10588179
+    },
+    {
+      "name": "AB191/Features/AB191_Features_210.csv",
+      "bytes": 10589605
+    },
+    {
+      "name": "AB191/Features/AB191_Features_240.csv",
+      "bytes": 10593982
+    },
+    {
+      "name": "AB191/Features/AB191_Features_270.csv",
+      "bytes": 10599917
+    },
+    {
+      "name": "AB191/Features/AB191_Features_300.csv",
+      "bytes": 10603145
+    },
+    {
+      "name": "AB191/MVC/",
+      "bytes": 0
+    },
+    {
+      "name": "AB191/MVC/AB191_MVC.csv",
+      "bytes": 4014318
+    },
+    {
+      "name": "AB191/Processed/",
+      "bytes": 0
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_001_post.csv",
+      "bytes": 28893830
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_002_post.csv",
+      "bytes": 16147455
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_003_post.csv",
+      "bytes": 20288229
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_004_post.csv",
+      "bytes": 23305321
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_006_post.csv",
+      "bytes": 20679435
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_007_post.csv",
+      "bytes": 20835505
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_008_post.csv",
+      "bytes": 19186924
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_009_post.csv",
+      "bytes": 19263125
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_011_post.csv",
+      "bytes": 19838559
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_012_post.csv",
+      "bytes": 17610219
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_013_post.csv",
+      "bytes": 20558592
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_014_post.csv",
+      "bytes": 19529955
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_015_post.csv",
+      "bytes": 18889799
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_016_post.csv",
+      "bytes": 20629027
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_017_post.csv",
+      "bytes": 20344078
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_018_post.csv",
+      "bytes": 19066205
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_019_post.csv",
+      "bytes": 18817356
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_021_post.csv",
+      "bytes": 20265657
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_022_post.csv",
+      "bytes": 20512202
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_023_post.csv",
+      "bytes": 20697464
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_024_post.csv",
+      "bytes": 18351315
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_026_post.csv",
+      "bytes": 19164943
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_027_post.csv",
+      "bytes": 19224546
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_028_post.csv",
+      "bytes": 19416860
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_029_post.csv",
+      "bytes": 18601674
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_030_post.csv",
+      "bytes": 20273001
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_031_post.csv",
+      "bytes": 18767780
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_032_post.csv",
+      "bytes": 18206913
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_033_post.csv",
+      "bytes": 17681540
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_034_post.csv",
+      "bytes": 17598659
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_036_post.csv",
+      "bytes": 17204590
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_037_post.csv",
+      "bytes": 18844637
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_038_post.csv",
+      "bytes": 17938956
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_039_post.csv",
+      "bytes": 19081324
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_041_post.csv",
+      "bytes": 20041236
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_042_post.csv",
+      "bytes": 18825834
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_043_post.csv",
+      "bytes": 19066381
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_044_post.csv",
+      "bytes": 17276826
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_045_post.csv",
+      "bytes": 19015014
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_046_post.csv",
+      "bytes": 17882930
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_047_post.csv",
+      "bytes": 18290004
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_048_post.csv",
+      "bytes": 17529113
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_049_post.csv",
+      "bytes": 17369390
+    },
+    {
+      "name": "AB191/Processed/AB191_Circuit_050_post.csv",
+      "bytes": 17691605
+    },
+    {
+      "name": "AB191/Raw/",
+      "bytes": 0
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_001_raw.csv",
+      "bytes": 26794598
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_002_raw.csv",
+      "bytes": 14942648
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_003_raw.csv",
+      "bytes": 18769083
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_004_raw.csv",
+      "bytes": 21571940
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_006_raw.csv",
+      "bytes": 19125483
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_007_raw.csv",
+      "bytes": 19283345
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_008_raw.csv",
+      "bytes": 17751209
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_009_raw.csv",
+      "bytes": 17818819
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_011_raw.csv",
+      "bytes": 18344186
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_012_raw.csv",
+      "bytes": 16273640
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_013_raw.csv",
+      "bytes": 19005037
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_014_raw.csv",
+      "bytes": 18051050
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_015_raw.csv",
+      "bytes": 17457492
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_016_raw.csv",
+      "bytes": 19066984
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_017_raw.csv",
+      "bytes": 18813100
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_018_raw.csv",
+      "bytes": 17626321
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_019_raw.csv",
+      "bytes": 17398908
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_021_raw.csv",
+      "bytes": 18746074
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_022_raw.csv",
+      "bytes": 18980293
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_023_raw.csv",
+      "bytes": 19152844
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_024_raw.csv",
+      "bytes": 16963089
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_026_raw.csv",
+      "bytes": 17715419
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_027_raw.csv",
+      "bytes": 17768353
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_028_raw.csv",
+      "bytes": 17941652
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_029_raw.csv",
+      "bytes": 17189061
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_030_raw.csv",
+      "bytes": 18750938
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_031_raw.csv",
+      "bytes": 17369539
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_032_raw.csv",
+      "bytes": 16848320
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_033_raw.csv",
+      "bytes": 16352158
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_034_raw.csv",
+      "bytes": 16267378
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_036_raw.csv",
+      "bytes": 15898209
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_037_raw.csv",
+      "bytes": 17417871
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_038_raw.csv",
+      "bytes": 16586728
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_039_raw.csv",
+      "bytes": 17649469
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_041_raw.csv",
+      "bytes": 18538699
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_042_raw.csv",
+      "bytes": 17414118
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_043_raw.csv",
+      "bytes": 17631739
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_044_raw.csv",
+      "bytes": 15973803
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_045_raw.csv",
+      "bytes": 17581872
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_046_raw.csv",
+      "bytes": 16541681
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_047_raw.csv",
+      "bytes": 16908970
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_048_raw.csv",
+      "bytes": 16202739
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_049_raw.csv",
+      "bytes": 16049763
+    },
+    {
+      "name": "AB191/Raw/AB191_Circuit_050_raw.csv",
+      "bytes": 16357123
+    }
+  ]
+}

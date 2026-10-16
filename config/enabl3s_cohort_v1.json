@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "defined_on": "2026-10-08",
+  "pilot_participant_excluded_from_main": "AB191",
+  "source_version": 2,
+  "sample_rate_Hz": 1000,
+  "mode": 1,
+  "primary_guard_samples_per_edge": 500,
+  "sensitivity_guards_samples_per_edge": [250, 1000],
+  "minimum_samples_after_guard": 4096,
+  "primary_block_samples": [256, 512, 1024],
+  "time_matched_block_samples": [133, 266, 532],
+  "dryad_reference_rate_Hz": 1925.9239,
+  "threshold_factors": [0.1, 0.2, 0.3],
+  "cap_quantile": 0.995,
+  "primary_selection": "independent_per_limb",
+  "secondary_selection": "intersection_of_limb_selections",
+  "trial_notes_policy": "only_explicitly_present_empty_notes_in_primary",
+  "segment_policy": "first_eligible_run_in_numeric_trial_order",
+  "sensitivity_segment_policy": "same_untrimmed_run_as_primary_no_reselection"
+}
