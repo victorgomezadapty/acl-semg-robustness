@@ -52,7 +52,7 @@ Start with the [plain-language case study and four figures](docs/review_case.md)
 3. [Limitations](docs/review_limitations.md)
 4. [Portfolio case](docs/review_case.md)
 
-[Baseline signal viewer](reports/analysis_index.html) Â· [Kaggle instructions](delivery/kaggle/UPLOAD_INSTRUCTIONS.md). Older documents preserve detailed audit history; the four entry points define the current presentation.
+[Baseline signal viewer](reports/analysis_index.html) · [Kaggle instructions](delivery/kaggle/UPLOAD_INSTRUCTIONS.md). Older documents preserve detailed audit history; the four entry points define the current presentation.
 
 `src/` holds reusable analysis; `scripts/` regenerates outputs; `tests/` verifies behaviour; `reports/` contains figures/tables. `docs/history/` preserves earlier reports and source reviews, including their original languages. `data/raw/` preserves measurements. Versioned delivery verification and archived local downloads are generated/local material excluded from Git.
 
