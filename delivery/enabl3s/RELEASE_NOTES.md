@@ -1,4 +1,4 @@
-# v0.2.0 — Independent ENABL3S methods audit
+# v0.2.0: Independent ENABL3S methods audit
 
 The original Dryad analysis showed that bilateral sEMG ratios depend on amplitude-summary choices. This release checks that dependence in a separate healthy walking dataset using rules fixed after one exploratory pilot.
 

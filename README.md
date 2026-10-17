@@ -13,8 +13,8 @@ The [Dryad dataset](https://doi.org/10.5061/dryad.66t1g1k4j) contains 22 partici
 ## Findings
 
 - 13 of the 43 primary participant-condition pairs cross ratio 1 across 21 specifications; 10 cross across the 11 RMS specifications. Small crossings are not clinically important by definition.
-- The sampling rate is not stated by the authors but the 88 exported clocks imply average rates of 1,923.9â€“1,925.9 Hz (median 1,925.9 Hz). A 20â€“450 Hz band-pass changes the whole-RMS direction in 1 of 43 pairs (patient7/iso180, 0.99 â†’ 1.00) and moves no cohort median ratio by more than 0.05: group medians are relatively stable, while individual ratios can change substantially.
-- RMS retention flags four control records with RMS retention of 0.62â€“0.79 under this filter; it does not diagnose movement artefacts or measure an outside-band energy fraction. These flags trigger review rather than removal; all records remain in sensitivity outputs.
+- The sampling rate is not stated by the authors but the 88 exported clocks imply average rates of 1,923.9-1,925.9 Hz (median 1,925.9 Hz). A 20-450 Hz band-pass changes the whole-RMS direction in 1 of 43 pairs (patient7/iso180, 0.99 → 1.00) and moves no cohort median ratio by more than 0.05: group medians are relatively stable, while individual ratios can change substantially.
+- RMS retention flags four control records with RMS retention of 0.62-0.79 under this filter; it does not diagnose movement artefacts or measure an outside-band energy fraction. These flags trigger review rather than removal; all records remain in sensitivity outputs.
 - healthy8/iso90 is excluded from the primary presentation: its uninv record lasts 2.0 s (next shortest: 10.5 s), so its whole-record ratio (25.2 exported, 64.6 band-passed) does not compare like with like. It remains in all sensitivity analyses.
 - Mean-centering reverses none of the 44 whole-RMS directions.
 - 23,100 synthetic evaluations show trade-offs: limiting spikes helps against a constructed artefact but also distorts a sustained desired event. Unknown unequal sensor gain persists across methods.

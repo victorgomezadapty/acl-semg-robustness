@@ -13,13 +13,13 @@ De nueve participantes: 6 tienen un tramo elegible, 3 están excluidos y 0 prese
 | Participante | Estado principal | Duración útil (s) | Rango de log-razones | Cruce de 1 |
 |---|---|---:|---:|---|
 | AB156 | complete | 5.810 | 0.3884 | True |
-| AB185 | excluded: no_eligible_trial_or_segment | — | — | — |
+| AB185 | excluded: no_eligible_trial_or_segment | n/a | n/a | n/a |
 | AB186 | complete | 4.910 | 0.1091 | True |
 | AB188 | complete | 5.360 | 0.2691 | False |
-| AB189 | excluded: no_eligible_trial_or_segment | — | — | — |
+| AB189 | excluded: no_eligible_trial_or_segment | n/a | n/a | n/a |
 | AB190 | complete | 4.190 | 0.1787 | False |
 | AB192 | complete | 5.480 | 0.2980 | False |
-| AB193 | excluded: no_eligible_trial_or_segment | — | — | — |
+| AB193 | excluded: no_eligible_trial_or_segment | n/a | n/a | n/a |
 | AB194 | complete | 4.100 | 0.3255 | False |
 
 Entre los 6 principales completos, mediana del rango de log-razones: **0.2835** (mínimo 0.1091; máximo 0.3884). 2 cruzan 1 entre métodos. El rango no es un intervalo de confianza y un cruce pequeño no establece importancia clínica.

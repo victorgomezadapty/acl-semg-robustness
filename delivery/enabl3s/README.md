@@ -1,4 +1,4 @@
-# ENABL3S methodological extension — v0.2.0
+# ENABL3S methodological extension: v0.2.0
 
 Prepared 2026-10-16. This delivery completes the independent methodological extension of the existing Dryad project. Start with the [portfolio case](../../docs/review_case.md), then the [full cohort report](../../docs/enabl3s_cohort_results_v1.md).
 

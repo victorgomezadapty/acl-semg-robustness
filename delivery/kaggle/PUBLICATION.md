@@ -1,4 +1,4 @@
-# Kaggle publication — 2026-10-07
+# Kaggle publication: 2026-10-07
 
 Both artifacts are public in the owner's Kaggle account:
 
