@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACL sEMG Robustness · Same signal, different answer</title>
+<meta name="title-en" content="ACL sEMG Robustness · Same signal, different answer">
+<meta name="title-es" content="ACL sEMG Robustness · Misma señal, otra respuesta">
+<meta name="description" content="How much does a bilateral sEMG limb-symmetry ratio after ACL reconstruction depend on the way the signal is summarized? A reproducible audit of 22 participants, 21 methods and 23,100 synthetic evaluations.">
+<meta property="og:title" content="ACL sEMG Robustness · Same signal, different answer">
+<meta property="og:description" content="13 of 43 participant-condition pairs flip sides of ratio 1 when only the amplitude summary changes. A reproducible audit with an independent extension.">
+<meta property="og:image" content="https://acl-semg-robustness.vercel.app/assets/og.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b111c">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/lang.js"></script>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html" data-keep-lang><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#161e2e" stroke="#33415e"/><path d="M4 17h5l2-7 3 13 3-16 3 14 2-4h6" fill="none" stroke="#e8603c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>ACL sEMG Robustness</a>
+    <nav class="nav" aria-label="Site">
+      <a href="index.html" data-keep-lang aria-current="page"><span data-l="en">Case study</span><span data-l="es">Caso de estudio</span></a>
+      <a href="#explore"><span data-l="en">Explore</span><span data-l="es">Explorar</span></a>
+      <a href="evidence.html" data-keep-lang><span data-l="en">Evidence</span><span data-l="es">Evidencia</span></a>
+      <a href="https://github.com/victorgomezadapty/acl-semg-robustness">GitHub</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker"><span class="dot"></span><span data-l="en">Biomechanics × reproducible data science</span><span data-l="es">Biomecánica × ciencia de datos reproducible</span></div>
+      <h1 data-l="en">Same signal.<br><span class="y">Different method.</span><br><span class="c">Different answer.</span></h1>
+      <h1 data-l="es">Misma señal.<br><span class="y">Otro método.</span><br><span class="c">Otra respuesta.</span></h1>
+      <p class="lead" data-l="en">After ACL reconstruction, clinicians compare the two legs. With surface EMG that comparison becomes a ratio, and that ratio depends on decisions made before anyone interprets it. This audit measures how much.</p>
+      <p class="lead" data-l="es">Tras una reconstrucción del LCA se comparan las dos piernas. Con EMG de superficie esa comparación se vuelve un cociente, y ese cociente depende de decisiones tomadas antes de interpretarlo. Esta auditoría mide cuánto.</p>
+      <div class="cta">
+        <a class="btn primary" href="#explore"><span data-l="en">Explore the results</span><span data-l="es">Explorar los resultados</span> ↓</a>
+        <a class="btn" href="evidence.html" data-keep-lang><span data-l="en">Read the scientific discussion</span><span data-l="es">Leer la discusión científica</span></a>
+      </div>
+    </div>
+    <figure class="scope" style="margin:0" aria-label="Animated illustration">
+      <div class="scope-top"><span class="live">● LIVE</span><span>ENABL3S · AB156 · <span data-l="en">walking</span><span data-l="es">marcha</span></span></div>
+      <canvas id="scope" width="900" height="440" aria-hidden="true"></canvas>
+      <div class="readout">
+        <div class="method"><span data-l="en">Summary method</span><span data-l="es">Método de resumen</span><b id="method-name">whole RMS</b></div>
+        <div class="ratio" id="ratio" aria-live="off">1.046</div>
+      </div>
+      <div class="meter" aria-hidden="true"><i id="needle" style="left:52%"></i></div>
+      <figcaption class="scope-cap"><span data-l="en">Ratios are AB156’s real results across 11 RMS methods (right / left). The waveform is an illustration.</span><span data-l="es">Los cocientes son los resultados reales de AB156 en 11 métodos RMS (derecha / izquierda). La onda es ilustrativa.</span></figcaption>
+    </figure>
+  </div>
+  <div class="kpis">
+    <div class="kpi reveal"><b data-count="22">22</b><span data-l="en">participants (12 ACLR, 10 controls)</span><span data-l="es">participantes (12 con LCA, 10 controles)</span></div>
+    <div class="kpi reveal d1"><b data-count="88">88</b><span data-l="en">bilateral sEMG recordings</span><span data-l="es">registros sEMG bilaterales</span></div>
+    <div class="kpi reveal d2"><b data-count="21">21</b><span data-l="en">explicit amplitude summaries</span><span data-l="es">resúmenes de amplitud explícitos</span></div>
+    <div class="kpi reveal d3"><b class="c" data-count="13" data-suf=" / 43">13 / 43</b><span data-l="en">pairs flip sides of ratio 1</span><span data-l="es">pares cruzan el cociente 1</span></div>
+    <div class="kpi reveal d4"><b data-count="23100">23,100</b><span data-l="en">synthetic evaluations</span><span data-l="es">evaluaciones sintéticas</span></div>
+  </div>
+</div>
+
+<section id="question">
+  <div class="wrap grid-2">
+    <div>
+      <div class="num reveal">01 / <span data-l="en">THE QUESTION</span><span data-l="es">LA PREGUNTA</span></div>
+      <h2 class="reveal" data-l="en">A ratio is simple. The measurement isn’t.</h2>
+      <h2 class="reveal" data-l="es">El cociente es simple. La medición no.</h2>
+      <p class="reveal" data-l="en">Surface electromyography (sEMG) records electrical activity over the vastus lateralis, part of the quadriceps. Dividing one leg’s amplitude by the other gives a symmetry ratio. But a pause, a spike, a filter or a different window can change that number before any clinical interpretation begins.</p>
+      <p class="reveal" data-l="es">La electromiografía de superficie (sEMG) registra actividad eléctrica sobre el vasto lateral, parte del cuádriceps. Dividir la amplitud de una pierna entre la otra da un cociente de simetría. Pero una pausa, un pico, un filtro o una ventana distinta pueden cambiar ese número antes de cualquier interpretación clínica.</p>
+      <div class="callout reveal"><strong data-l="en">What this is not.</strong><strong data-l="es">Lo que esto no es.</strong> <span data-l="en">A ratio flipping sides of 1 is not an injury, a clinically important difference or readiness to return to sport.</span><span data-l="es">Que un cociente cruce el 1 no es una lesión, una diferencia clínicamente importante ni preparación para volver al deporte.</span></div>
+    </div>
+    <div class="card glow reveal d1">
+      <span class="tag" data-l="en">How the ratio is built</span><span class="tag" data-l="es">Cómo se construye el cociente</span>
+      <div class="viz" data-chart="ratioDemo"></div>
+      <p class="small muted" data-l="en">Same two recordings, three summaries: whole-record RMS, RMS capped at the 99.5th percentile, and RMS of active 256-sample blocks. AB156, ENABL3S.</p>
+      <p class="small muted" data-l="es">Los mismos dos registros, tres resúmenes: RMS del registro completo, RMS limitado al percentil 99,5 y RMS de bloques activos de 256 muestras. AB156, ENABL3S.</p>
+    </div>
+  </div>
+</section>
+
+<section id="explore">
+  <div class="wrap">
+    <div class="num reveal">02 / <span data-l="en">DRYAD · 22 PARTICIPANTS</span><span data-l="es">DRYAD · 22 PARTICIPANTES</span></div>
+    <h2 class="reveal" data-l="en">43 pairs. 21 methods. One line at 1.</h2>
+    <h2 class="reveal" data-l="es">43 pares. 21 métodos. Una línea en 1.</h2>
+    <p class="lead reveal" data-l="en">Each row is one person in one condition. The bar spans the lowest to the highest ratio across all 21 summaries; the dot is whole-record RMS. Coral rows cross 1: their direction depends on the method.</p>
+    <p class="lead reveal" data-l="es">Cada fila es una persona en una condición. La barra va del cociente más bajo al más alto entre los 21 resúmenes; el punto es el RMS del registro completo. Las filas coral cruzan el 1: su dirección depende del método.</p>
+    <div class="card reveal" style="margin-top:24px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+        <div class="legend"><span><i style="background:var(--coral)"></i><span data-l="en">crosses 1 (13)</span><span data-l="es">cruza 1 (13)</span></span><span><i style="background:var(--cyan)"></i><span data-l="en">stays on one side (30)</span><span data-l="es">se mantiene de un lado (30)</span></span><span><i style="background:var(--ink)"></i>whole RMS</span></div>
+        <div class="toggle" role="group" aria-label="Sort"><button type="button" data-sort="range" aria-pressed="true"><span data-l="en">Sort by spread</span><span data-l="es">Ordenar por rango</span></button><button type="button" data-sort="whole" aria-pressed="false"><span data-l="en">Sort by ratio</span><span data-l="es">Ordenar por cociente</span></button></div>
+      </div>
+      <div class="viz" data-chart="ribbons"></div>
+      <p class="small soft" data-l="en">Log scale. healthy8/iso90 is excluded from this primary view (a 2-second record against a ~25-second partner) and kept in every sensitivity analysis. Conditions of one person are not independent observations.</p>
+      <p class="small soft" data-l="es">Escala logarítmica. healthy8/iso90 se excluye de esta vista principal (un registro de 2 segundos frente a uno de ~25) y se conserva en todos los análisis de sensibilidad. Las condiciones de una persona no son observaciones independientes.</p>
+    </div>
+
+    <div class="grid-2" style="margin-top:28px">
+      <div class="card reveal">
+        <span class="tag" data-l="en">Filter sensitivity</span><span class="tag" data-l="es">Sensibilidad al filtro</span>
+        <h3 style="margin-top:12px" data-l="en">Group medians barely move. Individuals can.</h3>
+        <h3 style="margin-top:12px" data-l="es">Las medianas apenas se mueven. Las personas sí.</h3>
+        <div class="viz" data-chart="bandpass"></div>
+        <p class="small muted" data-l="en">Whole-RMS ratio before vs. after a 20–450 Hz band-pass. One pair crosses 1 (patient7/iso180, 0.995 → 1.000); healthy9/iso90 rises about 60%, from 0.21 to 0.33.</p>
+        <p class="small muted" data-l="es">Cociente RMS completo antes vs. después de un pasa-banda 20–450 Hz. Un par cruza 1 (patient7/iso180, 0,995 → 1,000); healthy9/iso90 sube cerca de un 60%, de 0,21 a 0,33.</p>
+      </div>
+      <div class="card reveal d1">
+        <span class="tag coral" data-l="en">Synthetic scenarios</span><span class="tag coral" data-l="es">Escenarios sintéticos</span>
+        <h3 style="margin-top:12px" data-l="en">Every fix has a cost somewhere else</h3>
+        <h3 style="margin-top:12px" data-l="es">Cada corrección tiene un costo en otra parte</h3>
+        <div class="viz" data-chart="heatmap"></div>
+        <p class="small muted" data-l="en">Median error against a constructed reference, 11 scenarios × 21 methods × 100 repetitions. Brighter means larger error. Capping fixes the spike but damages a sustained true event; unequal sensor gain defeats every method.</p>
+        <p class="small muted" data-l="es">Error mediano frente a una referencia construida, 11 escenarios × 21 métodos × 100 repeticiones. Más brillante significa más error. Limitar picos corrige el artefacto pero daña un evento real sostenido; la ganancia desigual del sensor vence a todos los métodos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lab">
+  <div class="wrap">
+    <div class="num reveal">03 / <span data-l="en">TRY IT</span><span data-l="es">PRUÉBALO</span></div>
+    <h2 class="reveal" data-l="en">Break the ratio yourself</h2>
+    <h2 class="reveal" data-l="es">Rompe el cociente tú mismo</h2>
+    <p class="lead reveal" data-l="en">Two synthetic signals with a known true ratio of 1.10. Add a spike, a pause or a gain mismatch and watch three summaries disagree, live, computed in your browser.</p>
+    <p class="lead reveal" data-l="es">Dos señales sintéticas con un cociente verdadero conocido de 1,10. Añade un pico, una pausa o una diferencia de ganancia y mira cómo tres resúmenes discrepan en vivo, calculados en tu navegador.</p>
+    <div class="card lab reveal" id="signal-lab" style="margin-top:24px">
+      <div>
+        <div class="slider"><label for="sl-spike"><span data-l="en">Spike on the left leg</span><span data-l="es">Pico en la pierna izquierda</span><output id="o-spike">0×</output></label><input id="sl-spike" type="range" min="0" max="40" value="0"></div>
+        <div class="slider"><label for="sl-pause"><span data-l="en">Pause on the right leg</span><span data-l="es">Pausa en la pierna derecha</span><output id="o-pause">0%</output></label><input id="sl-pause" type="range" min="0" max="60" value="0"></div>
+        <div class="slider"><label for="sl-gain"><span data-l="en">Right sensor gain</span><span data-l="es">Ganancia del sensor derecho</span><output id="o-gain">1.00×</output></label><input id="sl-gain" type="range" min="70" max="130" value="100"></div>
+        <p class="small muted" data-l="en"><strong>Try:</strong> a spike → only capping resists. A pause → active blocks help, but not fully. A gain mismatch → no method can tell.</p>
+        <p class="small muted" data-l="es"><strong>Prueba:</strong> un pico → solo el recorte resiste. Una pausa → los bloques activos ayudan, pero no del todo. Una diferencia de ganancia → ningún método lo detecta.</p>
+        <button class="btn" type="button" id="lab-reset" style="margin-top:6px"><span data-l="en">Reset</span><span data-l="es">Restablecer</span></button>
+      </div>
+      <div>
+        <canvas id="lab-canvas" width="900" height="380" aria-label="Synthetic left and right signals"></canvas>
+        <div class="results" aria-live="polite">
+          <div class="res"><span>whole RMS</span><div class="track"><i class="pin" id="p-whole"></i></div><b id="r-whole">1.10</b></div>
+          <div class="res"><span>capped RMS (99.5%)</span><div class="track"><i class="pin" id="p-cap"></i></div><b id="r-cap">1.10</b></div>
+          <div class="res"><span>active blocks RMS</span><div class="track"><i class="pin" id="p-block"></i></div><b id="r-block">1.10</b></div>
+        </div>
+        <p class="small soft" style="margin-top:12px" data-l="en">Scale 0.5–2 (log), centre line = 1, true ratio 1.10. Simplified versions of the project’s methods on simulated data: illustrative, not patient data.</p>
+        <p class="small soft" style="margin-top:12px" data-l="es">Escala 0,5–2 (log), línea central = 1, cociente verdadero 1,10. Versiones simplificadas de los métodos del proyecto sobre datos simulados: ilustrativo, no son datos de pacientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="transport">
+  <div class="wrap">
+    <div class="num reveal">04 / <span data-l="en">INDEPENDENT EXTENSION · ENABL3S</span><span data-l="es">EXTENSIÓN INDEPENDIENTE · ENABL3S</span></div>
+    <h2 class="reveal" data-l="en">Does it happen in another dataset?</h2>
+    <h2 class="reveal" data-l="es">¿Pasa también en otro dataset?</h2>
+    <p class="lead reveal" data-l="en">Rules were fixed on a separate pilot before looking at nine new participants of a healthy walking dataset. Six were eligible. Pick one and see where its 11 RMS ratios land.</p>
+    <p class="lead reveal" data-l="es">Las reglas se fijaron con un piloto separado antes de ver a nueve participantes nuevos de un dataset de marcha sana. Seis fueron elegibles. Elige uno y mira dónde caen sus 11 cocientes RMS.</p>
+    <div class="card reveal" style="margin-top:24px">
+      <div class="chips" id="people" role="group" aria-label="Participant"></div>
+      <div class="viz" data-chart="people"></div>
+      <p class="small soft" data-l="en">9 assessed → 6 eligible → 2 cross 1. Healthy walking is methodological transport, not clinical validation in ACL reconstruction.</p>
+      <p class="small soft" data-l="es">9 evaluados → 6 elegibles → 2 cruzan 1. La marcha sana es transporte metodológico, no validación clínica en reconstrucción de LCA.</p>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="num reveal">05 / <span data-l="en">AUDITABLE DECISIONS</span><span data-l="es">DECISIONES AUDITABLES</span></div>
+    <h2 class="reveal" data-l="en">The method is part of the result</h2>
+    <h2 class="reveal" data-l="es">El método también es parte del resultado</h2>
+    <div class="steps">
+      <div class="step reveal"><span class="k">01</span><b data-l="en">Verify the source</b><b data-l="es">Verificar la fuente</b><p class="small muted" data-l="en">Hashes before loading, original recordings kept, durations and clocks inventoried. Only trailing padding removed.</p><p class="small muted" data-l="es">Hashes antes de cargar, registros originales conservados, duración y relojes inventariados. Solo se quita el relleno final.</p></div>
+      <div class="step reveal d1"><span class="k">02</span><b data-l="en">Make choices explicit</b><b data-l="es">Explicitar decisiones</b><p class="small muted" data-l="en">21 summaries, centering and filtering compared side by side; retrospective choices shown next to unmodified results.</p><p class="small muted" data-l="es">21 resúmenes, centrado y filtrado comparados lado a lado; las decisiones retrospectivas junto a los resultados sin modificar.</p></div>
+      <div class="step reveal d2"><span class="k">03</span><b data-l="en">Test known conditions</b><b data-l="es">Probar condiciones conocidas</b><p class="small muted" data-l="en">Synthetic signals with a known ratio reveal failure modes. Their frequencies are not clinical prevalences.</p><p class="small muted" data-l="es">Señales sintéticas con cociente conocido revelan modos de fallo. Sus frecuencias no son prevalencias clínicas.</p></div>
+      <div class="step reveal d3"><span class="k">04</span><b data-l="en">Check transport</b><b data-l="es">Evaluar el transporte</b><p class="small muted" data-l="en">Separate pilot, frozen rules, then nine new participants in an independent dataset.</p><p class="small muted" data-l="es">Piloto separado, reglas congeladas y luego nueve participantes nuevos en un dataset independiente.</p></div>
+    </div>
+    <div style="margin-top:26px">
+      <details class="reveal"><summary data-l="en">Why exclude one Dryad pair?</summary><summary data-l="es">¿Por qué excluir un par de Dryad?</summary><p data-l="en">healthy8/iso90 has a 2-second record against a ~25-second partner (next shortest of 88: 10.5 s). A whole task vs. a fragment doesn’t compare like with like. It was set aside retrospectively and kept in every sensitivity analysis; no measurement was deleted.</p><p data-l="es">healthy8/iso90 tiene un registro de 2 segundos frente a uno de ~25 (el siguiente más corto de 88: 10,5 s). Una tarea completa frente a un fragmento no compara lo mismo. Se apartó de forma retrospectiva y se conserva en todos los análisis de sensibilidad; no se borró ninguna medición.</p></details>
+      <details class="reveal"><summary data-l="en">Why not pick the method that looks best?</summary><summary data-l="es">¿Por qué no elegir el método que “mejor se ve”?</summary><p data-l="en">Without an independent reference of muscle function, a stable ratio can still be wrong. Capping helps one scenario and erases desired activity in another. No winner was chosen by appearance.</p><p data-l="es">Sin una referencia independiente de función muscular, un cociente estable puede estar equivocado. Limitar picos ayuda en un escenario y borra actividad deseada en otro. No se eligió un ganador por su apariencia.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="next">
+  <div class="wrap">
+    <div class="num reveal">06 / <span data-l="en">WHERE IT GOES NEXT</span><span data-l="es">HACIA DÓNDE VA</span></div>
+    <h2 class="reveal" data-l="en">A useful audit. A clear next question.</h2>
+    <h2 class="reveal" data-l="es">Una auditoría útil. Una siguiente pregunta clara.</h2>
+    <div class="road reveal">
+      <div><span class="tag coral" data-l="en">Now</span><span class="tag coral" data-l="es">Ahora</span><h3 style="margin-top:10px" data-l="en">Reproducible delivery</h3><h3 style="margin-top:10px" data-l="es">Entrega reproducible</h3><p class="small muted" data-l="en">Results, code, exclusions and decisions, verified on Kaggle and GitHub.</p><p class="small muted" data-l="es">Resultados, código, exclusiones y decisiones, verificados en Kaggle y GitHub.</p></div>
+      <div><span class="tag" data-l="en">Next study</span><span class="tag" data-l="es">Siguiente estudio</span><h3 style="margin-top:10px" data-l="en">Signal + torque + repetitions</h3><h3 style="margin-top:10px" data-l="es">Señal + torque + repeticiones</h3><p class="small muted" data-l="en">A bounded isometric task with measured torque, separate evaluation participants and reliability sessions.</p><p class="small muted" data-l="es">Una tarea isométrica acotada con torque medido, participantes separados para evaluar y sesiones de fiabilidad.</p></div>
+      <div><span class="tag" data-l="en">Later</span><span class="tag" data-l="es">Después</span><h3 style="margin-top:10px" data-l="en">Relevance for patients</h3><h3 style="margin-top:10px" data-l="es">Relevancia para pacientes</h3><p class="small muted" data-l="en">Follow-up, function and added value over usual assessment. Clinical usefulness stays open.</p><p class="small muted" data-l="es">Seguimiento, función y valor añadido frente a la evaluación habitual. La utilidad clínica sigue abierta.</p></div>
+    </div>
+    <div class="cta reveal" style="margin-top:40px">
+      <a class="btn primary" href="evidence.html" data-keep-lang><span data-l="en">Read the evidence &amp; discussion</span><span data-l="es">Leer la evidencia y discusión</span> →</a>
+      <a class="btn" href="https://github.com/victorgomezadapty/acl-semg-robustness">GitHub ↗</a>
+      <a class="btn" href="https://www.kaggle.com/code/vctorandrsgmezlpez/acl-semg-robustness-and-synthetic-scenarios"><span data-l="en">Dryad notebook</span><span data-l="es">Notebook Dryad</span> ↗</a>
+      <a class="btn" href="https://www.kaggle.com/code/vctorandrsgmezlpez/enabl3s-semg-independent-methods-audit"><span data-l="en">ENABL3S notebook</span><span data-l="es">Notebook ENABL3S</span> ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Víctor Andrés Gómez López</strong> · <span data-l="en">Physiotherapist, data scientist &amp; AI builder</span><span data-l="es">Fisioterapeuta, científico de datos y AI builder</span><br><a href="https://victor-gomez-portfolio.vercel.app">victor-gomez-portfolio.vercel.app</a></div>
+    <div class="small" style="max-width:520px"><span data-l="en">Data: Gutierrez, Hart &amp; Boukhechba (2022), Dryad, CC0 · Hu, Rouse &amp; Hargrove, ENABL3S v2, CC BY 4.0. Figures and charts are original, derived from saved results. Code and text: MIT. Research presentation, not a diagnostic tool.</span><span data-l="es">Datos: Gutierrez, Hart y Boukhechba (2022), Dryad, CC0 · Hu, Rouse y Hargrove, ENABL3S v2, CC BY 4.0. Figuras y gráficos propios, derivados de resultados guardados. Código y texto: MIT. Presentación de investigación, no herramienta diagnóstica.</span></div>
+  </div>
+</footer>
+<script src="assets/data.js"></script>
+<script src="assets/motion.js" defer></script>
+</body>
+</html>

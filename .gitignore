@@ -33,3 +33,4 @@ delivery/enabl3s/releases/*/verification/
 portfolio/.git/
 portfolio/.openai/*.tar.gz
 portfolio/.openai/*.tgz
+.claude/
