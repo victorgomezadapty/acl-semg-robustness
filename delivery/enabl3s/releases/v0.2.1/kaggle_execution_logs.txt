@@ -1,0 +1,127 @@
+Time
+	
+#
+	
+Log Message
+
+9.0s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+9.0s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+9.0s	3	0.00s - to python to disable frozen modules.
+
+9.0s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+9.9s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+9.9s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+9.9s	7	0.00s - to python to disable frozen modules.
+
+9.9s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+12.1s	9	Python: 3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]
+
+12.1s	10	{'participants_expected': 9, 'eligible': 6, 'complete_primary': 6, 'excluded': 3, 'not_calculable': 0, 'complete_primary_participants': ['AB156', 'AB186', 'AB188', 'AB190', 'AB192', 'AB194'], 'primary_log_range_median': 0.28353105760999203, 'primary_log_range_minimum': 0.10906515087258084, 'primary_log_range_maximum': 0.3884052252864041, 'primary_crossings_of_one': 2}
+
+12.1s	11	Derived-artifact hashes checked; original participant archives were not re-read.
+
+16.5s	12	{
+
+16.5s	13	  "participants_expected": 9,
+
+16.5s	14	  "eligible": 6,
+
+16.5s	15	  "complete_primary": 6,
+
+16.5s	16	  "excluded": 3,
+
+16.5s	17	  "not_calculable": 0,
+
+16.5s	18	  "complete_primary_participants": [
+
+16.5s	19	    "AB156",
+
+16.5s	20	    "AB186",
+
+16.5s	21	    "AB188",
+
+16.5s	22	    "AB190",
+
+16.5s	23	    "AB192",
+
+16.5s	24	    "AB194"
+
+16.5s	25	  ],
+
+16.5s	26	  "primary_log_range_median": 0.28353105760999203,
+
+16.5s	27	  "primary_log_range_minimum": 0.10906515087258084,
+
+16.5s	28	  "primary_log_range_maximum": 0.3884052252864041,
+
+16.5s	29	  "primary_crossings_of_one": 2
+
+16.5s	30	}
+
+16.7s	31	{
+
+16.7s	32	  "participants_expected": 9,
+
+16.7s	33	  "eligible": 6,
+
+16.7s	34	  "complete_primary": 6,
+
+16.7s	35	  "excluded": 3,
+
+16.7s	36	  "not_calculable": 0,
+
+16.7s	37	  "complete_primary_participants": [
+
+16.7s	38	    "AB156",
+
+16.7s	39	    "AB186",
+
+16.7s	40	    "AB188",
+
+16.7s	41	    "AB190",
+
+16.7s	42	    "AB192",
+
+16.7s	43	    "AB194"
+
+16.7s	44	  ],
+
+16.7s	45	  "primary_log_range_median": 0.28353105760999203,
+
+16.7s	46	  "primary_log_range_minimum": 0.10906515087258084,
+
+16.7s	47	  "primary_log_range_maximum": 0.3884052252864041,
+
+16.7s	48	  "primary_crossings_of_one": 2
+
+16.7s	49	}
+
+16.8s	50	Downloadable derived artifacts: /kaggle/working/enabl3s-review-artifacts.zip 108061 bytes
+
+16.8s	51	Regenerated review: /kaggle/working/source-c72eoycl
+
+20.5s	52	/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+
+20.5s	53	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+
+20.8s	54	/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+
+20.8s	55	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+
+21.9s	56	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+
+22.0s	57	[NbConvertApp] Writing 114904 bytes to __notebook__.ipynb
+
+25.5s	58	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+
+26.3s	59	[NbConvertApp] Support files will be in __results___files/
+
+26.3s	60	[NbConvertApp] Making directory __results___files
+
+26.3s	61	[NbConvertApp] Writing 312944 bytes to __results__.html
