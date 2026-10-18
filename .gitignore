@@ -25,3 +25,11 @@ reports/synthetic_scenario_results.csv
 delivery/enabl3s/*.zip
 delivery/enabl3s/*executed*.ipynb
 delivery/enabl3s/verification/
+
+# Keep publication snapshots separate; never recursively package extracted deliveries.
+delivery/enabl3s/releases/*/*.zip
+delivery/enabl3s/releases/*/*executed*.ipynb
+delivery/enabl3s/releases/*/verification/
+portfolio/.git/
+portfolio/.openai/*.tar.gz
+portfolio/.openai/*.tgz

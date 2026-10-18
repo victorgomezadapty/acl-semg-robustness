@@ -1,0 +1,17 @@
+date,channel,query,scope,result_or_limit
+2026-10-18,web directed to primary sources,ACL reconstruction surface electromyography quadriceps symmetry normalization strength 2024 2025 systematic review,updated clinical and methods literature,discovery only; primary sources selected separately
+2026-10-18,web directed to primary sources,CEDE amplitude normalization electromyography consensus 2020 102438,essential normalization reference,L01
+2026-10-18,web directed to primary sources,open dataset ACL reconstruction EMG knee torque dynamometer dataset,data eligibility,no complete eligible new dataset established
+2026-10-18,web directed to primary sources,"ACL reconstruction electromyography 2025 quadriceps",recent mechanistic studies,L06
+2026-10-18,web directed to primary sources,"ACL reconstruction electromyography 2024 strength dataset",measurement precedents,L05 and L07
+2026-10-18,web directed to primary sources,CEDE-Check reporting 2024 2025,reporting methods,L02
+2026-10-18,web directed to primary sources,Application of EMG to estimate muscle force Dick 2024 abstract,force interpretation,L03
+2026-10-18,web directed to primary sources,s41597-026-07543-2,descriptor and deposit,L10 already audited in project; not a newly eligible source
+2026-10-18,web directed to primary sources,30928694 figshare,repository provenance,direct API opening failed in web tool; prior file audit retained
+2026-10-18,web directed to primary sources,Quadriceps motor unit properties and cortical activations OSF,public repository,L06 OSF hv6x2 identified; direct page opening failed; file inventory not inspected
+2026-10-18,web directed to primary sources,Neuroplastic alterations data availability Nuccio 2024,access requirements,L07 data on reasonable request
+2026-10-18,web directed to primary sources,Impact of hamstring versus quadriceps tendon graft Forquignon 70342 methods,recent clinical comparison,L08; indexed primary abstract and availability; full text not fully read
+2026-10-18,web directed to primary sources,Residual Neuromuscular Deficits Following authors September 2026,recent task-specific work,L09; primary abstract verified; no individual archive confirmed
+2026-10-18,web directed to primary sources,10.25259/JMSR_129_2026,same dataset reuse,L04; previous detailed comparison retained
+2026-10-18,web directed to primary sources,10.1016/j.jshs.2026.101160,voluntary activation review,carried in historical review; not newly extracted because usable primary full text was not obtained here
+2026-10-18,local provenance review,docs/history/external_validation_feasibility.md,prior direct data inspections,prevents repeating a known ineligible dataset as a new recommendation

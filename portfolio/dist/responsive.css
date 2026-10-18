@@ -1,0 +1,6 @@
+.chart-aside .big-value { font-size: 55px; }
+@media (max-width: 760px) {
+  .chart-aside .big-value { font-size: 45px; }
+  #participant-chart { overflow-x: auto; }
+  #participant-chart svg { min-width: 570px; }
+}

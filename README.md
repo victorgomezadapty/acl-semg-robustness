@@ -19,11 +19,17 @@ The [Dryad dataset](https://doi.org/10.5061/dryad.66t1g1k4j) contains 22 partici
 - Mean-centering reverses none of the 44 whole-RMS directions.
 - 23,100 synthetic evaluations show trade-offs: limiting spikes helps against a constructed artefact but also distorts a sustained desired event. Unknown unequal sensor gain persists across methods.
 
-Scientific priority, clinical validity and external validation are not established. Absolute cross-person voltage comparisons are supplemental acquisition-dependent descriptions.
+Scientific priority and clinical validity are not established. Absolute cross-person voltage comparisons are supplemental acquisition-dependent descriptions. The independent methodological extension below evaluates transport to healthy walking, not clinical validation in ACL reconstruction.
 
-The next phase is an independent methodological transport study using ENABL3S. Its [analysis plan](docs/history/enabl3s_transport_protocol.md) distinguishes healthy walking data from ACL reconstruction and freezes pilot selection before signal inspection. A verified one-participant [pilot and interpretation](docs/enabl3s_pilot_review.md) are complete; the ten-participant study and clinical validation remain pending. This phase is separate from the published Kaggle release.
+The independent ENABL3S methodological study is complete: one separate [pilot](docs/enabl3s_pilot_review.md), followed by nine participants assessed under fixed rules, six eligible and three excluded. Two of six eligible participants cross ratio 1 across eleven RMS specifications. This is descriptive sensitivity in healthy walking, not a clinical threshold. The [executed ENABL3S Kaggle notebook](https://www.kaggle.com/code/vctorandrsgmezlpez/enabl3s-semg-independent-methods-audit) has its own [dated publication evidence](delivery/enabl3s/KAGGLE_PUBLICATION.md). Clinical validation remains pending.
 
-The [remaining-cohort protocol v1](docs/enabl3s_cohort_protocol_v1.md) now fixes annotation exclusions, transition margins, minimum segment length and separate sensitivities for duration matching and shared temporal selection before analysis of the other nine participants.
+The [cohort protocol v1](docs/enabl3s_cohort_protocol_v1.md) fixed annotation exclusions, transition margins, minimum segment length and duration/shared-selection sensitivities before the nine-participant analysis. Its original frozen files are preserved.
+
+## Portfolio and research update
+
+The [visual case study](portfolio/dist/index.html) presents the question, interactive participant-level results, decisions, limitations and next research steps. Rebuild its data and figures with `python scripts/build_portfolio.py`; the page works as a static site without a build toolchain.
+
+The [critical literature update](docs/literature_update_2026-10-18.md), [search log](docs/literature_search_2026-10-18.csv) and [evidence matrix](docs/literature_evidence_2026-10-18.csv) distinguish published evidence, inspected datasets and proposed extensions. This is a targeted review, not an exhaustive systematic review or proof of novelty.
 
 ![Band-pass sensitivity and RMS retention](reports/figures/bandpass_sensitivity.png)
 

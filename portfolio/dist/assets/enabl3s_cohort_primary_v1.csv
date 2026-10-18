@@ -1,0 +1,10 @@
+participant,status,reason,log_ratio_range,defined_positive_ratios,crosses_one
+AB156,complete,,0.3884052252864041,11,True
+AB185,excluded,no_eligible_trial_or_segment,,,
+AB186,complete,,0.10906515087258084,11,True
+AB188,complete,,0.2690609073300376,11,False
+AB189,excluded,no_eligible_trial_or_segment,,,
+AB190,complete,,0.17869417022117012,11,False
+AB192,complete,,0.29800120788994644,11,False
+AB193,excluded,no_eligible_trial_or_segment,,,
+AB194,complete,,0.3254871271209822,11,False

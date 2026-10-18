@@ -16,7 +16,19 @@ The ZIP omits original measurements, environments, credentials and local caches.
 
 Extract the ZIP, install `requirements.txt` and `requirements-verification.txt` into Python 3.14, then open this notebook from the extracted repository. Run all cells. It searches parent directories for the included results, so it does not require a particular Windows username. The recorded local dependency versions may need a compatible interpreter; printed runtime versions identify the environment actually used.
 
-This notebook and ZIP are suitable for a proposed Kaggle update containing derived artifacts, with ENABL3S attribution and CC BY 4.0 for those artifacts. They have not yet been executed or published on Kaggle. The existing public Dryad notebook remains the first delivery.
+The ENABL3S review was executed and published on Kaggle on 2026-10-17; see the [versioned publication record](KAGGLE_PUBLICATION.md). The top-level v0.2.0 manifest, checksums and verification files preserve that historical delivery. New locally verified bundles have separate version directories and execution records; a local check does not certify a new Kaggle execution.
+
+## Updated delivery and preservation of history
+
+The current packaging improvements are in [v0.2.1](releases/v0.2.1/): the notebook exports a downloadable derived-evidence ZIP under `/kaggle/working` and uses absolute source links in the displayed report. The report inside the ZIP retains its portable relative links. Original measurements are still excluded.
+
+Create each future delivery in a new, empty directory:
+
+```powershell
+python scripts/prepare_enabl3s_release.py --version v0.2.2
+```
+
+Use the next unused version. The builder records the actual UTC date and refuses to overwrite existing output. Versioned notebook/manifest files are stored under `delivery/enabl3s/releases/<version>/`; the ZIP, executed notebook and extraction directory are generated artifacts. A package's manifest verifies its own snapshot, not a later edited checkout. For raw reproduction, use the analysis commands below.
 
 ## Recompute from original measurements
 

@@ -2,6 +2,14 @@
 
 Each entry records what changed and why.
 
+## 2026-10-18 — v0.2.1 presentation and delivery improvements
+
+- Corrected current documentation to distinguish completed ENABL3S transport and Kaggle execution from pending ACLR clinical validation; retained dated historical receipts.
+- Added a version-required delivery builder that records the actual UTC date, refuses existing output and preserves published snapshots. New notebooks verify all packaged file hashes, export an evidence ZIP under `/kaggle/working` and render absolute report links.
+- Added a critical, targeted literature update with twelve sources, a query log and evidence/access matrix. Previously inspected 101-point ACLR exports remain ineligible; OSF HV6X2 is a candidate requiring file/license audit, not confirmed validation data.
+- Added a responsive static portfolio with original plots, participant/method exploration, readable tables, decision explanations and literature downloads. Figures/data rebuild from saved results with frozen-protocol/result hash checks.
+- Preserved original signals, frozen v1 protocol and endpoint results. These are presentation, packaging and research-planning changes, not new clinical findings.
+
 ## 2026-10-16 — v0.2.0 independent ENABL3S delivery
 
 - Added the preserved AB191 pilot and the protocol fixed before the other nine outcomes: six eligible, three excluded; two of six cross ratio 1 across eleven RMS specifications.
