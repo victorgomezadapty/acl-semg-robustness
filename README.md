@@ -1,5 +1,9 @@
 # sEMG limb symmetry after ACL reconstruction: a robustness analysis
 
+**Live site (EN/ES):** [acl-semg-robustness.vercel.app](https://acl-semg-robustness.vercel.app): animated case study, interactive results for all 43 pairs, a live synthetic signal lab and a [scientific discussion](https://acl-semg-robustness.vercel.app/evidence) with 18 verified references. The source is in `site/`; rebuild its data with `python scripts/build_site_data.py`.
+
+![ACL sEMG Robustness site](site/assets/og.png)
+
 **v0.2.0:** the independent ENABL3S methodological extension is ready. Start with the [portfolio case](docs/review_case.md), [cohort findings](docs/enabl3s_cohort_results_v1.md) and [delivery/reproduction guide](delivery/enabl3s/README.md). Code/prose and data-derived artifacts have [separate licenses](DATA_SOURCES.md).
 
 [Download release v0.2.0](https://github.com/victorgomezadapty/acl-semg-robustness/releases/tag/v0.2.0): source/results ZIP, locally executed notebook and verification files. [Publication record](delivery/enabl3s/PUBLICATION.md).

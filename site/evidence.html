@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACL sEMG Robustness · Evidence &amp; discussion</title>
+<meta name="title-en" content="ACL sEMG Robustness · Evidence & discussion">
+<meta name="title-es" content="ACL sEMG Robustness · Evidencia y discusión">
+<meta name="description" content="A scientific-style discussion of the ACL sEMG robustness audit against the literature on return to sport, limb symmetry indices, EMG processing consensus, torque-based designs and open datasets, with a research agenda.">
+<meta property="og:title" content="ACL sEMG Robustness · Evidence & discussion">
+<meta property="og:description" content="What the literature says about limb symmetry after ACL reconstruction, EMG processing choices and open data, and what a validation study would need.">
+<meta property="og:image" content="https://acl-semg-robustness.vercel.app/assets/og.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b111c">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/lang.js"></script>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html" data-keep-lang><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#161e2e" stroke="#33415e"/><path d="M4 17h5l2-7 3 13 3-16 3 14 2-4h6" fill="none" stroke="#e8603c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>ACL sEMG Robustness</a>
+    <nav class="nav" aria-label="Site">
+      <a href="index.html" data-keep-lang><span data-l="en">Case study</span><span data-l="es">Caso de estudio</span></a>
+      <a href="index.html#explore" data-keep-lang><span data-l="en">Explore</span><span data-l="es">Explorar</span></a>
+      <a href="evidence.html" data-keep-lang aria-current="page"><span data-l="en">Evidence</span><span data-l="es">Evidencia</span></a>
+      <a href="https://github.com/victorgomezadapty/acl-semg-robustness">GitHub</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap narrow article">
+<div class="hero" style="padding-bottom:0">
+  <div class="kicker"><span class="dot"></span><span data-l="en">Evidence &amp; discussion</span><span data-l="es">Evidencia y discusión</span></div>
+  <h1 style="font-size:clamp(34px,5vw,56px)" data-l="en">Symmetry, signals and decisions: reading the audit against the literature</h1>
+  <h1 style="font-size:clamp(34px,5vw,56px)" data-l="es">Simetría, señales y decisiones: la auditoría frente a la literatura</h1>
+  <p class="lead" data-l="en">Written as the discussion section of a research article: what was found, how it compares with published evidence, where it is weak, and what a validation study would need.</p>
+  <p class="lead" data-l="es">Escrito como la sección de discusión de un artículo científico: qué se encontró, cómo se compara con la evidencia publicada, dónde es débil y qué necesitaría un estudio de validación.</p>
+  <nav class="toc" aria-label="Contents">
+    <a href="#principal"><span data-l="en">1 · Principal findings</span><span data-l="es">1 · Hallazgos principales</span></a>
+    <a href="#prior"><span data-l="en">2 · Prior work</span><span data-l="es">2 · Estudios previos</span></a>
+    <a href="#limits"><span data-l="en">3 · Strengths &amp; limitations</span><span data-l="es">3 · Fortalezas y limitaciones</span></a>
+    <a href="#practice"><span data-l="en">4 · Implications</span><span data-l="es">4 · Implicaciones</span></a>
+    <a href="#agenda"><span data-l="en">5 · Research agenda</span><span data-l="es">5 · Agenda de investigación</span></a>
+    <a href="#refs"><span data-l="en">References</span><span data-l="es">Referencias</span></a>
+  </nav>
+</div>
+
+<div class="abstract reveal">
+  <div class="kicker" style="margin-bottom:10px"><span data-l="en">Summary</span><span data-l="es">Resumen</span></div>
+  <p data-l="en">In a public dataset of 22 participants (12 after ACL reconstruction, 10 controls), 13 of 43 primary participant-condition pairs crossed a bilateral ratio of 1 across 21 explicit amplitude summaries, and 10 across the 11 RMS summaries. A band-pass filter barely moved group medians but changed some individuals substantially. Controlled synthetic scenarios showed that each correction helps one failure mode and harms another, and that unequal sensor gain defeats all of them. An independent healthy-walking cohort reproduced the sensitivity in two of six eligible participants. The findings agree with established evidence that EMG processing and normalisation choices matter, and with clinical work showing that symmetry indices can overstate recovery. They do not establish clinical validity.</p>
+  <p data-l="es">En un dataset público de 22 participantes (12 tras reconstrucción del LCA y 10 controles), 13 de 43 pares principales cruzaron un cociente bilateral de 1 entre 21 resúmenes de amplitud explícitos, y 10 entre los 11 resúmenes RMS. Un filtro pasa-banda apenas movió las medianas de grupo pero cambió de forma importante a algunas personas. Escenarios sintéticos controlados mostraron que cada corrección ayuda en un modo de fallo y perjudica en otro, y que la ganancia desigual del sensor vence a todas. Una cohorte independiente de marcha sana reprodujo la sensibilidad en dos de seis participantes elegibles. Los hallazgos coinciden con la evidencia de que el procesamiento y la normalización del EMG importan, y con trabajos clínicos que muestran que los índices de simetría pueden sobrestimar la recuperación. No establecen validez clínica.</p>
+</div>
+
+<span id="principal" class="anchor"></span>
+<h2 data-l="en">1. Principal findings</h2><h2 data-l="es">1. Hallazgos principales</h2>
+<p data-l="en">Three results carry most of the information. First, <strong>a symmetry direction can depend on the summary</strong>: almost a third of primary pairs changed sides of 1 without any change in the recordings. Second, <strong>group stability can hide individual instability</strong>: after filtering, cohort medians moved by at most 0.05 while one control’s ratio rose by about 60%. Third, <strong>there is no universally safe method</strong>: capping large values neutralised an isolated spike in all 100 repetitions but also removed a sustained event defined as true signal, and no method recovered an unknown difference in sensor gain.</p>
+<p data-l="es">Tres resultados concentran la mayor parte de la información. Primero, <strong>la dirección de la simetría puede depender del resumen</strong>: casi un tercio de los pares principales cambió de lado del 1 sin ningún cambio en los registros. Segundo, <strong>la estabilidad del grupo puede ocultar inestabilidad individual</strong>: tras filtrar, las medianas de cohorte se movieron como máximo 0,05 mientras el cociente de un control subió cerca de un 60%. Tercero, <strong>no existe un método universalmente seguro</strong>: limitar valores grandes neutralizó un pico aislado en las 100 repeticiones pero también eliminó un evento sostenido definido como señal verdadera, y ningún método recuperó una diferencia desconocida de ganancia del sensor.</p>
+
+<span id="prior" class="anchor"></span>
+<h2 data-l="en">2. Comparison with prior work</h2><h2 data-l="es">2. Comparación con estudios previos</h2>
+
+<h3 data-l="en">2.1 Why limb symmetry numbers carry weight</h3><h3 data-l="es">2.1 Por qué los números de simetría pesan tanto</h3>
+<p data-l="en">Return to sport after ACL reconstruction is far from guaranteed: a meta-analysis of 69 articles and 7,556 participants found that 81% returned to any sport, 65% to their pre-injury level and 55% to competitive sport.<sup><a href="#r1">1</a></sup> In the Delaware-Oslo cohort of 106 athletes, more symmetrical quadriceps strength before return was associated with fewer knee reinjuries, and each month of delay up to nine months reduced the reinjury rate by 51%.<sup><a href="#r2">2</a></sup> Current guidance therefore asks for multidimensional assessment rather than a single number.<sup><a href="#r3">3</a></sup> In that context, a symmetry ratio can influence real decisions, which is why its measurement properties matter.</p>
+<p data-l="es">Volver al deporte tras una reconstrucción del LCA no está garantizado: un metaanálisis de 69 artículos y 7.556 participantes encontró que el 81% volvió a algún deporte, el 65% a su nivel previo y el 55% al deporte competitivo.<sup><a href="#r1">1</a></sup> En la cohorte Delaware-Oslo de 106 deportistas, una fuerza de cuádriceps más simétrica antes del retorno se asoció con menos relesiones de rodilla, y cada mes de espera hasta los nueve meses redujo la tasa de relesión un 51%.<sup><a href="#r2">2</a></sup> Por eso la guía actual pide una evaluación multidimensional en lugar de un único número.<sup><a href="#r3">3</a></sup> En ese contexto, un cociente de simetría puede influir en decisiones reales, y por eso importan sus propiedades de medición.</p>
+<figure class="figure reveal">
+  <p class="fig-title" data-l="en">Figure 1 · Return to sport after ACL reconstruction</p><p class="fig-title" data-l="es">Figura 1 · Retorno al deporte tras reconstrucción de LCA</p>
+  <p class="fig-sub" data-l="en">Pooled proportions from 69 articles (7,556 participants).<sup><a href="#r1">1</a></sup></p><p class="fig-sub" data-l="es">Proporciones combinadas de 69 artículos (7.556 participantes).<sup><a href="#r1">1</a></sup></p>
+  <div class="viz" data-fig="rts"></div>
+</figure>
+
+<h3 data-l="en">2.2 Symmetry can overstate recovery</h3><h3 data-l="es">2.2 La simetría puede sobrestimar la recuperación</h3>
+<p data-l="en">A ratio compares two legs that may both have changed. In 70 athletes tested before and six months after reconstruction, 57.1% met a 90% limb-symmetry criterion but only 28.6% reached 90% of their estimated pre-injury capacity, and 34.3% passed symmetry while failing the pre-injury benchmark.<sup><a href="#r4">4</a></sup> This audit adds a complementary point: before asking whether a ratio reflects recovery, one must ask whether the ratio itself is stable to processing.</p>
+<p data-l="es">Un cociente compara dos piernas que pueden haber cambiado ambas. En 70 deportistas evaluados antes y seis meses después de la reconstrucción, el 57,1% alcanzó un criterio de simetría del 90%, pero solo el 28,6% llegó al 90% de su capacidad previa estimada, y el 34,3% pasó la simetría sin alcanzar el umbral de capacidad previa.<sup><a href="#r4">4</a></sup> Esta auditoría añade un punto complementario: antes de preguntar si un cociente refleja recuperación, hay que preguntar si el propio cociente es estable frente al procesamiento.</p>
+<figure class="figure reveal">
+  <p class="fig-title" data-l="en">Figure 2 · Symmetry vs. pre-injury capacity at 6 months</p><p class="fig-title" data-l="es">Figura 2 · Simetría vs. capacidad previa a los 6 meses</p>
+  <p class="fig-sub" data-l="en">Quadriceps strength and hop tests, 70 athletes.<sup><a href="#r4">4</a></sup></p><p class="fig-sub" data-l="es">Fuerza de cuádriceps y pruebas de salto, 70 deportistas.<sup><a href="#r4">4</a></sup></p>
+  <div class="viz" data-fig="lsi"></div>
+</figure>
+
+<h3 data-l="en">2.3 Processing and normalisation are known to matter</h3><h3 data-l="es">2.3 Se sabe que el procesamiento y la normalización importan</h3>
+<p data-l="en">The general principle is not new. Normalisation choices changed the clinical interpretation of EMG after ACL injury two decades ago,<sup><a href="#r5">5</a></sup> and digital filter type, amplitude normalisation and co-contraction methods altered conclusions in later work.<sup><a href="#r6">6</a></sup> The CEDE consensus recommends choosing normalisation according to the question,<sup><a href="#r7">7</a></sup> reporting task, electrodes, acquisition and processing explicitly,<sup><a href="#r8">8</a></sup> and not reading electrical amplitude as individual muscle force.<sup><a href="#r9">9</a></sup> This project’s contribution is narrower: a dataset-specific, inspectable implementation that shows the size of the effect person by person, with controlled failure cases. It does not claim to discover the principle.</p>
+<p data-l="es">El principio general no es nuevo. Las decisiones de normalización ya cambiaban la interpretación clínica del EMG tras lesión del LCA hace dos décadas,<sup><a href="#r5">5</a></sup> y el tipo de filtro digital, la normalización de amplitud y los métodos de cocontracción alteraron conclusiones en trabajos posteriores.<sup><a href="#r6">6</a></sup> El consenso CEDE recomienda elegir la normalización según la pregunta,<sup><a href="#r7">7</a></sup> informar de forma explícita tarea, electrodos, adquisición y procesamiento,<sup><a href="#r8">8</a></sup> y no leer la amplitud eléctrica como fuerza muscular individual.<sup><a href="#r9">9</a></sup> La contribución de este proyecto es más acotada: una implementación inspeccionable y específica del dataset que muestra el tamaño del efecto persona por persona, con casos de fallo controlados. No pretende descubrir el principio.</p>
+
+<h3 data-l="en">2.4 Designs that measure torque alongside EMG</h3><h3 data-l="es">2.4 Diseños que miden torque junto al EMG</h3>
+<p data-l="en">The audit cannot say which summary best represents muscle function, because the data contain no torque. Recent studies show what such a reference looks like: torque steadiness with quadriceps activation at 4, 6 and 12 months in 30 athletes;<sup><a href="#r10">10</a></sup> high-density EMG of the vastus medialis with corticospinal measures in 20 patients and 20 controls;<sup><a href="#r11">11</a></sup> motor-unit analyses of the vasti with force output;<sup><a href="#r12">12</a></sup> graft comparisons using isometric strength and normalised sEMG in 60 patients;<sup><a href="#r13">13</a></sup> and phase-specific force and EMG complexity during flywheel squats.<sup><a href="#r14">14</a></sup> A secondary analysis of the same Dryad cohort exists;<sup><a href="#r15">15</a></sup> it is a direct comparator of definitions, not an independent sample. These studies answer different questions, so their percentages cannot be pooled with ours.</p>
+<p data-l="es">La auditoría no puede decir qué resumen representa mejor la función muscular, porque los datos no contienen torque. Estudios recientes muestran cómo sería esa referencia: estabilidad del torque con activación del cuádriceps a los 4, 6 y 12 meses en 30 deportistas;<sup><a href="#r10">10</a></sup> EMG de alta densidad del vasto medial con medidas corticoespinales en 20 pacientes y 20 controles;<sup><a href="#r11">11</a></sup> análisis de unidades motoras de los vastos con salida de fuerza;<sup><a href="#r12">12</a></sup> comparaciones de injertos con fuerza isométrica y sEMG normalizada en 60 pacientes;<sup><a href="#r13">13</a></sup> y complejidad de fuerza y EMG por fases en sentadilla con volante de inercia.<sup><a href="#r14">14</a></sup> Existe un análisis secundario de la misma cohorte de Dryad;<sup><a href="#r15">15</a></sup> es un comparador directo de definiciones, no una muestra independiente. Estos estudios responden preguntas distintas, así que sus porcentajes no pueden combinarse con los nuestros.</p>
+
+<div class="ev-grid">
+  <div class="ev reveal"><span class="yr">2024 · [10]</span><b>Cobian et al.</b><span class="small muted" data-l="en">30 athletes · 3 visits</span><span class="small muted" data-l="es">30 deportistas · 3 visitas</span><div class="icons"><span class="on">torque</span><span class="on">sEMG</span><span>open data</span></div></div>
+  <div class="ev reveal d1"><span class="yr">2025 · [11]</span><b>Sherman et al.</b><span class="small muted" data-l="en">20 ACLR · 20 controls</span><span class="small muted" data-l="es">20 LCA · 20 controles</span><div class="icons"><span class="on">HD-EMG</span><span class="on">EEG</span><span class="on">OSF?</span></div></div>
+  <div class="ev reveal d2"><span class="yr">2024 · [12]</span><b>Nuccio et al.</b><span class="small muted" data-l="en">vasti motor units</span><span class="small muted" data-l="es">unidades motoras de los vastos</span><div class="icons"><span class="on">force</span><span class="on">HD-EMG</span><span>open data</span></div></div>
+  <div class="ev reveal"><span class="yr">2026 · [13]</span><b>Forquignon et al.</b><span class="small muted" data-l="en">60 patients · grafts</span><span class="small muted" data-l="es">60 pacientes · injertos</span><div class="icons"><span class="on">strength</span><span class="on">sEMG</span><span>open data</span></div></div>
+  <div class="ev reveal d1"><span class="yr">2026 · [14]</span><b>Ledesma-Clopés et al.</b><span class="small muted" data-l="en">13 athletes · flywheel</span><span class="small muted" data-l="es">13 deportistas · volante de inercia</span><div class="icons"><span class="on">force</span><span class="on">EMG</span><span>open data</span></div></div>
+  <div class="ev reveal d2"><span class="yr">2026 · [15]</span><b>Khafagy &amp; Hamza</b><span class="small muted" data-l="en">same Dryad cohort</span><span class="small muted" data-l="es">misma cohorte de Dryad</span><div class="icons"><span class="on">sEMG</span><span>torque</span><span class="on">open data</span></div></div>
+</div>
+<p class="small soft" data-l="en">Highlighted chips mark what each study provides. “OSF?”: a public project exists, but its files, muscles and licence have not been audited.</p>
+<p class="small soft" data-l="es">Las etiquetas resaltadas indican lo que aporta cada estudio. “OSF?”: existe un proyecto público, pero sus archivos, músculos y licencia no se han auditado.</p>
+
+<h3 data-l="en">2.5 Open data: separating promise from eligibility</h3><h3 data-l="es">2.5 Datos abiertos: separar promesa de elegibilidad</h3>
+<p data-l="en">Only two datasets were usable here: the Dryad cohort analysed<sup><a href="#r16">16</a></sup> and ENABL3S for methodological transport in healthy walking.<sup><a href="#r17">17</a></sup> A newer bilateral gait dataset in ACL reconstruction was inspected file by file: each sheet holds 101 time-normalised points, too few for the 256-sample windows this protocol requires.<sup><a href="#r18">18</a></sup> Other candidates offer data only on request or have not been audited. An “open” label is a promise; eligibility must be checked against the protocol.</p>
+<p data-l="es">Solo dos datasets fueron utilizables: la cohorte de Dryad analizada<sup><a href="#r16">16</a></sup> y ENABL3S para transporte metodológico en marcha sana.<sup><a href="#r17">17</a></sup> Un dataset más reciente de marcha bilateral en reconstrucción del LCA se inspeccionó archivo por archivo: cada hoja contiene 101 puntos normalizados en el tiempo, muy pocos para las ventanas de 256 muestras que exige este protocolo.<sup><a href="#r18">18</a></sup> Otros candidatos ofrecen datos solo bajo solicitud o aún no se han auditado. La etiqueta “abierto” es una promesa; la elegibilidad debe comprobarse frente al protocolo.</p>
+
+<span id="limits" class="anchor"></span>
+<h2 data-l="en">3. Strengths and limitations</h2><h2 data-l="es">3. Fortalezas y limitaciones</h2>
+<p data-l="en"><strong>Strengths.</strong> Source hashes before loading; participants, not samples or tasks, as the unit; every retrospective decision shown next to the unmodified result; controlled scenarios with a known reference; and an independent cohort analysed under rules frozen after a separate pilot.</p>
+<p data-l="es"><strong>Fortalezas.</strong> Hashes de las fuentes antes de cargar; las personas, no las muestras ni las tareas, como unidad; cada decisión retrospectiva junto al resultado sin modificar; escenarios controlados con referencia conocida; y una cohorte independiente analizada con reglas congeladas tras un piloto separado.</p>
+<p data-l="en"><strong>Limitations.</strong> (i) No torque, movement sensors or return-to-sport outcomes, so no summary can be validated. (ii) The sampling rate is estimated from the clocks and device preprocessing is undocumented. (iii) Centering, filtering, quality flags and one exclusion were decided after seeing the data. (iv) Samples are small and conditions of one person are not independent. (v) Synthetic scenarios illustrate failure modes, not their frequency in patients. (vi) ENABL3S is healthy walking, not ACL reconstruction.</p>
+<p data-l="es"><strong>Limitaciones.</strong> (i) Sin torque, sensores de movimiento ni desenlaces de retorno al deporte, ningún resumen puede validarse. (ii) La frecuencia de muestreo se estima a partir de los relojes y el preprocesamiento del equipo no está documentado. (iii) El centrado, el filtrado, las alertas de calidad y una exclusión se decidieron tras ver los datos. (iv) Las muestras son pequeñas y las condiciones de una persona no son independientes. (v) Los escenarios sintéticos ilustran modos de fallo, no su frecuencia en pacientes. (vi) ENABL3S es marcha sana, no reconstrucción del LCA.</p>
+
+<span id="practice" class="anchor"></span>
+<h2 data-l="en">4. Implications for practice and research</h2><h2 data-l="es">4. Implicaciones para la práctica y la investigación</h2>
+<ul>
+  <li data-l="en"><strong>Report the summary, not just the ratio.</strong> A symmetry value without its window, filter and amplitude definition cannot be compared or reproduced.</li>
+  <li data-l="es"><strong>Informar el resumen, no solo el cociente.</strong> Un valor de simetría sin su ventana, filtro y definición de amplitud no se puede comparar ni reproducir.</li>
+  <li data-l="en"><strong>Show sensitivity per person.</strong> A stable group median is not evidence that an individual result is robust.</li>
+  <li data-l="es"><strong>Mostrar la sensibilidad por persona.</strong> Una mediana de grupo estable no demuestra que un resultado individual sea robusto.</li>
+  <li data-l="en"><strong>Treat values near 1 with caution.</strong> Small crossings are common and are not, by themselves, clinically important.</li>
+  <li data-l="es"><strong>Tratar con cautela los valores cercanos a 1.</strong> Los pequeños cruces son frecuentes y no son, por sí mismos, clínicamente importantes.</li>
+  <li data-l="en"><strong>Pair EMG with an independent reference.</strong> Measured torque and repeated sessions are the minimum needed to say which summary is more useful.</li>
+  <li data-l="es"><strong>Combinar el EMG con una referencia independiente.</strong> El torque medido y las sesiones repetidas son lo mínimo para decir qué resumen es más útil.</li>
+</ul>
+
+<span id="agenda" class="anchor"></span>
+<h2 data-l="en">5. Research agenda</h2><h2 data-l="es">5. Agenda de investigación</h2>
+<div class="table-wrap reveal">
+<table>
+  <thead><tr><th><span data-l="en">Question</span><span data-l="es">Pregunta</span></th><th><span data-l="en">Data needed</span><span data-l="es">Datos necesarios</span></th><th><span data-l="en">Design</span><span data-l="es">Diseño</span></th></tr></thead>
+  <tbody>
+    <tr><td><span data-l="en">Is the OSF candidate eligible?</span><span data-l="es">¿Es elegible el candidato de OSF?</span></td><td><span data-l="en">Files, muscles, bilateral signal, scale, torque, clocks, licence</span><span data-l="es">Archivos, músculos, señal bilateral, escala, torque, relojes, licencia</span></td><td><span data-l="en">Dataset audit before any analysis</span><span data-l="es">Auditoría del dataset antes de analizar</span></td></tr>
+    <tr><td><span data-l="en">Which summary tracks torque best?</span><span data-l="es">¿Qué resumen sigue mejor al torque?</span></td><td><span data-l="en">Synchronised bilateral sEMG + torque, several effort levels</span><span data-l="es">sEMG bilateral sincronizada + torque, varios niveles de esfuerzo</span></td><td><span data-l="en">Pre-specified methods, error on held-out participants</span><span data-l="es">Métodos preespecificados, error en participantes reservados</span></td></tr>
+    <tr><td><span data-l="en">Is the ratio reliable across sessions?</span><span data-l="es">¿Es fiable el cociente entre sesiones?</span></td><td><span data-l="en">≥2 sessions, documented electrode re-placement, repetitions</span><span data-l="es">≥2 sesiones, recolocación documentada de electrodos, repeticiones</span></td><td><span data-l="en">ICC, absolute error, limits of agreement</span><span data-l="es">CCI, error absoluto, límites de acuerdo</span></td></tr>
+    <tr><td><span data-l="en">Does it add value for patients?</span><span data-l="es">¿Aporta valor para los pacientes?</span></td><td><span data-l="en">Follow-up, function, validated outcomes defined in advance</span><span data-l="es">Seguimiento, función, desenlaces validados definidos antes</span></td><td><span data-l="en">Longitudinal cohort; added value over usual assessment</span><span data-l="es">Cohorte longitudinal; valor añadido frente a la evaluación habitual</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 data-l="en">6. Conclusion</h2><h2 data-l="es">6. Conclusión</h2>
+<p data-l="en">A bilateral sEMG ratio is a measurement with its own uncertainty, not a direct readout of recovery. In this audit, its direction depended on defensible processing choices for almost a third of pairs, and no single method was safe across failure modes. Combined with clinical evidence that symmetry can overstate function, the practical message is to report how a ratio was computed, show its sensitivity, and validate it against torque and outcomes before it informs return-to-sport decisions.</p>
+<p data-l="es">Un cociente sEMG bilateral es una medición con su propia incertidumbre, no una lectura directa de la recuperación. En esta auditoría, su dirección dependió de decisiones de procesamiento defendibles en casi un tercio de los pares, y ningún método fue seguro frente a todos los modos de fallo. Sumado a la evidencia clínica de que la simetría puede sobrestimar la función, el mensaje práctico es informar cómo se calculó el cociente, mostrar su sensibilidad y validarlo frente a torque y desenlaces antes de que oriente decisiones de retorno al deporte.</p>
+
+<span id="refs" class="anchor"></span>
+<h2 data-l="en">References</h2><h2 data-l="es">Referencias</h2>
+<ol class="refs">
+  <li id="r1">Ardern CL, Taylor NF, Feller JA, Webster KE. Fifty-five per cent return to competitive sport following anterior cruciate ligament reconstruction surgery: an updated systematic review and meta-analysis. <em>Br J Sports Med</em>. 2014;48(21):1543–1552. <a href="https://doi.org/10.1136/bjsports-2013-093398">doi:10.1136/bjsports-2013-093398</a></li>
+  <li id="r2">Grindem H, Snyder-Mackler L, Moksnes H, Engebretsen L, Risberg MA. Simple decision rules can reduce reinjury risk by 84% after ACL reconstruction: the Delaware-Oslo ACL cohort study. <em>Br J Sports Med</em>. 2016;50(13):804–808. <a href="https://doi.org/10.1136/bjsports-2016-096031">doi:10.1136/bjsports-2016-096031</a></li>
+  <li id="r3">Kotsifaki R, Korakakis V, King E, et al. Aspetar clinical practice guideline on rehabilitation after anterior cruciate ligament reconstruction. <em>Br J Sports Med</em>. 2023;57(9):500–514. <a href="https://doi.org/10.1136/bjsports-2022-106158">doi:10.1136/bjsports-2022-106158</a></li>
+  <li id="r4">Wellsandt E, Failla MJ, Snyder-Mackler L. Limb symmetry indexes can overestimate knee function after anterior cruciate ligament injury. <em>J Orthop Sports Phys Ther</em>. 2017;47(5):334–338. <a href="https://doi.org/10.2519/jospt.2017.7285">doi:10.2519/jospt.2017.7285</a></li>
+  <li id="r5">Benoit DL, Lamontagne M, Cerulli G, Liti A. The clinical significance of electromyography normalisation techniques in subjects with anterior cruciate ligament injury during treadmill walking. <em>Gait Posture</em>. 2003;18(2):56–63. <a href="https://doi.org/10.1016/S0966-6362(02)00194-7">doi:10.1016/S0966-6362(02)00194-7</a></li>
+  <li id="r6">Devaprakash D, Weir GJ, Dunne JJ, Alderson JA, Donnelly CJ. The influence of digital filter type, amplitude normalisation method, and co-contraction algorithm on clinically relevant surface electromyography data during clinical movement assessments. <em>J Electromyogr Kinesiol</em>. 2016;31:126–135. <a href="https://doi.org/10.1016/j.jelekin.2016.10.001">doi:10.1016/j.jelekin.2016.10.001</a></li>
+  <li id="r7">Besomi M, Hodges PW, Clancy EA, et al. Consensus for experimental design in electromyography (CEDE) project: amplitude normalization matrix. <em>J Electromyogr Kinesiol</em>. 2020;53:102438. <a href="https://doi.org/10.1016/j.jelekin.2020.102438">doi:10.1016/j.jelekin.2020.102438</a></li>
+  <li id="r8">Besomi M, Devecchi V, Falla D, et al. Consensus for experimental design in electromyography (CEDE) project: checklist for reporting and critically appraising studies using EMG (CEDE-Check). <em>J Electromyogr Kinesiol</em>. 2024;76:102874. <a href="https://doi.org/10.1016/j.jelekin.2024.102874">doi:10.1016/j.jelekin.2024.102874</a></li>
+  <li id="r9">Dick TJM, Tucker K, Hug F, Besomi M, et al. Consensus for experimental design in electromyography (CEDE) project: application of EMG to estimate muscle force. <em>J Electromyogr Kinesiol</em>. 2024;79:102910. <a href="https://doi.org/10.1016/j.jelekin.2024.102910">doi:10.1016/j.jelekin.2024.102910</a></li>
+  <li id="r10">Cobian DG, Oppenheim ZR, Roehl TJ, Joachim MR, Heiderscheit BC. Knee extensor torque steadiness and quadriceps activation variability in collegiate athletes 4, 6, and 12 months after ACL reconstruction. <em>Orthop J Sports Med</em>. 2024;12(6):23259671241253843. <a href="https://doi.org/10.1177/23259671241253843">doi:10.1177/23259671241253843</a></li>
+  <li id="r11">Sherman DA, Beausejour JP, Koohestani M, Stock MS, et al. Quadriceps motor unit properties following ACL reconstruction are associated with corticospinal excitability and motor cortex activations. <em>J Appl Physiol</em>. 2025;138(4):1011–1023. <a href="https://doi.org/10.1152/japplphysiol.00641.2024">doi:10.1152/japplphysiol.00641.2024</a></li>
+  <li id="r12">Nuccio S, Germer CM, Casolo A, Borzuola R, et al. Neuroplastic alterations in common synaptic inputs and synergistic motor unit clusters controlling the vastii muscles of individuals with ACL reconstruction. <em>J Appl Physiol</em>. 2024;137(4):835–847. <a href="https://doi.org/10.1152/japplphysiol.00056.2024">doi:10.1152/japplphysiol.00056.2024</a></li>
+  <li id="r13">Forquignon B, Drenck T, Krause M, Akoto R, et al. Impact of hamstring versus quadriceps tendon graft on thigh muscle strength and surface electromyography activity after anterior cruciate ligament reconstruction. <em>Knee Surg Sports Traumatol Arthrosc</em>. 2026. <a href="https://doi.org/10.1002/ksa.70342">doi:10.1002/ksa.70342</a></li>
+  <li id="r14">Ledesma-Clopés S, Illera-Domínguez V, Toro-Román V, Pérez-Chirinos Buxadé C, et al. Residual neuromuscular deficits following anterior cruciate ligament reconstruction revealed by phase-specific force, electromyographic complexity and inter-limb asymmetries in flywheel squat. <em>Sensors</em>. 2026;26(18):5745. <a href="https://doi.org/10.3390/s26185745">doi:10.3390/s26185745</a></li>
+  <li id="r15">Khafagy A, Hamza MS. Velocity-dependent quadriceps neuromuscular activation asymmetry after anterior cruciate ligament reconstruction. <em>J Musculoskelet Surg Res</em>. 2026;10:429–435. <a href="https://doi.org/10.25259/JMSR_129_2026">doi:10.25259/JMSR_129_2026</a></li>
+  <li id="r16">Gutierrez A, Hart J, Boukhechba M. Post-ACL reconstruction surgery rehabilitation dataset using isokinetic dynamometer and wearable sensors. Dryad; 2022. CC0. <a href="https://doi.org/10.5061/dryad.66t1g1k4j">doi:10.5061/dryad.66t1g1k4j</a></li>
+  <li id="r17">Hu B, Rouse E, Hargrove L. Benchmark datasets for bilateral lower limb neuromechanical signals from wearable sensors during unassisted locomotion in able-bodied individuals (ENABL3S), v2. figshare; 2018. CC BY 4.0. <a href="https://doi.org/10.6084/m9.figshare.5362627.v2">doi:10.6084/m9.figshare.5362627.v2</a></li>
+  <li id="r18">Zhang H, Wei M, Zhong Y, Zhu G. A dataset for bilateral lower limb muscle synergy patterns in unilateral anterior cruciate ligament reconstructed patients. <em>Sci Data</em>. 2026;13:1239. <a href="https://doi.org/10.1038/s41597-026-07543-2">doi:10.1038/s41597-026-07543-2</a></li>
+</ol>
+<p class="small soft" data-l="en">References were checked against Crossref and DataCite records in October 2026. Applicability judgements are the author’s, not conclusions attributed to the cited authors. This is a targeted review, not a systematic review.</p>
+<p class="small soft" data-l="es">Las referencias se verificaron con los registros de Crossref y DataCite en octubre de 2026. Los juicios de aplicabilidad son del autor, no conclusiones atribuidas a los autores citados. Es una revisión dirigida, no una revisión sistemática.</p>
+</main>
+
+<footer style="margin-top:60px">
+  <div class="wrap">
+    <div><strong>Víctor Andrés Gómez López</strong> · <a href="https://victor-gomez-portfolio.vercel.app">victor-gomez-portfolio.vercel.app</a></div>
+    <div class="small"><a href="index.html" data-keep-lang><span data-l="en">← Back to the case study</span><span data-l="es">← Volver al caso de estudio</span></a></div>
+  </div>
+</footer>
+<script src="assets/evidence.js"></script>
+<script src="assets/motion.js" defer></script>
+</body>
+</html>
